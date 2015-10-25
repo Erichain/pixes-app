@@ -29,3 +29,4 @@ node_modules
 *.map
 platforms/
 .DS_store
+.sass-cache/
