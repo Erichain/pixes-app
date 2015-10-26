@@ -5,6 +5,10 @@
  * @date 2015-10-25
  */
 (function ( angular, pixes ) {
+    pixes.login = angular.module('Pixes.login', []);
+
+    pixes.register = angular.module('Pixes.register', []);
+
     pixes.home = angular.module('Pixes.home', []);
 
     pixes.explore = angular.module('Pixes.explore', []);

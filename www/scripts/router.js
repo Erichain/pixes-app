@@ -8,10 +8,13 @@
 
 var pixesApp = angular.module('Pixes', [
     'ionic',
+    'Pixes.login',
+    'Pixes.register',
     'Pixes.home',
     'Pixes.explore',
     'Pixes.favorites',
-    'Pixes.me']);
+    'Pixes.me'
+    ]);
 
 pixesApp.run(function ( $ionicPlatform ) {
     $ionicPlatform.ready(function () {
@@ -27,43 +30,64 @@ pixesApp.run(function ( $ionicPlatform ) {
 })
 .config(['$stateProvider', '$urlRouterProvider', function ( $stateProvider, $urlRouterProvider ) {
 
-        $stateProvider.state('tab', {
-            url: '/tab',
-            abstract: true,
-            templateUrl: 'views/tabs.html'
-        }).state('tab.home', {
-            url: '/home',
-            views: {
-                'tab-home': {
-                    templateUrl: 'views/home/home.html',
-                    controller: 'HomeCtrl'
+        $urlRouterProvider.when('', '/login');
+
+        $stateProvider
+            .state('login', {
+                url: '/login',
+                templateUrl: 'views/login/login.html',
+                controller: 'LoginCtrl'
+            })
+
+            /* register router */
+            .state('register', {
+                url: '/register',
+                templateUrl: 'views/register/register.html',
+                controller: 'RegisterCtrl'
+            })
+
+            /* tabs' page router */
+            .state('tab', {
+                url: '/tab',
+                abstract: true,
+                templateUrl: 'views/tabs.html'
+            })
+            .state('tab.home', {
+                url: '/home',
+                views: {
+                    'tab-home': {
+                        templateUrl: 'views/home/home.html',
+                        controller: 'HomeCtrl'
+                    }
                 }
-            }
-        }).state('tab.explore', {
-            url: '/explore',
-            views: {
-                'tab-explore': {
-                    templateUrl: 'views/explore/explore.html',
-                    controller: 'ExploreCtrl'
+            })
+            .state('tab.explore', {
+                url: '/explore',
+                views: {
+                    'tab-explore': {
+                        templateUrl: 'views/explore/explore.html',
+                        controller: 'ExploreCtrl'
+                    }
                 }
-            }
-        }).state('tab.favorites', {
-            url: '/favorites',
-            views: {
-                'tab-favorites': {
-                    templateUrl: 'views/favorites/favorites.html',
-                    controller: 'FavoritesCtrl'
+            })
+            .state('tab.favorites', {
+                url: '/favorites',
+                views: {
+                    'tab-favorites': {
+                        templateUrl: 'views/favorites/favorites.html',
+                        controller: 'FavoritesCtrl'
+                    }
                 }
-            }
-        }).state('tab.me', {
-            url: '/me',
-            views: {
-                'tab-me': {
-                    templateUrl: 'views/me/me.html',
-                    controller: 'MeCtrl'
+            })
+            .state('tab.me', {
+                url: '/me',
+                views: {
+                    'tab-me': {
+                        templateUrl: 'views/me/me.html',
+                        controller: 'MeCtrl'
+                    }
                 }
-            }
-        });
+            });
 
         $urlRouterProvider.otherwise('/tab/home');
 
