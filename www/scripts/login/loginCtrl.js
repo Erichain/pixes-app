@@ -7,7 +7,7 @@
 (function ( login ) {
     var signIn = function ( scope, location ) {
             if ( scope.user.username === 'Erichain' && scope.user.password === '123456' ) {
-                location.path('/tab/home');
+                location.path('/tab/recommend');
             }
         },
 

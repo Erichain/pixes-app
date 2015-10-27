@@ -8,22 +8,20 @@ var rename = require('gulp-rename');
 var sh = require('shelljs');
 
 var paths = {
-  sass: ['./scss/**/*.scss']
+  sass: ['./www/styles/**/*.scss']
 };
 
 gulp.task('default', ['sass']);
 
-gulp.task('sass', function(done) {
-  gulp.src('./scss/common.scss')
-    .pipe(sass())
-    .on('error', sass.logError)
-    .pipe(gulp.dest('./.tmp/css/'))
+gulp.task('sass', function() {
+  gulp.src('./www/styles/common/common.scss')
+    .pipe(sass()).on('error', sass.logError)
+    .pipe(gulp.dest('./www/styles/common/compiled/'))
     .pipe(minifyCss({
       keepSpecialComments: 0
     }))
     .pipe(rename({ extname: '.min.css' }))
-    .pipe(gulp.dest('./www/css/'))
-    .on('end', done);
+    .pipe(gulp.dest('./www/styles/common/compiled/'));
 });
 
 gulp.task('watch', function() {

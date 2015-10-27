@@ -10,9 +10,9 @@ var pixesApp = angular.module('Pixes', [
     'ionic',
     'Pixes.login',
     'Pixes.register',
-    'Pixes.home',
+    'Pixes.recommend',
     'Pixes.explore',
-    'Pixes.favorites',
+    'Pixes.create',
     'Pixes.me'
     ]);
 
@@ -52,12 +52,12 @@ pixesApp.run(function ( $ionicPlatform ) {
                 abstract: true,
                 templateUrl: 'views/tabs.html'
             })
-            .state('tab.home', {
-                url: '/home',
+            .state('tab.recommend', {
+                url: '/recommend',
                 views: {
-                    'tab-home': {
-                        templateUrl: 'views/home/home.html',
-                        controller: 'HomeCtrl'
+                    'tab-recommend': {
+                        templateUrl: 'views/recommend/recommend.html',
+                        controller: 'RecommendCtrl'
                     }
                 }
             })
@@ -70,12 +70,12 @@ pixesApp.run(function ( $ionicPlatform ) {
                     }
                 }
             })
-            .state('tab.favorites', {
-                url: '/favorites',
+            .state('tab.create', {
+                url: '/create',
                 views: {
-                    'tab-favorites': {
-                        templateUrl: 'views/favorites/favorites.html',
-                        controller: 'FavoritesCtrl'
+                    'tab-create': {
+                        templateUrl: 'views/create/create.html',
+                        controller: 'CreateCtrl'
                     }
                 }
             })
@@ -89,6 +89,6 @@ pixesApp.run(function ( $ionicPlatform ) {
                 }
             });
 
-        $urlRouterProvider.otherwise('/tab/home');
+        $urlRouterProvider.otherwise('/tab/recommend');
 
     }]);

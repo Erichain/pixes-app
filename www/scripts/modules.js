@@ -9,11 +9,11 @@
 
     pixes.register = angular.module('Pixes.register', []);
 
-    pixes.home = angular.module('Pixes.home', []);
+    pixes.recommend = angular.module('Pixes.recommend', []);
 
     pixes.explore = angular.module('Pixes.explore', []);
 
-    pixes.favorites = angular.module('Pixes.favorites', []);
+    pixes.create = angular.module('Pixes.create', []);
 
     pixes.me = angular.module('Pixes.me', []);
 })( angular, Pixes );
