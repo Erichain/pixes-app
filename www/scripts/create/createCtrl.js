@@ -1,14 +1,18 @@
 /**
  * create page's controller
  *
+ * @controller CreateCtrl
+ * @module Pixes.create
  * @author Erichain
  * @date 2015-10-25
  */
 (function ( create ) {
-    var CreateCtrl = function ( $scope ) {
-
-    };
 
     create.controller('CreateCtrl', CreateCtrl);
     CreateCtrl.$inject = ['$scope'];
-})( Pixes.create );
+
+    function CreateCtrl ( $scope ) {
+
+    }
+
+})( angular.module('Pixes.create') );

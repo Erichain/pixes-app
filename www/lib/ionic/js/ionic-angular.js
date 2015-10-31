@@ -4265,12 +4265,12 @@ IonicModule
  *         prefetchTemplate: false,
  *         templateUrl: "tabs-templates/tabs.html"
  *       })
- *       .state('tabs.recommend', {
- *         url: "/recommend",
+ *       .state('tabs.home', {
+ *         url: "/home",
  *         views: {
- *           'recommend-tab': {
+ *           'home-tab': {
  *             prefetchTemplate: false,
- *             templateUrl: "tabs-templates/recommend.html",
+ *             templateUrl: "tabs-templates/home.html",
  *             controller: 'HomeTabCtrl'
  *           }
  *         }
@@ -6812,7 +6812,7 @@ IonicModule
 
         ionic.requestAnimationFrame(tail);
 
-        // scroll back to recommend during tail animation
+        // scroll back to home during tail animation
         scrollTo(0, scrollTime, deactivate);
 
         // return to native scrolling after tail animation has time to finish
@@ -10880,7 +10880,7 @@ function($timeout) {
  * automatically close the currently opened menu.
  *
  * ```html
- * <a menu-close href="#/recommend" class="item">Home</a>
+ * <a menu-close href="#/home" class="item">Home</a>
  * ```
  *
  * Note that if your destination state uses a resolve and that resolve asyncronously
@@ -11312,7 +11312,7 @@ IonicModule
  * @usage
  *
  * ```html
- * <a nav-direction="forward" href="#/recommend">Home</a>
+ * <a nav-direction="forward" href="#/home">Home</a>
  * ```
  */
 IonicModule
@@ -11414,7 +11414,7 @@ IonicModule
  * @usage
  *
  * ```html
- * <a nav-transition="none" href="#/recommend">Home</a>
+ * <a nav-transition="none" href="#/home">Home</a>
  * ```
  */
 IonicModule
@@ -11472,7 +11472,7 @@ IonicModule
  *   $stateProvider
  *   .state('index', {
  *     url: '/',
- *     templateUrl: 'recommend.html'
+ *     templateUrl: 'home.html'
  *   })
  *   .state('music', {
  *     url: '/music',
@@ -11481,14 +11481,14 @@ IonicModule
  * });
  * ```
  * Then on app start, $stateProvider will look at the url, see it matches the index state,
- * and then try to load recommend.html into the `<ion-nav-view>`.
+ * and then try to load home.html into the `<ion-nav-view>`.
  *
  * Pages are loaded by the URLs given. One simple way to create templates in Angular is to put
  * them directly into your HTML file and use the `<script type="text/ng-template">` syntax.
- * So here is one way to put recommend.html into our app:
+ * So here is one way to put home.html into our app:
  *
  * ```html
- * <script id="recommend" type="text/ng-template">
+ * <script id="home" type="text/ng-template">
  *   <!-- The title of the ion-view will be shown on the navbar -->
  *   <ion-view view-title="Home">
  *     <ion-content ng-controller="HomeCtrl">

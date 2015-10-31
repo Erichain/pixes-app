@@ -5,10 +5,11 @@
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
         <title>Pixes</title>
         <!-- compiled css output -->
-        <link href="styles/common/compiled/common.css" rel="stylesheet" type="text/css">
+        <link href="styles/main.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="lib/ionic/css/ionic.min.css"/>
 
         <!-- Animate.css -->
-        <link rel="stylesheet" href="lib/animate/animate.min.css" type="text/css"/>
+        <link rel="stylesheet" href="lib/animat.css/animate.min.css" type="text/css"/>
 
     </head>
     <body ng-app="Pixes">
@@ -23,17 +24,32 @@
         <!-- cordova script (this will be a 404 during development) -->
         <script src="cordova.js"></script>
 
-        <!-- global js -->
-        <script src="scripts/namespace.js"></script>
-        <script src="scripts/modules.js"></script>
-        <script src="scripts/router.js"></script>
+        <!-- scripts build -->
+        <script src="scripts/app.js"></script>
+
+        <script src="scripts/common/main.js"></script>
+        <script src="scripts/common/config/config.js"></script>
+        <script src="scripts/common/config/api.js"></script>
+        <script src="scripts/common/config/router.js"></script>
 
         <!-- module's script -->
+        <script src="scripts/login/main.js"></script>
         <script src="scripts/login/loginCtrl.js"></script>
+
+        <script src="scripts/register/main.js"></script>
         <script src="scripts/register/registerCtrl.js"></script>
+
+        <script src="scripts/recommend/main.js"></script>
         <script src="scripts/recommend/recommendCtrl.js"></script>
+
+        <script src="scripts/me/main.js"></script>
         <script src="scripts/me/meCtrl.js"></script>
+
+        <script src="scripts/create/main.js"></script>
         <script src="scripts/create/createCtrl.js"></script>
+
+        <script src="scripts/explore/main.js"></script>
         <script src="scripts/explore/exploreCtrl.js"></script>
+        <!-- enbuild -->
     </body>
 </html>

@@ -30,3 +30,5 @@ node_modules
 platforms/
 .DS_store
 **/.sass-cache/
+.tmp/
+www/lib/

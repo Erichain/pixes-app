@@ -1,14 +1,18 @@
 /**
  * recommend page's controller
  *
+ * @controller RecommendCtrl
+ * @module Pixes.recommend
  * @author Erichain
  * @date 2015-10-25
  */
 (function ( recommend ) {
-    var RecommendCtrl = function ( $scope ) {
-
-    };
 
     recommend.controller('RecommendCtrl', RecommendCtrl);
     RecommendCtrl.$inject = ['$scope'];
-})( Pixes.recommend );
+
+    function RecommendCtrl ( $scope ) {
+
+    }
+
+})( angular.module('Pixes.recommend') );
