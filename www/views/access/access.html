@@ -1,0 +1,73 @@
+<ion-view view-title="Sign In" hide-nav-bar="true">
+    <ion-content scroll="false" class="main-body">
+        <div class="title-content animated fadeIn">
+            <div class="row text-center">
+                <div class="col col-offset-10 col-80">
+                    <h2 class="text-light text-logo">Pixes</h2>
+                    <h4 class="text-light">Find the pictures you want</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="before-content animated fadeIn">
+            <div class="row text-center">
+                <div class="col col-offset-10 col-80">
+                    <button class="button button-block" px-show>Sign In</button>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col col-offset-10 col-80">
+                    <button class="button button-block" px-show>Sign Up</button>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col col-offset-33 col-34">
+                    <button class="button button-clear">
+                        <p class="text-light">Look Around</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Login part -->
+        <div class="login-content">
+            <div class="list list-inset">
+                <label class="item item-input">
+                    <input type="text" placeholder="Your Email or Phone Number" ng-model="user.username"/>
+                </label>
+                <label class="item item-input">
+                    <input type="password" placeholder="Your Password" ng-model="user.password"/>
+                </label>
+            </div>
+            <ul class="list list-inset">
+                <li class="item item-checkbox">
+                    <label class="checkbox">
+                        <input type="checkbox" ng-checked="true"/>
+                    </label>
+                    Remeber Password
+                </li>
+            </ul>
+            <div class="padding">
+                <button class="button button-block button-royal" ng-click="signIn()">Sign In</button>
+                <button class="button button-block button-default login-btn-outline" px-show>Sign Up</button>
+            </div>
+            <div class="bar bar-footer bar-energized" ng-show="isEmpty">
+                <div class="title">Can't be empty</div>
+            </div>
+        </div>
+        <!-- register part -->
+        <div class="reg-content">
+            <div class="list list-inset">
+                <label class="item item-input">
+                    <input type="text" placeholder="Please Enter Your Email or Phone Number"/>
+                </label>
+                <label class="item item-input">
+                    <input type="password" placeholder="Please Enter Your Password"/>
+                </label>
+            </div>
+            <div class="padding">
+                <button class="button button-block button-royal">Sign Up</button>
+                <button class="button button-block login-btn-outline" px-show>Sign In</button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

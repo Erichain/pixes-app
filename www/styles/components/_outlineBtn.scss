@@ -1,0 +1,26 @@
+@import "../common/variables";
+.general-btn-outline {
+    background: transparent;
+    border: 1px solid $app-theme-color;
+    color: $app-theme-color;
+
+    &:hover,
+    &:active,
+    &.active{
+        background: $app-theme-color;
+        color: $font-front-color;
+    }
+}
+
+.login-btn-outline {
+    background: transparent;
+    border: 1px solid $font-front-color;
+    color: $font-front-color;
+
+    &:hover,
+    &:active,
+    &.active{
+        background: $font-front-color;
+        color: $app-theme-color;
+    }
+}

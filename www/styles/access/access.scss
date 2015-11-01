@@ -1,0 +1,24 @@
+@import "../common/variables";
+.main-body {
+    resize: vertical;
+    background: url("../images/access/access_bg.jpg") center center no-repeat;
+
+    .title-content {
+        margin-bottom: 80px;
+        -webkit-transform: translateY(50%);
+        -moz-transform: translateY(50%);
+        -ms-transform: translateY(50%);
+        -o-transform: translateY(50%);
+        transform: translateY(50%);
+    }
+}
+.text-light {
+    color: $font-front-color;
+}
+.login-content,
+.reg-content {
+    opacity: 0;
+}
+.hide-ele {
+    display: none;
+}

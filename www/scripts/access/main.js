@@ -1,10 +1,10 @@
 /**
- * register
+ * login
  *
- * @module Pixes.register
+ * @module Pixes.access
  * @author Erichain
  * @date 2015-10-30
  */
 (function ( angular ) {
-    angular.module('Pixes.register', [])
+    angular.module('Pixes.access', [])
 })( angular );

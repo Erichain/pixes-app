@@ -1,1 +1,15 @@
 @import "variables";
+.bar {
+    &.bar-royal {
+        background: $app-theme-color;
+    }
+}
+
+.button {
+    border: none;
+    &.button-block {
+        &.button-royal {
+            background: $app-theme-color;
+        }
+    }
+}

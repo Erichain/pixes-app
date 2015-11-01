@@ -7,8 +7,7 @@
 (function ( angular ) {
     angular.module('Pixes', [
         'ionic',
-        'Pixes.login',
-        'Pixes.register',
+        'Pixes.access',
         'Pixes.recommend',
         'Pixes.explore',
         'Pixes.create',

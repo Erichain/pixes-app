@@ -20,20 +20,13 @@
     })
         .config(['$stateProvider', '$urlRouterProvider', function ( $stateProvider, $urlRouterProvider ) {
 
-            $urlRouterProvider.when('', '/login');
+            $urlRouterProvider.when('', '/access');
 
             $stateProvider
-                .state('login', {
-                    url: '/login',
-                    templateUrl: 'views/login/login.html',
-                    controller: 'LoginCtrl'
-                })
-
-                /* register router */
-                .state('register', {
-                    url: '/register',
-                    templateUrl: 'views/register/register.html',
-                    controller: 'RegisterCtrl'
+                .state('access', {
+                    url: '/access',
+                    templateUrl: 'views/access/access.html',
+                    controller: 'AccessCtrl'
                 })
 
                 /* tabs' page router */
