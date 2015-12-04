@@ -49,7 +49,7 @@ var SplashScreen = {
         localSplash.style.width = "100%";
         localSplash.style.height = "100%";
 
-        localSplashImage = document.createElement("images");
+        localSplashImage = document.createElement("img");
         localSplashImage.src = splashImageSrc;
         localSplashImage.style.maxWidth = "100%";
         localSplashImage.style.maxHeight = "100%";

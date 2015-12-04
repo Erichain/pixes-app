@@ -13,9 +13,7 @@
   background: transparent;
   border: 1px solid #8632f8;
   color: #8632f8; }
-  .general-btn-outline:hover,
-  .general-btn-outline:active,
-  .general-btn-outline.active {
+  .general-btn-outline:hover, .general-btn-outline:active, .general-btn-outline.active {
     background: #8632f8;
     color: #fafafa; }
 
@@ -23,9 +21,7 @@
   background: transparent;
   border: 1px solid #fafafa;
   color: #fafafa; }
-  .login-btn-outline:hover,
-  .login-btn-outline:active,
-  .login-btn-outline.active {
+  .login-btn-outline:hover, .login-btn-outline:active, .login-btn-outline.active {
     background: #fafafa;
     color: #8632f8; }
 

@@ -8,10 +8,14 @@
 
 (function( Common ) {
 
-    Common.factory('config', [function() {
-        return {
+    Common.service('config', config);
 
+    config.$inject = [];
+
+    function config () {
+        return {
+            API_ROOT_URL: ''
         };
-    }]);
+    }
 
 })( angular.module('Pixes.common') );

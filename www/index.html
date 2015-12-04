@@ -4,13 +4,18 @@
         <meta charset="utf-8">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
         <title>Pixes</title>
-        <!-- compiled css output -->
+
+        <!-- build:css(.tmp) styles/main.css -->
         <link href="styles/ionic.app.css" rel="stylesheet"  type="text/css"/>
         <link href="styles/main.css" rel="stylesheet" type="text/css">
+        <!-- endbuild -->
 
-
+        <!-- build:css(.) styles/vendor.css -->
+        <!-- bower:css -->
         <!-- Animate.css -->
         <link rel="stylesheet" href="lib/animate.css/animate.min.css" type="text/css"/>
+        <!-- endbower -->
+        <!-- endbuild -->
 
     </head>
     <body ng-app="Pixes">
@@ -20,13 +25,16 @@
 
         <ion-nav-view class="animated fadeIn"></ion-nav-view>
 
-
+        <!-- build:js(.) scripts/vendor.js -->
+        <!-- bower:js -->
         <script src="lib/jquery/dist/jquery.min.js"></script>
         <script src="lib/ionic/js/ionic.bundle.js"></script>
         <!-- cordova script (this will be a 404 during development) -->
         <script src="cordova.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
 
-        <!-- scripts build -->
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
 
         <script src="scripts/common/main.js"></script>
@@ -34,10 +42,13 @@
         <script src="scripts/common/config/api.js"></script>
         <script src="scripts/common/config/router.js"></script>
 
-        <script src="scripts/common/directive/pxShow.js"></script>
+        <script src="scripts/common/directive/accessBtn.js"></script>
+
+        <script src="scripts/common/service/requestService.js"></script>
 
         <!-- module's script -->
         <script src="scripts/access/main.js"></script>
+        <script src="scripts/access/accessService.js"></script>
         <script src="scripts/access/accessCtrl.js"></script>
 
         <script src="scripts/recommend/main.js"></script>
@@ -51,6 +62,6 @@
 
         <script src="scripts/explore/main.js"></script>
         <script src="scripts/explore/exploreCtrl.js"></script>
-        <!-- enbuild -->
+        <!-- endbuild -->
     </body>
 </html>

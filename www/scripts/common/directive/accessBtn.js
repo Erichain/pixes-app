@@ -6,10 +6,10 @@
  * @date 2015-11-01
  */
 (function ( Common ) {
-    Common.directive('pxShow', pxShow);
-    pxShow.$inject = [];
+    Common.directive('accessBtn', accessBtn);
+    accessBtn.$inject = [];
 
-    function pxShow () {
+    function accessBtn () {
         return {
             restrict: 'AE',
             link: function ( scope, ele, attr ) {
@@ -20,8 +20,7 @@
                         $('.before-content').addClass('fadeOut hide-ele');
                     }
                     else if ( $(this).text() === 'Sign Up' ) {
-                        $('.reg-content').addClass('animated fadeIn');
-                        $('.before-content').addClass('fadeOut hide-ele');
+
                     }
                 });
             }
