@@ -6,6 +6,8 @@ var sass = require('gulp-sass');
 var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var sh = require('shelljs');
+var uglify = require('gulp-uglify');
+var uglify_html = require('gulp-minify-html');
 
 var paths = {
     sass: ['./www/styles/**/*.scss']
@@ -18,9 +20,12 @@ gulp.task('sass', function(done) {
         .pipe(sass())
         .on('error', sass.logError)
         .pipe(gulp.dest('./www/styles/'))
-        .pipe(minifyCss({keepSpecialComments: 0
+        .pipe(minifyCss({
+            keepSpecialComments: 0
         }))
-        .pipe(rename({ extname: '.min.css' }))
+        .pipe(rename({
+            extname: '.min.css'
+        }))
         .pipe(gulp.dest('.tmp'))
         .on('end', done);
 });
@@ -34,6 +39,23 @@ gulp.task('install', ['git-check'], function() {
         .on('log', function(data) {
             gutil.log('bower', gutil.colors.cyan(data.id), data.message);
         });
+});
+
+gulp.task('compress',[], function () {
+    var opt = {};
+
+    gulp.src('./www/views/**/*.html')
+        .pipe(uglify_html())
+        .pipe(gulp.dest('./dist/views'));
+});
+
+gulp.task('build', ['compress'], function () {
+    gulp.src('./www/scripts/**/*.js')
+        .pipe(uglify())
+        .pipe(rename({
+            extname: '.min.js'
+        }))
+        .pipe(gulp.dest('./dist/scripts'));
 });
 
 gulp.task('git-check', function(done) {

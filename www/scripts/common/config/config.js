@@ -14,7 +14,7 @@
 
     function config () {
         return {
-            API_ROOT_URL: ''
+            API_ROOT_URL: 'http://www.pixes.me'
         };
     }
 

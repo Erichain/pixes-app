@@ -10,7 +10,5 @@
     Common.factory('api', api);
     api.$inject = [];
 
-    function api () {
-
-    }
+    function api () {}
 })( angular.module('Pixes.common') );
