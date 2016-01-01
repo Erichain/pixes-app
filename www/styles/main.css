@@ -28,7 +28,8 @@
 /*App's main color, such as main button's background, border etc.*/
 .main-body {
   resize: vertical;
-  background: url("../images/access/access_bg.jpg") center center no-repeat; }
+  background: url("../images/start/start_bg@2x.png") center center no-repeat;
+  background-size: contain; }
   .main-body .title-content {
     margin-bottom: 80px;
     -webkit-transform: translateY(50%);

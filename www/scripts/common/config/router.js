@@ -20,12 +20,12 @@
     })
         .config(['$stateProvider', '$urlRouterProvider', function ( $stateProvider, $urlRouterProvider ) {
 
-            $urlRouterProvider.when('', '/access');
+            $urlRouterProvider.when('', '/start');
 
             $stateProvider
                 .state('access', {
-                    url: '/access',
-                    templateUrl: 'views/access/access.html',
+                    url: '/start',
+                    templateUrl: 'views/start/start.html',
                     controller: 'AccessCtrl'
                 })
 
