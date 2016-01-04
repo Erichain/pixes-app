@@ -1,36 +1,35 @@
 /*App's main color, such as main button's background, border etc.*/
 /*App's main color, such as main button's background, border etc.*/
 .bar.bar-royal {
-  background: #8632f8; }
+  background: #1dd1ff !important; }
 
 .button {
-  border: none; }
-  .button.button-block.button-royal {
-    background: #8632f8; }
+  font-weight: normal;
+  border: none;
+  border-radius: 6px;
+  box-shadow: none;
+  outline: none; }
+  .button.button-block.button-general {
+    color: #ffffff;
+    background-color: #1dd1ff; }
+    .button.button-block.button-general:active {
+      color: #ffffff;
+      background-color: #1dbdeb; }
+  .button.button-block.button-bordered {
+    color: #ffffff;
+    background-color: transparent;
+    border: 2px solid #ffffff; }
+    .button.button-block.button-bordered:active {
+      color: #ffffff;
+      background-color: rgba(255, 255, 255, 0.2); }
 
 /*App's main color, such as main button's background, border etc.*/
-.general-btn-outline {
-  background: transparent;
-  border: 1px solid #8632f8;
-  color: #8632f8; }
-  .general-btn-outline:hover, .general-btn-outline:active, .general-btn-outline.active {
-    background: #8632f8;
-    color: #fafafa; }
-
-.login-btn-outline {
-  background: transparent;
-  border: 1px solid #fafafa;
-  color: #fafafa; }
-  .login-btn-outline:hover, .login-btn-outline:active, .login-btn-outline.active {
-    background: #fafafa;
-    color: #8632f8; }
-
 /*App's main color, such as main button's background, border etc.*/
-.main-body {
+.start-page {
   resize: vertical;
   background: url("../images/start/start_bg@2x.png") center center no-repeat;
   background-size: contain; }
-  .main-body .title-content {
+  .start-page .title-content {
     margin-bottom: 80px;
     -webkit-transform: translateY(50%);
     -moz-transform: translateY(50%);
@@ -40,10 +39,3 @@
 
 .text-light {
   color: #fafafa; }
-
-.login-content,
-.reg-content {
-  opacity: 0; }
-
-.hide-ele {
-  display: none; }

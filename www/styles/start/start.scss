@@ -1,5 +1,5 @@
 @import "../common/variables";
-.main-body {
+.start-page {
     resize: vertical;
     background: url("../images/start/start_bg@2x.png") center center no-repeat;
     background-size: contain;
@@ -15,11 +15,4 @@
 }
 .text-light {
     color: $font-front-color;
-}
-.login-content,
-.reg-content {
-    opacity: 0;
-}
-.hide-ele {
-    display: none;
 }

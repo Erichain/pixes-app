@@ -23,12 +23,11 @@
             $urlRouterProvider.when('', '/start');
 
             $stateProvider
-                .state('access', {
+                .state('start', {
                     url: '/start',
                     templateUrl: 'views/start/start.html',
-                    controller: 'AccessCtrl'
+                    controller: 'StartCtrl'
                 })
-
                 /* tabs' page router */
                 .state('tab', {
                     url: '/tab',

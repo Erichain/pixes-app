@@ -1,5 +1,5 @@
 /*App's main color, such as main button's background, border etc.*/
-$app-theme-color: #8632f8;
+$app-theme-color: #1dd1ff !important;
 
 $general-font-color: #232323;
 $font-front-color: #fafafa;
@@ -8,3 +8,6 @@ $color-warning: #eb5e18;
 $color-error: #db2c2a;
 $color-disabled: #afafaf;
 $color-tip: #878787;
+
+$btn-general-color: #1dd1ff;
+$btn-general-active-color: #1dbdeb;

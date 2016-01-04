@@ -1,4 +1,5 @@
 @import "variables";
+
 .bar {
     &.bar-royal {
         background: $app-theme-color;
@@ -6,10 +7,32 @@
 }
 
 .button {
+    font-weight: normal;
     border: none;
+    border-radius: 6px;
+    box-shadow: none;
+    outline: none;
+
     &.button-block {
-        &.button-royal {
-            background: $app-theme-color;
+        &.button-general {
+            color: #ffffff;
+            background-color: $btn-general-color;
+
+            &:active {
+                color: #ffffff;
+                background-color: $btn-general-active-color;
+            }
+        }
+
+        &.button-bordered {
+            color: #ffffff;
+            background-color: transparent;
+            border: 2px solid #ffffff;
+
+            &:active {
+                color: #ffffff;
+                background-color: rgba(255, 255, 255, 0.2);
+            }
         }
     }
 }
