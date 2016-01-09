@@ -29,16 +29,10 @@ var gulp = require('gulp'),
     paths = {
         scripts: [rootApp.app + '/scripts/**/*.js'],
         styles: [rootApp.app + '/scss/**/*.scss'],
+        images: [rootApp.app + '/images/**/*.png', rootApp.app + '/images/**/*.jpg'],
         test: [rootApp.app + '/test/spec/**/*.js'],
         testRequire: [
-            rootApp.app + '/vendor/angular/angular.js',
-            rootApp.app + '/vendor/angular-mocks/angular-mocks.js',
-            rootApp.app + '/vendor/angular-resource/angular-resource.js',
-            rootApp.app + '/vendor/angular-cookies/angular-cookies.js',
-            rootApp.app + '/vendor/angular-sanitize/angular-sanitize.js',
-            rootApp.app + '/vendor/angular-route/angular-route.js',
-            rootApp.app + '/test/mock/**/*.js',
-            rootApp.app + '/test/spec/**/*.js'
+            rootApp.app + '/lib/ionic/js/ionic.bundle.min.js'
         ],
         karma: rootApp.app + '/karma.conf.js',
         views: {
@@ -52,7 +46,7 @@ var gulp = require('gulp'),
 // Tasks definition ////
 ////////////////////////
 
-gulp.task('compass', function () {
+gulp.task('sass', function () {
     gulp.src(paths.styles)
         .pipe(plumber())
         .pipe(compass({
@@ -78,6 +72,12 @@ gulp.task('html', function () {
         .pipe(connect.reload());
 });
 
+gulp.task('images', function () {
+    gulp.src(paths.images)
+        .pipe(plumber())
+        .pipe(connect.reload());
+});
+
 gulp.task('clean:css', function ( cb ) {
     rimraf(rootApp.app + '/styles', cb)
 });
@@ -86,15 +86,15 @@ gulp.task('start:server', function () {
     connect.server({
         root: [rootApp.app],
         livereload: {
-            port: 35733
+            port: 35734
         },
-        port: 9011
+        port: 9012
     });
 });
 
-gulp.task('start:client', ['start:server', 'compass'], function () {
+gulp.task('start:client', ['start:server', 'sass'], function () {
     var options = {
-        uri: 'http://0.0.0.0:9011',
+        uri: 'http://0.0.0.0:9012',
         app: 'Google Chrome'
     };
 
@@ -104,8 +104,9 @@ gulp.task('start:client', ['start:server', 'compass'], function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch(paths.styles, ['compass']);
+    gulp.watch(paths.styles, ['sass']);
     gulp.watch(paths.views.files, ['html']);
+    gulp.watch(paths.views.images, ['images']);
     gulp.watch(paths.scripts, ['lint:scripts']);
 });
 

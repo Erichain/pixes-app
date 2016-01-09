@@ -1,0 +1,27 @@
+.recommend-page {
+    .operation-bar {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        color: $text-bright-color;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .list {
+        margin: 10px;
+
+        &.card {
+            box-shadow: none;
+        }
+
+        .item {
+            height: 176px;
+            margin-bottom: 10px;
+            padding: 0;
+            border: 1px solid $border-light-color;
+            box-shadow: 0 2px 4px $border-light-color;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+    }
+}

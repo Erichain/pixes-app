@@ -1,18 +1,19 @@
 @import "variables";
+
 .start-page {
     resize: vertical;
     background: url("../images/start/start_bg@2x.png") center center no-repeat;
     background-size: contain;
 
-    .title-content {
-        margin-bottom: 80px;
-        -webkit-transform: translateY(50%);
-        -moz-transform: translateY(50%);
-        -ms-transform: translateY(50%);
-        -o-transform: translateY(50%);
-        transform: translateY(50%);
+    .content {
+        .title-content {
+            margin-bottom: 200px;
+        }
+
+        -webkit-transform: translateY(20%);
+        -moz-transform: translateY(20%);
+        -ms-transform: translateY(20%);
+        -o-transform: translateY(20%);
+        transform: translateY(20%);
     }
-}
-.text-light {
-    color: $text-bright-color;
 }

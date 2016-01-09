@@ -28,6 +28,14 @@
                     templateUrl: 'views/start/start.html',
                     controller: 'StartCtrl'
                 })
+
+                /* access router */
+                .state('access', {
+                    url: '/access',
+                    templateUrl: 'views/common/access.html',
+                    controller: 'AccessCtrl'
+                })
+
                 /* tabs' page router */
                 .state('tab', {
                     url: '/tab',
@@ -70,8 +78,6 @@
                         }
                     }
                 });
-
-            $urlRouterProvider.otherwise('/tab/recommend');
 
         }]);
 })( angular.module('Pixes.common') );

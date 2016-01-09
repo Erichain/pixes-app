@@ -1,4 +1,3 @@
-@import "variables";
 @import "mixin";
 
 body {
@@ -43,7 +42,7 @@ $padding-maps:
                 (pl, padding-left),
                 (p, padding);
 
-$padding-sizes: 0, 5, 10, 15, 20, 30;
+$padding-sizes: -10, -5, 0, 5, 10, 15, 20, 30;
 
 @each $size in $padding-sizes {
     @each $key, $value1, $value2 in $padding-maps {
@@ -95,6 +94,10 @@ $font-weight-maps:
 
     &-minor {
         color: $text-minor-color;
+    }
+
+    &-bright {
+        color: $text-bright-color;
     }
 }
 

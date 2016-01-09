@@ -1,5 +1,4 @@
-@import "variables";
-
+/* reset default ionic styles */
 .bar {
     &.bar-royal {
         background: $app-theme-color;
@@ -17,11 +16,6 @@
         &.button-general {
             color: #ffffff;
             background-color: $btn-highlight-bgcolor;
-
-            &:active {
-                color: #ffffff;
-                background-color: $btn-highlight-active-bgcolor;
-            }
         }
 
         &.button-bordered {
@@ -32,6 +26,61 @@
             &:active {
                 color: #ffffff;
                 background-color: rgba(255, 255, 255, 0.2);
+            }
+        }
+    }
+}
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+    border: none;
+
+    &.input-general {
+        border-bottom: 2px solid $border-input-color;
+        @include hovertransition();
+    }
+
+    &.input-highlight {
+        border-bottom: 2px solid $border-highlight-color;
+        @include hovertransition();
+    }
+
+    &:focus {
+        &.input-general {
+            border-bottom: 2px solid $border-highlight-color;
+        }
+
+        &.input-highlight {
+            border-bottom: 2px solid $border-highlight-color;
+        }
+    }
+}
+
+ion-tabs {
+    &.tabs-color-active-positive {
+        .tab-item {
+            i {
+                padding: 6px 0;
+                font-size: 24px;
+            }
+
+            &.activated,
+            &.active,
+            &.tab-item-active {
+                color: $app-theme-color;
             }
         }
     }

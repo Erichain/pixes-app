@@ -14,20 +14,24 @@
             function ( $stateProvider, $urlRouterProvider ) {
 
                 $stateProvider
-                    .state('access', {
-                        url: '/access',
-                        template: '<ui-view/>',
-                        abstract: true
-                    })
+
                     .state('access.login', {
                         url: '/login',
-                        templateUrl: 'views/access/login.html',
-                        controller: 'AccessCtrl'
+                        views: {
+                            'page-login': {
+                                templateUrl: 'views/access/login.html',
+                                controller: 'AccessCtrl'
+                            }
+                        }
                     })
-                    .state('access.reg', {
-                        url: '/reg',
-                        templateUrl: 'views/access/register.html',
-                        controller: 'AccessCtrl'
+                    .state('access.register', {
+                        url: '/register',
+                        views: {
+                            'page-register': {
+                                templateUrl: 'views/access/register.html',
+                                controller: 'AccessCtrl'
+                            }
+                        }
                     })
 
             }]);
