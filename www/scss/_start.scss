@@ -1,4 +1,4 @@
-@import "../common/variables";
+@import "variables";
 .start-page {
     resize: vertical;
     background: url("../images/start/start_bg@2x.png") center center no-repeat;
@@ -14,5 +14,5 @@
     }
 }
 .text-light {
-    color: $font-front-color;
+    color: $text-bright-color;
 }

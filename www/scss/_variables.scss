@@ -1,0 +1,19 @@
+/*App's main color, such as main button's background, border etc.*/
+$app-theme-color: #1dd1ff !important;
+
+$text-general-color: #232323;
+$text-bright-color: #fafafa;
+$text-warning-color: #eb5e18;
+$text-danger-color: #db2c2a;
+$text-disabled-color: #afafaf;
+$text-minor-color: #878787;
+$text-highlight-color: $app-theme-color;
+
+$btn-highlight-bgcolor: $app-theme-color;
+$btn-highlight-active-bgcolor: #1dbdeb;
+$btn-disabled-bgcolor: afafaf;
+$btn-warning-bgcolor: #eb5e18;
+$btn-danger-bgcolor: #db2c2a;
+
+$border-light-color: #eeeeee;
+$border-highlight-color: $app-theme-color;

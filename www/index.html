@@ -5,16 +5,16 @@
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
         <title>Pixes</title>
 
-        <!-- build:css(.tmp) styles/main.css -->
-        <link href="styles/ionic.app.css" rel="stylesheet"  type="text/css"/>
-        <link href="styles/main.css" rel="stylesheet" type="text/css">
+        <!-- build:styles(.) styles/vendor.css -->
+        <!-- bower:styles -->
+        <!-- Animate.styles -->
+        <link rel="stylesheet" href="lib/animate.css/animate.min.css" type="text/css"/>
+        <link rel="stylesheet" href="lib/ionic/css/ionic.min.css">
+        <!-- endbower -->
         <!-- endbuild -->
 
-        <!-- build:css(.) styles/vendor.css -->
-        <!-- bower:css -->
-        <!-- Animate.css -->
-        <link rel="stylesheet" href="lib/animate.css/animate.min.css" type="text/css"/>
-        <!-- endbower -->
+        <!-- build:styles(.tmp) scss/main.css -->
+        <link href="styles/main.css" rel="stylesheet" type="text/css">
         <!-- endbuild -->
 
     </head>
@@ -25,7 +25,7 @@
 
         <ion-nav-view class="animated fadeIn"></ion-nav-view>
 
-        <!-- build:js(.) scripts/vendor.js -->
+        <!-- build:js(.) scripts/lib.js -->
         <!-- bower:js -->
         <script src="lib/jquery/dist/jquery.min.js"></script>
         <script src="lib/ionic/js/ionic.bundle.min.js"></script>

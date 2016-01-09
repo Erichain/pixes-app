@@ -1,0 +1,51 @@
+@import "compass/css3";
+
+@mixin noliststyle() {
+    list-style: none;
+
+    > li {
+        padding: 0;
+    }
+}
+
+@mixin clearfix() {
+    zoom: 1;
+
+    &:after,
+    &:before {
+        display: block;
+        content: '';
+        width: 0;
+        height: 0;
+        clear: both;
+    }
+}
+
+@mixin blockcenter( $hor: true, $ver: true ) {
+    & {
+        position: absolute;
+
+        $x: 0;
+        $y: 0;
+
+        @if $ver {
+            top: 50%;
+            $y: -50%;
+        }
+
+        @if $hor {
+            left: 50%;
+            $x: -50%;
+        }
+
+        @include translate($x, $y);
+    }
+}
+
+@mixin hovertransition ( $t: 0.2s) {
+    -webkit-transition: all $t ease-in-out;
+    -moz-transition: all $t ease-in-out;
+    -ms-transition: all $t ease-in-out;
+    -o-transition: all $t ease-in-out;
+    transition: all $t ease-in-out;
+}
