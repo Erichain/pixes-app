@@ -54,6 +54,9 @@
         },
         "com.ionic.keyboard": {
             "PACKAGE_NAME": "com.ionicframework.pixes434605"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.ionicframework.pixes434605"
         }
     },
     "dependent_plugins": {}

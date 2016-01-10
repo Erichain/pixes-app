@@ -40,8 +40,11 @@
                 defered = $q.defer();
 
             options = angular.merge( {}, default_options, options );
-            options.headers['X-SERVICE'] = options.url;
-            options.url = config.API_ROOT_URL;
+            //options.headers['X-SERVICE'] = options.url;
+
+            //if it's mock mode
+            options.url = config.API_ROOT_URL + options.url;
+            //console.log(options.url);
 
             $http(options)
                 .then(function ( data ) {

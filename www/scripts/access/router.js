@@ -20,7 +20,7 @@
                         views: {
                             'page-login': {
                                 templateUrl: 'views/access/login.html',
-                                controller: 'AccessCtrl'
+                                controller: 'AccessCtrl as access'
                             }
                         }
                     })
@@ -29,7 +29,7 @@
                         views: {
                             'page-register': {
                                 templateUrl: 'views/access/register.html',
-                                controller: 'AccessCtrl'
+                                controller: 'AccessCtrl as access'
                             }
                         }
                     })

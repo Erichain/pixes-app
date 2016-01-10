@@ -1,7 +1,6 @@
 <!-- access page -->
 <!-- Login part -->
 <ion-view view-title="Login">
-    <ion-nav-buttons side="left"></ion-nav-buttons>
     <ion-content scroll="false" class="animated fadeIn login-page">
         <div class="col col-offset-10 col-80">
             <div class="list">
@@ -10,17 +9,17 @@
                     <input class="input-general"
                            type="text"
                            placeholder="Username or Email"
-                           ng-model="user.username">
+                           ng-model="access.login.username">
                 </label>
                 <label class="item item-input">
                     <i class="fa fa-lock"></i>
                     <input class="input-general"
                            type="password"
                            placeholder="Your Password"
-                           ng-model="user.password">
+                           ng-model="access.login.password">
                 </label>
             </div>
-            <button class="button button-block button-general" ng-click="signIn()">Sign In</button>
+            <button class="button button-block button-general" ng-click="access.signIn()" nav-direction="enter">Sign In</button>
         </div>
     </ion-content>
 </ion-view>

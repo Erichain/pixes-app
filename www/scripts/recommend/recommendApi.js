@@ -6,5 +6,9 @@
  * @date 2015-12-05
  */
 (function ( Create ) {
-    Create.constant('recommendApi', {});
+    Create.constant('recommendApi', {
+        recommend: {
+            list: '/recommend/list'
+        }
+    });
 })( angular.module('Pixes.recommend') );
