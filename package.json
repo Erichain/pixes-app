@@ -10,7 +10,6 @@
     "gulp-cssnano": "^2.1.0",
     "gulp-jshint": "^1.11.1",
     "gulp-livereload": "^3.8.1",
-    "gulp-minify-css": "^0.3.0",
     "gulp-open": "^1.0.0",
     "gulp-plumber": "^1.0.1",
     "gulp-rename": "^1.2.0",
