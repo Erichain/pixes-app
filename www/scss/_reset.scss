@@ -3,6 +3,18 @@
     &.bar-royal {
         background: $app-theme-color;
         border-color: $border-light-color;
+
+        .button {
+            font-size: 15px;
+            border: none;
+            background-color: transparent;
+
+            &:active {
+                opacity: 0.8;
+                border: none;
+                box-shadow: none;
+            }
+        }
     }
 }
 
@@ -17,6 +29,11 @@
         &.button-general {
             color: $text-bright-color;
             background-color: $btn-highlight-bgcolor;
+
+            &:active {
+                color: #ffffff;
+                background-color: $btn-highlight-active-bgcolor;
+            }
         }
 
         &.button-bordered {
