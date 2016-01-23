@@ -18,6 +18,7 @@
     }
 }
 
+/* reset button */
 .button {
     font-weight: normal;
     border: none;
@@ -49,6 +50,7 @@
     }
 }
 
+/* reset input */
 textarea,
 input[type="text"],
 input[type="password"],
@@ -87,6 +89,7 @@ input[type="color"] {
     }
 }
 
+/* reset tabs */
 ion-tabs {
     &.tabs-color-active-positive {
         .tab-item {
@@ -100,6 +103,24 @@ ion-tabs {
             &.tab-item-active {
                 color: $app-theme-color;
             }
+        }
+    }
+}
+
+/* reset card */
+.card {
+    margin: 10px;;
+    box-shadow: none;
+
+    .item {
+        border: 1px solid $border-light-color;
+        box-shadow: 0 2px 4px $border-light-color;
+        border-radius: 4px;
+        overflow: hidden;
+
+        &:first-child,
+        &:last-child {
+            border: 1px solid $border-light-color;
         }
     }
 }

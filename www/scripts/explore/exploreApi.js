@@ -5,6 +5,14 @@
  * @author Erichain
  * @date 2015-12-05
  */
-(function ( Create ) {
-    Create.constant('exploreApi', {});
+(function ( Explore ) {
+
+    Explore.constant('ExploreApi', {
+        explore: {
+            list: {
+                people: '/explore/list/people'
+            }
+        }
+    });
+
 })( angular.module('Pixes.explore') );

@@ -1,0 +1,7 @@
+<div class="card animated fadeIn">
+    <div class="item item-avatar mb10" ng-repeat="people in explore.explorePeopleData">
+        <img ng-src="{{ people.avatar_url }}" alt="Avatar">
+        <h2>{{ people.name }}</h2>
+        <p>Followers{{ people.follower_count }}&nbsp;Following{{people.following_count}}&nbsp;Photos{{people.photo_count}}</p>
+    </div>
+</div>

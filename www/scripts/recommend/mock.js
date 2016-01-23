@@ -10,7 +10,7 @@
     Mock.mockjax(Recommend);
 
     Recommend.run([
-        'config', 'recommendApi',
+        'config', 'RecommendApi',
         function ( config, recommendApi ) {
             var root = config.API_ROOT_URL;
 

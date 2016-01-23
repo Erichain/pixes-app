@@ -6,5 +6,7 @@
  * @date 2015-10-30
  */
 (function ( angular ) {
-    angular.module('Pixes.common', [])
+
+    angular.module('Pixes.common', []);
+
 })( angular );

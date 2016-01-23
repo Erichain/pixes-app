@@ -9,7 +9,6 @@
 (function( Common ) {
 
     Common.service('config', config);
-
     config.$inject = [];
 
     function config () {

@@ -6,11 +6,6 @@ body {
     line-height: 1;
     overflow-y: scroll;
     outline: none;
-
-    *::selection {
-        color: #ffffff;
-        background-color: #414141;
-    }
 }
 
 /* basic classes for margin */

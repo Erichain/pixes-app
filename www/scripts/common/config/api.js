@@ -7,8 +7,6 @@
  */
 (function ( Common ) {
 
-    Common.factory('api', api);
-    api.$inject = [];
+    Common.constant('api', {});
 
-    function api () {}
 })( angular.module('Pixes.common') );

@@ -22,6 +22,24 @@
                             }
                         }
                     })
+                    .state('tab.explore.people', {
+                        url: '/people',
+                        views: {
+                            'subTab': {
+                                templateUrl: 'views/explore/people.html',
+                                controller: 'ExploreCtrl as explore'
+                            }
+                        }
+                    })
+                    .state('tab.explore.photo', {
+                        url: '/photo',
+                        views: {
+                            'subTab': {
+                                templateUrl: 'views/explore/photo.html',
+                                controller: 'ExploreCtrl as explore'
+                            }
+                        }
+                    })
             }]);
 
 })( angular.module('Pixes.explore') );

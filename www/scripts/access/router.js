@@ -8,7 +8,6 @@
 (function ( Access ) {
 
     Access
-        .run()
         .config([
             '$stateProvider', '$urlRouterProvider',
             function ( $stateProvider, $urlRouterProvider ) {

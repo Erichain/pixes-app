@@ -5,6 +5,8 @@
  * @author Erichain
  * @date 2015-12-05
  */
-(function ( Create ) {
-    Create.constant('meApi', {});
+(function ( Me ) {
+
+    Me.constant('MeApi', {});
+
 })( angular.module('Pixes.me') );

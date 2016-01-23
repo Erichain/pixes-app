@@ -6,5 +6,7 @@
  * @date 2015-12-05
  */
 (function ( Create ) {
-    Create.constant('createApi', {});
+
+    Create.constant('CreateApi', {});
+
 })( angular.module('Pixes.create') );

@@ -8,9 +8,9 @@
 (function ( Recommend ) {
 
     Recommend.service('RecommendService', RecommendService);
-    RecommendService.$inject = ['RequestService', 'recommendApi'];
+    RecommendService.$inject = ['RequestService', 'RecommendApi'];
 
-    function RecommendService ( RequestService, recommendApi ) {
+    function RecommendService ( RequestService, RecommendApi ) {
         return {
             getPhotosList: getPhotosList
         };
@@ -21,7 +21,7 @@
          * @returns {*|HttpPromise}
          */
         function getPhotosList ( params ) {
-            return RequestService.post(recommendApi.recommend.list, params);
+            return RequestService.post(RecommendApi.recommend.list, params);
         }
     }
 
