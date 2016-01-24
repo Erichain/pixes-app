@@ -94,8 +94,8 @@ ion-tabs {
     &.tabs-color-active-positive {
         .tab-item {
             i {
-                padding: 6px 0;
-                font-size: 24px;
+                padding: 8px 0;
+                font-size: 22px;
             }
 
             &.activated,
@@ -121,6 +121,13 @@ ion-tabs {
         &:first-child,
         &:last-child {
             border: 1px solid $border-light-color;
+        }
+
+        p {
+            color: $text-minor-color;
+            font-size: 0.8em;
+            line-height: 1.6;
+            overflow: visible;
         }
     }
 }

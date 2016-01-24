@@ -3,8 +3,11 @@
         position: absolute;
         bottom: 0;
         left: 0;
-        color: $text-bright-color;
         background-color: rgba(0, 0, 0, 0.4);
+
+        i {
+            color: lighten($text-minor-color, 30%);
+        }
     }
 
     .card {

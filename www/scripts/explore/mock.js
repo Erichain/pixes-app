@@ -20,10 +20,10 @@
                     'name': '@name',
                     'follower_count|20-100': 0,
                     'following_count|10-200': 0,
-                    'photo_count|0-100': 0
+                    'photo_count|0-100': 0,
+                    'status|1': [0, 1]
                 }]
             });
-
         }]);
 
 })( angular.module('Pixes.explore') );

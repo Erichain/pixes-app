@@ -2,6 +2,14 @@
     <div class="item item-avatar mb10" ng-repeat="people in explore.explorePeopleData">
         <img ng-src="{{ people.avatar_url }}" alt="Avatar">
         <h2>{{ people.name }}</h2>
-        <p>Followers{{ people.follower_count }}&nbsp;Following{{people.following_count}}&nbsp;Photos{{people.photo_count}}</p>
+        <p>
+            <i class="fa fa-user m5"></i>{{ people.follower_count }}
+            <i class="fa fa-user m5"></i>{{ people.following_count }}
+            <i class="fa fa-photo m5"></i>{{ people.photo_count }}
+        </p>
+        <button class="button add-to-following">
+            <i class="fa" ng-class="{'fa-plus': people.status === 0, 'fa-check': people.status === 1}"></i>
+            {{ people.status | transfer: 'followOrNot' }}
+        </button>
     </div>
 </div>
