@@ -1,0 +1,30 @@
+<ion-view view-title="Recommend">
+    <ion-content class="recommend-page">
+        <ion-refresher pulling-text="Let go to refresh !"
+                       on-refresh="recommend.getDataByRefresh()"
+                       refreshing-icon="fa fa-spinner fa-spin">
+        </ion-refresher>
+        <div class="card">
+            <div class="item text-center animated fadeIn" ng-repeat="photos in recommend.imgData">
+                <img class="m0" ng-src="{{ photos.src }}" width="355" alt="" ui-sref="tab.recommend_detail({img_id: photos.img_id})">
+                <div class="row text-center operation-bar">
+                    <div class="col col-33">
+                        <a href="">
+                            <i class="fa fa-star-o"></i>
+                        </a>
+                    </div>
+                    <div class="col col-33">
+                        <a href="">
+                            <i class="fa fa-comment-o"></i>
+                        </a>
+                    </div>
+                    <div class="col col-33">
+                        <a href="">
+                            <i class="fa fa-thumbs-o-up"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

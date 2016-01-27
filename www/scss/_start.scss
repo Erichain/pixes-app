@@ -1,0 +1,66 @@
+@import "variables";
+
+.start-page {
+    .slider-pager {
+        .slider-pager-page {
+            color: $text-bright-color;
+        }
+    }
+
+    .slide-item {
+        width: 100vw;
+        height: 100vh;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+
+        .intro-content {
+            padding-top: 15px;
+            background-color: rgba(0, 0, 0, 0.4);
+            -webkit-transform: translateY(500px);
+            -moz-transform: translateY(500px);
+            -ms-transform: translateY(500px);
+            -o-transform: translateY(500px);
+            transform: translateY(500px);
+        }
+
+        .entry {
+            -webkit-transform: translateY(35%);
+            -moz-transform: translateY(35%);
+            -ms-transform: translateY(35%);
+            -o-transform: translateY(35%);
+            transform: translateY(35%);
+
+            .logo-content {
+                margin-bottom: 200px;
+
+                p {
+                    font-size: 5em;
+                }
+            }
+
+            a {
+                display: block;
+                text-decoration: none;
+
+                &:active {
+                    color: $text-minor-color;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        &.slide1 {
+            background: url("../images/start/start1.png") center center no-repeat;
+            background-size: contain;
+        }
+
+        &.slide2 {
+            background: url("../images/start/start2.png") center center no-repeat;
+            background-size: contain;
+        }
+
+        &.slide3 {
+            background: url("../images/start/start3.png") center center no-repeat;
+            background-size: contain;
+        }
+    }
+}

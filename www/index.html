@@ -1,31 +1,104 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <title></title>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Pixes</title>
 
+        <!-- build:styles(.) styles/vendor.css -->
+        <!-- bower:styles -->
+        <!-- Animate.styles -->
+        <link rel="stylesheet" href="lib/animate.css/animate.min.css" type="text/css"/>
+        <link rel="stylesheet" href="lib/ionic/css/ionic.min.css">
+        <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+        <!-- endbower -->
+        <!-- endbuild -->
 
-    <!-- compiled css output -->
-    <link href="css/ionic.app.css" rel="stylesheet">
+        <!-- build:styles(.tmp) scss/main.css -->
+        <link href="styles/main.css" rel="stylesheet" type="text/css">
+        <!-- endbuild -->
 
-    <!-- ionic/angularjs js -->
-    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    </head>
+    <body ng-app="Pixes">
+        <ion-nav-bar class="bar-royal"></ion-nav-bar>
 
-    <!-- cordova script (this will be a 404 during development) -->
-    <script src="cordova.js"></script>
+        <ion-nav-view class="animated fadeIn"></ion-nav-view>
 
-    <!-- your app's js -->
-    <script src="js/app.js"></script>
-  </head>
-  <body ng-app="starter">
+        <!-- build:js(.) scripts/lib.js -->
+        <!-- bower:js -->
+        <script src="lib/jquery/dist/jquery.min.js"></script>
+        <script src="lib/ionic/js/ionic.bundle.min.js"></script>
+        <script src="lib/mockjs/dist/mock.js"></script>
+        <!-- cordova script (this will be a 404 during development) -->
+        <script src="cordova.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
 
-    <ion-pane>
-      <ion-header-bar class="bar-stable">
-        <h1 class="title">Ionic Blank Starter</h1>
-      </ion-header-bar>
-      <ion-content>
-      </ion-content>
-    </ion-pane>
-  </body>
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+
+        <!-- plugins -->
+        <script src="plugins/mock.angular.js"></script>
+        <!-- endplugins -->
+
+        <!-- common -->
+        <script src="scripts/common/main.js"></script>
+        <script src="scripts/common/config/config.js"></script>
+        <script src="scripts/common/config/api.js"></script>
+        <script src="scripts/common/config/router.js"></script>
+
+        <script src="scripts/common/service/requestService.js"></script>
+
+        <script src="scripts/common/filter/transfer.js"></script>
+        <!-- endcommon -->
+
+        <!-- start -->
+        <script src="scripts/start/main.js"></script>
+        <script src="scripts/start/startCtrl.js"></script>
+        <!-- endstart -->
+
+        <!-- access -->
+        <script src="scripts/access/main.js"></script>
+        <script src="scripts/access/router.js"></script>
+        <script src="scripts/access/accessService.js"></script>
+        <script src="scripts/access/accessCtrl.js"></script>
+        <!-- endaccess -->
+
+        <!-- recommand -->
+        <script src="scripts/recommend/main.js"></script>
+        <script src="scripts/recommend/router.js"></script>
+        <script src="scripts/recommend/recommendApi.js"></script>
+        <script src="scripts/recommend/recommendService.js"></script>
+        <script src="scripts/recommend/recommendCtrl.js"></script>
+        <!-- endrecommand -->
+
+        <!-- me -->
+        <script src="scripts/me/main.js"></script>
+        <script src="scripts/me/router.js"></script>
+        <script src="scripts/me/meApi.js"></script>
+        <script src="scripts/me/meCtrl.js"></script>
+        <!-- endme -->
+
+        <!-- create -->
+        <script src="scripts/create/main.js"></script>
+        <script src="scripts/create/router.js"></script>
+        <script src="scripts/create/createApi.js"></script>
+        <script src="scripts/create/createCtrl.js"></script>
+        <!-- endcreate -->
+
+        <!-- explore -->
+        <script src="scripts/explore/main.js"></script>
+        <script src="scripts/explore/router.js"></script>
+        <script src="scripts/explore/exploreService.js"></script>
+        <script src="scripts/explore/exploreApi.js"></script>
+        <script src="scripts/explore/exploreCtrl.js"></script>
+        <!-- endexplore -->
+
+        <!-- mock -->
+        <script src="scripts/recommend/mock.js"></script>
+        <script src="scripts/explore/mock.js"></script>
+        <!-- endmock -->
+
+        <!-- endbuild -->
+    </body>
 </html>
