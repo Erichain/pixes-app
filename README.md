@@ -2,11 +2,11 @@
 An application built with Ionic and Angular
 
 ## Install
-`bower install && npm install`
-`ionic platform add ios`
-`ionic build ios`
+`bower install && npm install` <br/>
+`ionic platform add ios` <br/>
+`ionic build ios` <br/>
 
-*If you haven't install ionic and cordova, then `npm install -g cordova ionic`*
+**If you haven't install ionic and cordova, then `npm install -g cordova ionic`**
 
 ## Run
 Use `gulp serve` or `ionic serve` to run with a browser.
