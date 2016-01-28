@@ -1,4 +1,7 @@
 # Pixes
+
+![](https://github.com/Erichain/Pixes/blob/master/www/images/pixes-main.png)
+
 An application built with Ionic and Angular
 
 ## Install
