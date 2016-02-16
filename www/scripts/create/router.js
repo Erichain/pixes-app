@@ -5,12 +5,12 @@
  * @author Erichain
  * @date 2016-01-10
  */
-(function ( Create ) {
+(function( Create ) {
 
     Create
         .config([
             '$stateProvider', '$urlRouterProvider',
-            function ( $stateProvider, $urlRouterProvider ) {
+            function( $stateProvider, $urlRouterProvider ) {
 
                 $stateProvider
                     .state('tab.create', {

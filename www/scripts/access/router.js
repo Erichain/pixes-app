@@ -5,15 +5,14 @@
  * @author Erichain
  * @date 2016-01-04
  */
-(function ( Access ) {
+(function( Access ) {
 
     Access
         .config([
             '$stateProvider', '$urlRouterProvider',
-            function ( $stateProvider, $urlRouterProvider ) {
+            function( $stateProvider, $urlRouterProvider ) {
 
                 $stateProvider
-
                     .state('access.login', {
                         url: '/login',
                         views: {

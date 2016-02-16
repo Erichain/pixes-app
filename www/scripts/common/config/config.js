@@ -11,7 +11,7 @@
     Common.service('config', config);
     config.$inject = [];
 
-    function config () {
+    function config() {
         return {
             API_ROOT_URL: 'http://api.pixes.me/json'
         };

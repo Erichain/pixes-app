@@ -5,13 +5,13 @@
  * @author Erichain
  * @date 2015-11-14
  */
-(function ( Common ) {
+(function( Common ) {
 
     Common.service('RequestService', RequestService);
 
     RequestService.$inject = ['$http', '$q', 'config'];
 
-    function RequestService ( $http, $q, config ) {
+    function RequestService( $http, $q, config ) {
         var service =  {
             ajax: ajax,
             get: get,
@@ -28,7 +28,7 @@
          * @param {object} options
          * @returns {*}
          */
-        function ajax ( options ) {
+        function ajax( options ) {
             var default_options = {
                     method: 'POST',
                     url: '',
@@ -47,9 +47,9 @@
             //console.log(options.url);
 
             $http(options)
-                .then(function ( data ) {
+                .then(function( data ) {
                     defered.resolve(data.data);
-                }, function ( reason ) {
+                }, function( reason ) {
                     defered.reject(reason);
                 });
 
@@ -68,7 +68,7 @@
          * @returns {*}
          * @private
          */
-        function _request ( method, url, data, config ) {
+        function _request( method, url, data, config ) {
             var options = angular.merge( {}, config || {} );
             options.method = method;
             options.url = url;
@@ -85,7 +85,7 @@
          * @param config
          * @returns {*}
          */
-        function get ( url, data, config ) {
+        function get( url, data, config ) {
             return _request('GET', url, data, config)
         }
 
@@ -97,7 +97,7 @@
          * @param config
          * @returns {*}
          */
-        function post ( url, data, config ) {
+        function post( url, data, config ) {
             return _request('POST', url, data, config);
         }
     }

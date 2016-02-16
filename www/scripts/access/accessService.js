@@ -5,13 +5,13 @@
  * @author Erichain
  * @date 2015-11-14
  */
-(function ( Access ) {
+(function( Access ) {
 
     Access.service('AccessService', AccessService);
 
     AccessService.$inject = ['RequestService', 'api'];
 
-    function AccessService ( RequestService, api ) {
+    function AccessService( RequestService, api ) {
         return {
             signIn: signIn,
             signUp: signUp,
@@ -24,7 +24,7 @@
          * @param params
          * @returns {*}
          */
-        function signIn ( params ) {
+        function signIn( params ) {
             return RequestService.post( api, params );
         }
 
@@ -34,7 +34,7 @@
          * @param params
          * @returns {*}
          */
-        function signUp ( params ) {
+        function signUp( params ) {
             return RequestService.post( api, params );
         }
 
@@ -44,7 +44,7 @@
          * @param params
          * @returns {*}
          */
-        function resetPassword ( params ) {
+        function resetPassword( params ) {
             return RequestService.post( api, params );
         }
     }

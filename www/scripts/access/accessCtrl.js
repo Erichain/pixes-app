@@ -6,12 +6,12 @@
  * @author Erichain
  * @date 2015-10-25
  */
-(function ( Access ) {
+(function( Access ) {
 
     Access.controller('AccessCtrl', AccessCtrl);
     AccessCtrl.$inject = ['$scope', '$location', '$timeout', '$ionicLoading'];
 
-    function AccessCtrl ( $scope, $location, $timeout, $ionicLoading ) {
+    function AccessCtrl( $scope, $location, $timeout, $ionicLoading ) {
         var vm = this;
 
         vm.login = {
@@ -19,11 +19,11 @@
             password: ''
         };
 
-        vm.signIn = function () {
+        vm.signIn = function() {
             signIn();
         };
 
-        vm.signUp = function () {
+        vm.signUp = function() {
             signUp();
         };
 
@@ -35,10 +35,10 @@
          */
 
         /* signg in */
-        function signIn () {
+        function signIn() {
             if ( !vm.login.username || !vm.login.password ) {
                 vm.isEmpty = true;
-                $timeout(function () {
+                $timeout(function() {
                     vm.isEmpty = false;
                 }, 1000);
                 return;
@@ -48,7 +48,7 @@
                 $ionicLoading.show({
                     template: 'Loading'
                 });
-                $timeout(function () {
+                $timeout(function() {
                     $ionicLoading.hide();
                     $location.path('/tab/recommend/list');
                 }, 1000);
@@ -56,7 +56,7 @@
         }
 
         /* sign up */
-        function signUp () {}
+        function signUp() {}
 
     }
 

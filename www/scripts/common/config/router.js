@@ -5,15 +5,15 @@
  * @author Erichain
  * @date 2015-10-25
  */
-(function ( Common ) {
+(function( Common ) {
     Common.run([
         '$rootScope', '$state', '$stateParams', '$ionicPlatform',
-        function ( $rootScope, $state, $stateParams, $ionicPlatform ) {
+        function( $rootScope, $state, $stateParams, $ionicPlatform ) {
 
             $rootScope.$state = $state;
             $rootScope.$stateParams = $stateParams;
 
-            $ionicPlatform.ready(function () {
+            $ionicPlatform.ready(function() {
                 if ( window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard ) {
                     cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
                     cordova.plugins.Keyboard.disableScroll(true);
@@ -25,7 +25,7 @@
             });
 
         }])
-        .config(['$stateProvider', '$urlRouterProvider', function ( $stateProvider, $urlRouterProvider ) {
+        .config(['$stateProvider', '$urlRouterProvider', function( $stateProvider, $urlRouterProvider ) {
 
             $urlRouterProvider.when('', '/start');
 

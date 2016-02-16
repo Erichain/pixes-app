@@ -6,12 +6,12 @@
  * @author Erichain
  * @date 2015-10-25
  */
-(function ( create ) {
+(function( create ) {
 
     create.controller('CreateCtrl', CreateCtrl);
     CreateCtrl.$inject = ['$scope'];
 
-    function CreateCtrl ( $scope ) {
+    function CreateCtrl( $scope ) {
 
     }
 
