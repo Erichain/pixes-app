@@ -9,10 +9,18 @@
 (function ( create ) {
 
     create.controller('CreateCtrl', CreateCtrl);
-    CreateCtrl.$inject = ['$scope'];
+    CreateCtrl.$inject = ['CameraService'];
 
-    function CreateCtrl( $scope ) {
+    function CreateCtrl( CameraService ) {
+        var vm = this;
 
+        vm.openPhotoLibrary = function () {
+            openPhotoLibrary();
+        };
+
+        function openPhotoLibrary() {
+            CameraService.getPicture().then(function ( imgURL ) {}, function () {})
+        }
     }
 
 })( angular.module('Pixes.create') );

@@ -24,6 +24,9 @@
         },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.ionicframework.pixes434605"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.ionicframework.pixes434605"
         }
     },
     "dependent_plugins": {}

@@ -110,11 +110,10 @@ gulp.task('watch', function () {
     gulp.watch(paths.scripts, ['lint:scripts']);
 });
 
-gulp.task('serve', function ( cb ) {
+gulp.task('serve', ['start:client'], function ( cb ) {
     runSequence(
         'clean:css',
         ['lint:scripts'],
-        ['start:client'],
         'watch', cb)
 });
 

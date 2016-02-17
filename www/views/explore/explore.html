@@ -1,16 +1,16 @@
 <ion-view view-title="Explore">
-    <ion-content class="padding">
-            <div class="button-bar">
-                <button class="button"
-                        ui-sref="tab.explore.people"
-                        ui-sref-active="active"
-                        ng-class="{active: $state.includes('*.people')}">People</button>
-                <button class="button"
-                        ui-sref="tab.explore.photo"
-                        ui-sref-active="active"
-                        ng-class="{active: $state.includes('*.photo')}">Photos</button>
-            </div>
+    <ion-content class="padding explore-page">
+        <div class="button-bar">
+            <button class="button"
+                    ui-sref="tab.explore.people"
+                    ui-sref-active="active"
+                    ng-class="{active: $state.includes('*.people')}">People</button>
+            <button class="button"
+                    ui-sref="tab.explore.photo"
+                    ui-sref-active="active"
+                    ng-class="{active: $state.includes('*.photo')}">Photos</button>
+        </div>
 
-            <div ui-view="subTab" class="mt20"></div>
+        <div ui-view="subTab" class="mt20"></div>
     </ion-content>
 </ion-view>
