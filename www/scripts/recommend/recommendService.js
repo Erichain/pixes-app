@@ -5,7 +5,7 @@
  * @author Erichain
  * @date 2016-01-10
  */
-(function( Recommend ) {
+(function ( Recommend ) {
 
     Recommend.service('RecommendService', RecommendService);
     RecommendService.$inject = ['RequestService', 'RecommendApi'];
@@ -21,7 +21,7 @@
          * @returns {*|HttpPromise}
          */
         function getPhotosList( params ) {
-            return RequestService.post(RecommendApi.recommend.list, params);
+            return RequestService.post( RecommendApi.recommend.list, params );
         }
     }
 

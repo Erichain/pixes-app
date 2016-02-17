@@ -5,7 +5,7 @@
  * @author Erichain
  * @date 2015-12-05
  */
-(function( Create ) {
+(function ( Create ) {
 
     Create.constant('CreateApi', {});
 

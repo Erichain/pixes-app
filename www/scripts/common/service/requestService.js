@@ -5,10 +5,9 @@
  * @author Erichain
  * @date 2015-11-14
  */
-(function( Common ) {
+(function ( Common ) {
 
     Common.service('RequestService', RequestService);
-
     RequestService.$inject = ['$http', '$q', 'config'];
 
     function RequestService( $http, $q, config ) {
@@ -19,7 +18,6 @@
         };
 
         return service;
-
 
         /**
          * Ajax method
@@ -47,15 +45,14 @@
             //console.log(options.url);
 
             $http(options)
-                .then(function( data ) {
+                .then(function ( data ) {
                     defered.resolve(data.data);
-                }, function( reason ) {
+                }, function ( reason ) {
                     defered.reject(reason);
                 });
 
             return defered.promise;
         }
-
 
         /**
          * base function of get and post
@@ -77,7 +74,6 @@
             return service.ajax(options);
         }
 
-
         /**
          * @function get
          * @param url
@@ -88,7 +84,6 @@
         function get( url, data, config ) {
             return _request('GET', url, data, config)
         }
-
 
         /**
          * @function post

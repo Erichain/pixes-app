@@ -6,7 +6,7 @@
  * @author Erichain
  * @date 2016-01-04
  */
-(function( Start ) {
+(function ( Start ) {
 
     Start.controller('StartCtrl', StartCtrl);
     StartCtrl.$inject = [];

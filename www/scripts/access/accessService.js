@@ -5,10 +5,9 @@
  * @author Erichain
  * @date 2015-11-14
  */
-(function( Access ) {
+(function ( Access ) {
 
     Access.service('AccessService', AccessService);
-
     AccessService.$inject = ['RequestService', 'api'];
 
     function AccessService( RequestService, api ) {

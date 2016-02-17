@@ -5,12 +5,12 @@
  * @author Erichain
  * @date 2016-01-10
  */
-(function( Explore ) {
+(function ( Explore ) {
 
     Explore
         .config([
             '$stateProvider', '$urlRouterProvider',
-            function( $stateProvider, $urlRouterProvider ) {
+            function ( $stateProvider, $urlRouterProvider ) {
 
                 $stateProvider
                     .state('tab.explore', {

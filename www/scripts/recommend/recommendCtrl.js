@@ -6,7 +6,7 @@
  * @author Erichain
  * @date 2015-10-25
  */
-(function( recommend ) {
+(function ( recommend ) {
 
     recommend.controller('RecommendCtrl', RecommendCtrl);
     RecommendCtrl.$inject = ['$scope', '$timeout', 'RecommendService'];
@@ -31,7 +31,7 @@
         function getPhotosList() {
             var reqParams = {};
 
-            RecommendService.getPhotosList( reqParams ).then(function( data ) {
+            RecommendService.getPhotosList( reqParams ).then(function ( data ) {
                 vm.imgData = data.result;
 
             }, function ( data ) {
@@ -40,9 +40,9 @@
         }
 
         /* refreshing by pulling down */
-        function getDataByRefresh () {
+        function getDataByRefresh() {
             console.log('refreshed!');
-            $timeout(function() {
+            $timeout(function () {
                 $scope.$broadcast('scroll.refreshComplete');
             }, 2000);
         }

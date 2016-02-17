@@ -6,7 +6,7 @@
  * @author Erichain
  * @date 2015-10-25
  */
-(function( Explore ) {
+(function ( Explore ) {
 
     Explore.controller('ExploreCtrl', ExploreCtrl);
     ExploreCtrl.$inject = ['ExploreService'];
@@ -19,7 +19,7 @@
         function getPeopleList() {
             var reqContent = {};
 
-            ExploreService.getPeopleList( reqContent ).then(function( data ) {
+            ExploreService.getPeopleList( reqContent ).then(function ( data ) {
                 vm.explorePeopleData = data.result;
             });
         }

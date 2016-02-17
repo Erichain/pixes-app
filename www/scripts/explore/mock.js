@@ -5,13 +5,13 @@
  * @author Erichain
  * @date 2016-01-23
  */
-(function( Explore ) {
+(function ( Explore ) {
 
     Mock.mockjax(Explore);
 
     Explore.run([
         'config', 'ExploreApi',
-        function( config, ExploreApi ) {
+        function ( config, ExploreApi ) {
             var root = config.API_ROOT_URL;
 
             Mock.mock(root + ExploreApi.explore.list.people, {

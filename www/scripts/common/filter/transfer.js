@@ -5,7 +5,7 @@
  * @author Erichain
  * @date 2016-01-24
  */
-(function( Common ) {
+(function ( Common ) {
 
     Common.filter('transfer', transfer);
     transfer.$inject = [];
@@ -22,7 +22,7 @@
          * @param index data received from back
          * @param dictName
          */
-        return function( index, dictName ) {
+        return function ( index, dictName ) {
             if ( dictName && typeof dictName === 'string' ) {
                 return DICT[dictName][index];
             }

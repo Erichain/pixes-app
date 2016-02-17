@@ -5,7 +5,7 @@
  * @author Erichain
  * @date 2016-01-23
  */
-(function( Explore ) {
+(function ( Explore ) {
 
     Explore.service('ExploreService', ExploreService);
     ExploreService.$inject = ['RequestService', 'ExploreApi'];
@@ -21,7 +21,7 @@
          * @returns {*|HttpPromise}
          */
         function getPeopleList( params ) {
-            return RequestService.post(ExploreApi.explore.list.people, params);
+            return RequestService.post( ExploreApi.explore.list.people, params );
         }
     }
 

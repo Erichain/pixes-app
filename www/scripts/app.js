@@ -4,7 +4,7 @@
  * @author Erichain
  * @date 2015-10-25
  */
-(function( angular ) {
+(function ( angular ) {
     angular.module('Pixes', [
         'ionic',
         'Pixes.start',

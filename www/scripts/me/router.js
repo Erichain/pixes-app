@@ -5,12 +5,12 @@
  * @author Erichain
  * @date 2016-01-10
  */
-(function( Me ) {
+(function ( Me ) {
 
     Me
         .config([
             '$stateProvider', '$urlRouterProvider',
-            function( $stateProvider, $urlRouterProvider ) {
+            function ( $stateProvider, $urlRouterProvider ) {
 
                 $stateProvider
                     .state('tab.me', {

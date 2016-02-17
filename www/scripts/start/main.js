@@ -5,7 +5,7 @@
  * @author Erichain
  * @date 2016-01-04
  */
-(function( angular ) {
+(function ( angular ) {
 
     angular.module('Pixes.start', []);
 

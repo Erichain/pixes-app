@@ -6,7 +6,7 @@
  * @date 2015-10-31
  */
 
-(function( Common ) {
+(function ( Common ) {
 
     Common.service('config', config);
     config.$inject = [];
