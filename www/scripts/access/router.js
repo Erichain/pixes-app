@@ -16,7 +16,7 @@
                     .state('access.login', {
                         url: '/login',
                         views: {
-                            'page-login': {
+                            'access-page': {
                                 templateUrl: 'views/access/login.html',
                                 controller: 'AccessCtrl as access'
                             }
@@ -25,13 +25,12 @@
                     .state('access.register', {
                         url: '/register',
                         views: {
-                            'page-register': {
+                            'access-page': {
                                 templateUrl: 'views/access/register.html',
                                 controller: 'AccessCtrl as access'
                             }
                         }
                     })
-
             }]);
 
 })( angular.module('Pixes.access') );
