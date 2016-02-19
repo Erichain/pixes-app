@@ -120,6 +120,7 @@ ion-tabs {
 
         &:first-child,
         &:last-child {
+            border-radius: 4px;
             border: 1px solid $border-light-color;
         }
 
