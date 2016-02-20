@@ -1,6 +1,5 @@
 /**
- * app's modules
- *
+ * @description app's modules
  * @author Erichain
  * @date 2015-10-25
  */

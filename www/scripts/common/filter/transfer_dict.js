@@ -1,16 +1,16 @@
 /**
+ * @description
  * transfer filter used to transfer status code to text
- *
  * @module Pixes.common
  * @author Erichain
  * @date 2016-01-24
  */
 (function ( Common ) {
 
-    Common.filter('transfer', transfer);
-    transfer.$inject = [];
+    Common.filter('transfer_dict', transfer_dict);
+    transfer_dict.$inject = [];
 
-    function transfer() {
+    function transfer_dict() {
         var DICT = {
             'followOrNot': {
                 '0': 'Follow',

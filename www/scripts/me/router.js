@@ -1,6 +1,5 @@
 /**
- * router for me
- *
+ * @description router for me
  * @module Pixes.me
  * @author Erichain
  * @date 2016-01-10

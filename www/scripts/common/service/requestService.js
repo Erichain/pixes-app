@@ -1,6 +1,5 @@
 /**
- * Request Service
- *
+ * @description Request Service
  * @module Pixes.common
  * @author Erichain
  * @date 2015-11-14

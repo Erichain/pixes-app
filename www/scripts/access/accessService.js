@@ -1,6 +1,5 @@
 /**
- * Access Service
- *
+ * @description Access Service
  * @module Pixes.access
  * @author Erichain
  * @date 2015-11-14

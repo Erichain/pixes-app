@@ -1,6 +1,5 @@
 /**
- * global config
- *
+ * @description global config
  * @module Pixes.common
  * @author Erichain
  * @date 2015-10-31

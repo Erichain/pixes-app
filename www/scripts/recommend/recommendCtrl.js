@@ -1,6 +1,5 @@
 /**
- * recommend page's controller
- *
+ * @description recommend page's controller
  * @controller RecommendCtrl
  * @module Pixes.recommend
  * @author Erichain

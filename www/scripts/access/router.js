@@ -1,6 +1,5 @@
 /**
- * router for access
- *
+ * @description router for access
  * @module Pixes.access
  * @author Erichain
  * @date 2016-01-04

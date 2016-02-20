@@ -1,6 +1,5 @@
 /**
- * Common directive/filter/service
- *
+ * @description Common directive/filter/service
  * @module Pixes.common
  * @author Erichain
  * @date 2015-10-30

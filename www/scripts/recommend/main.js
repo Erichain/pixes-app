@@ -1,6 +1,5 @@
 /**
- * recommend
- *
+ * @description recommend
  * @module Pixes.recommend
  * @author Erichain
  * @date 2015-10-30

@@ -1,6 +1,5 @@
 /**
- * login page's controller
- *
+ * @description login page's controller
  * @controller AccessCtrl
  * @module Pixes.access
  * @author Erichain

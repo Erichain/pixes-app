@@ -1,6 +1,5 @@
 /**
- * module extern for start page
- *
+ * @description module extern for start page
  * @module Pixes.start
  * @author Erichain
  * @date 2016-01-04

@@ -9,7 +9,7 @@
         </p>
         <button class="button add-to-following">
             <i class="fa" ng-class="{'fa-plus': people.status === 0, 'fa-check': people.status === 1}"></i>
-            {{ people.status | transfer: 'followOrNot' }}
+            {{ people.status | transfer_dict: 'followOrNot' }}
         </button>
     </div>
 </div>

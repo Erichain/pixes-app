@@ -1,6 +1,5 @@
 /**
- * Me module's api
- *
+ * @description Me module's api
  * @module Pixes.me
  * @author Erichain
  * @date 2015-12-05

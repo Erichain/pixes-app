@@ -1,7 +1,16 @@
 .me-page {
     .user-info {
-        width: 100%;
         height: 250px;
         background: $page-me-bgcolor;
+
+        .user-avatar {
+            width: 75px;
+            height: 75px;
+            border-radius: 100%;
+        }
+
+        p {
+            color: $text-bright-color;
+        }
     }
 }

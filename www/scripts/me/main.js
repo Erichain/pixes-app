@@ -1,6 +1,5 @@
 /**
- * me
- *
+ * @description me
  * @module Pixes.me
  * @author Erichain
  * @date 2015-10-30

@@ -1,6 +1,5 @@
 /**
- * me page's controller
- *
+ * @description me page's controller
  * @controller MeCtrl
  * @module Pixes.me
  * @author Erichain

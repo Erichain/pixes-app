@@ -1,6 +1,5 @@
 /**
- * router for Pixes
- *
+ * @description router for Pixes
  * @module Pixes.common
  * @author Erichain
  * @date 2015-10-25

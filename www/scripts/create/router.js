@@ -1,6 +1,5 @@
 /**
- * router for create
- *
+ * @description router for create
  * @module Pixes.create
  * @author Erichain
  * @date 2016-01-10

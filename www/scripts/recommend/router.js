@@ -1,6 +1,5 @@
 /**
- * router for recommend
- *
+ * @description router for recommend
  * @module Pixes.recommend
  * @author Erichain
  * @date 2016-01-10

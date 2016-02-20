@@ -1,6 +1,5 @@
 /**
- * explore page's controller
- *
+ * @description explore page's controller
  * @controller ExploreCtrl
  * @module Pixes.explore
  * @author Erichain

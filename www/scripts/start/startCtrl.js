@@ -1,6 +1,5 @@
 /**
- * controller for start page
- *
+ * @description controller for start page
  * @module Pixes.start
  * @controller StartCtrl
  * @author Erichain

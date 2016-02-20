@@ -1,6 +1,5 @@
 /**
- * Recommend module's api
- *
+ * @description Recommend module's api
  * @module Pixes.recommend
  * @author Erichain
  * @date 2015-12-05

@@ -1,6 +1,5 @@
 /**
- * service for camera
- *
+ * @description service for camera
  * @module Pixes.common
  * @author Erichain
  * @date 2016-02-17
@@ -19,6 +18,8 @@
             var defer = $q.defer();
 
             if ( window.cordova ) {
+
+                // invoke getPicture() function to invoke the camera device
                 navigator.camera.getPicture(function ( result ) {
                     defer.resolve(result);
                 }, function ( err ) {

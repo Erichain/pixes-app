@@ -1,6 +1,5 @@
 /**
- * create page's controller
- *
+ * @description create page's controller
  * @controller CreateCtrl
  * @module Pixes.create
  * @author Erichain
