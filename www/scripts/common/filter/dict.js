@@ -7,10 +7,10 @@
  */
 (function ( Common ) {
 
-    Common.filter('transfer_dict', transfer_dict);
-    transfer_dict.$inject = [];
+    Common.filter('dict', dict);
+    dict.$inject = [];
 
-    function transfer_dict() {
+    function dict() {
         var DICT = {
             'followOrNot': {
                 '0': 'Follow',

@@ -21,6 +21,8 @@
                             }
                         }
                     })
+
+                    /* explore-people */
                     .state('tab.explore.people', {
                         url: '/people',
                         views: {
@@ -30,6 +32,8 @@
                             }
                         }
                     })
+
+                    /* explore-photo */
                     .state('tab.explore.photo', {
                         url: '/photo',
                         views: {

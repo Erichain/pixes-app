@@ -12,6 +12,8 @@
             function ( $stateProvider, $urlRouterProvider ) {
 
                 $stateProvider
+
+                    /* recommend-list */
                     .state('tab.recommend_list', {
                         url: '/recommend/list',
                         views: {
@@ -21,6 +23,8 @@
                             }
                         }
                     })
+
+                    /* recommend-detail */
                     .state('tab.recommend_detail', {
                         url: '/recommend/detail?img_id',
                         views: {
