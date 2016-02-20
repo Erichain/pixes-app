@@ -8,17 +8,64 @@
 (function ( create ) {
 
     create.controller('CreateCtrl', CreateCtrl);
-    CreateCtrl.$inject = ['CameraService'];
+    CreateCtrl.$inject = ['$ionicActionSheet', 'PhotoService'];
 
-    function CreateCtrl( CameraService ) {
+    function CreateCtrl( $ionicActionSheet, PhotoService ) {
         var vm = this;
 
-        vm.openPhotoLibrary = function () {
-            openPhotoLibrary();
+        vm.choosePhotoFromGalleryOrCamera = function () {
+            choosePhotoFromGalleryOrCamera();
         };
 
-        function openPhotoLibrary() {
-            CameraService.getPicture().then(function ( imgURL ) {}, function () {})
+        // open the action sheet for user
+        // to choose use photo from gallery or taking a photo
+        function choosePhotoFromGalleryOrCamera() {
+            $ionicActionSheet.show({
+                buttons: [{
+                    text: 'From Gallery'
+                }, {
+                    text: 'Take A Photo'
+                }],
+                titleText: 'Create A Creation',
+                cancelText: 'Cancel',
+                cancel: function () {},
+                buttonClicked: function ( index ) {
+                    var choices = {
+                            '0': choosePhotoFromGallery,
+                            '1': takePhoto
+                        },
+                        options = {};
+
+                    return choices[index]();
+                }
+            });
+        }
+
+        // open device's photo gallery
+        function choosePhotoFromGallery() {
+            document.addEventListener('deviceready', function () {
+                var options = {
+                    quality: 100,
+                    destinationType: Camera.DestinationType.FILE_URI,
+                    sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
+                    allowEdit: true,
+                    encodingType: Camera.EncodingType.JPEG,
+                    popoverOptions: CameraPopoverOptions,
+                    correctOrientation: true,
+                    saveToPhotoAlbum: false
+                };
+
+                PhotoService.getPicture( options ).then(function ( imgData ) {}, function ( error ) {});
+            });
+
+            return true;
+        }
+
+        // open device's camera to take photo
+        function takePhoto() {
+            PhotoService.getPicture().then(function ( imgData ) {}, function ( error ) {});
+
+            return true;
         }
     }
 

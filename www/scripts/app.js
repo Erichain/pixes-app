@@ -6,6 +6,7 @@
 (function ( angular ) {
     angular.module('Pixes', [
         'ionic',
+        'ngCordova',
         'Pixes.start',
         'Pixes.access',
         'Pixes.recommend',
