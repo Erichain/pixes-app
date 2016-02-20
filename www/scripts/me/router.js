@@ -48,7 +48,10 @@
                     .state('tab.me_photo', {
                         url: '/photo',
                         views: {
-                            'tab-me': {}
+                            'tab-me': {
+                                templateUrl: 'views/me/me-photo.html',
+                                controller: ''
+                            }
                         }
                     })
 
@@ -56,7 +59,10 @@
                     .state('tab.me_creations', {
                         url: '/creations',
                         views: {
-                            'tab-me': {}
+                            'tab-me': {
+                                templateUrl: 'views/me/me-creations.html',
+                                controller: ''
+                            }
                         }
                     })
 
@@ -64,7 +70,10 @@
                     .state('tab.me_favorites', {
                         url: '/favorites',
                         views: {
-                            'tab-me': {}
+                            'tab-me': {
+                                templateUrl: 'views/me/me-favorites.html',
+                                controller: ''
+                            }
                         }
                     })
 
@@ -72,7 +81,10 @@
                     .state('tab.me_bought', {
                         url: '/bought',
                         views: {
-                            'tab-me': {}
+                            'tab-me': {
+                                templateUrl: 'views/me/me-bought.html',
+                                controller: ''
+                            }
                         }
                     })
 
@@ -80,9 +92,27 @@
                     .state('tab.me_settings', {
                         url: '/settings',
                         views: {
-                            'tab-me': {}
+                            'tab-me': {
+                                templateUrl: 'views/me/me-settings.html',
+                                abstract: true
+                            }
                         }
-                    });
+                    })
+
+                    /* settings-notification */
+                    .state('tab.me_settings.notification', {})
+
+                    /* settings-private */
+                    .state('tab.me_settings.private', {})
+
+                    /* settings-cache */
+                    .state('tab.me_settings.cache', {})
+
+                    /* settings-feedback */
+                    .state('tab.me_settings.feedback', {})
+
+                    /* settings-about */
+                    .state('tab.me_setting.about', {});
             }]);
 
 })( angular.module('Pixes.me') );

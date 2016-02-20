@@ -6,7 +6,29 @@
             Back
         </button>
     </ion-nav-buttons>
-    <ion-content class="padding">
-        Recommend detail
+    <ion-content class="recommend-detail-page">
+        <div class="text-center">
+            <img src="images/recommend/photo.png" alt="" width="375">
+        </div>
+        <div class="user-info">
+            <div class="card">
+                <div class="item item-avatar mb10">
+                    <img ng-src="{{ people.avatar_url }}" alt="Avatar">
+                    <h2>{{ 12334 }}</h2>
+                    <p>
+                        <i class="fa fa-user m5"></i>{{ people.follower_count }}
+                        <i class="fa fa-user m5"></i>{{ people.following_count }}
+                        <i class="fa fa-photo m5"></i>{{ people.photo_count }}
+                    </p>
+                    <button class="button star-this-photo">
+                        <i class="fa fa-star"></i>
+                    </button>
+                    <button class="button download-this-photo">
+                        <i class="fa fa-download"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="comment"></div>
     </ion-content>
 </ion-view>

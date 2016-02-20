@@ -42,7 +42,7 @@
                 .state('access', {
                     cache: false,
                     url: '/access',
-                    templateUrl: 'views/common/access.html',
+                    templateUrl: 'views/access/access.html',
                     controller: 'AccessCtrl as access'
                 })
 

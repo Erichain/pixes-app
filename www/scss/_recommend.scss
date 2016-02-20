@@ -1,5 +1,5 @@
 /* styles for recommend page */
-.recommend-page {
+.recommend-list {
     .operation-bar {
         position: absolute;
         bottom: 0;
@@ -19,6 +19,46 @@
             height: 176px;
             margin-bottom: 10px;
             padding: 0;
+        }
+    }
+}
+
+.recommend-detail-page {
+    .user-info {
+        .star-this-photo,
+        .download-this-photo {
+            position: absolute;
+            top: 27px;
+            min-height: 24px;
+            font-size: 1.2em;
+            line-height: 24px;
+            color: $text-minor-color;
+            background-color: transparent;
+
+            &:active,
+            &:focus,
+            &.activated {
+                box-shadow: none;
+            }
+        }
+
+        .star-this-photo {
+            right: 15px;
+        }
+
+        .download-this-photo {
+            right: 60px;
+        }
+
+        .card {
+            border-top: 1px solid $border-light-color;
+            border-bottom: 1px solid $border-light-color;
+
+            .item {
+                border: none;
+                border-radius: 0;
+                box-shadow: none;
+            }
         }
     }
 }
