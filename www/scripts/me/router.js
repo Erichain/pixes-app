@@ -23,23 +23,29 @@
                     })
 
                     /* me-follower */
-                    .state('tab.me.follower', {
+                    .state('tab.me_follower', {
                         url: '/follower',
                         views: {
-                            'tab-me': {}
+                            'tab-me': {
+                                templateUrl: 'views/me/me-follower.html',
+                                controller: ''
+                            }
                         }
                     })
 
                     /* me-following */
-                    .state('tab.me.following', {
+                    .state('tab.me_following', {
                         url: '/following',
                         views: {
-                            'tab-me': {}
+                            'tab-me': {
+                                templateUrl: 'views/me/me-following.html',
+                                controller: ''
+                            }
                         }
                     })
 
                     /* me-photo */
-                    .state('tab.me.photo', {
+                    .state('tab.me_photo', {
                         url: '/photo',
                         views: {
                             'tab-me': {}
@@ -47,7 +53,7 @@
                     })
 
                     /* me-creations */
-                    .state('tab.me.creations', {
+                    .state('tab.me_creations', {
                         url: '/creations',
                         views: {
                             'tab-me': {}
@@ -55,7 +61,7 @@
                     })
 
                     /* me-favorites */
-                    .state('tab.me.favorites', {
+                    .state('tab.me_favorites', {
                         url: '/favorites',
                         views: {
                             'tab-me': {}
@@ -63,7 +69,7 @@
                     })
 
                     /* me-bought */
-                    .state('tab.me.bought', {
+                    .state('tab.me_bought', {
                         url: '/bought',
                         views: {
                             'tab-me': {}
@@ -71,7 +77,7 @@
                     })
 
                     /* me-settings */
-                    .state('tab.me.settings', {
+                    .state('tab.me_settings', {
                         url: '/settings',
                         views: {
                             'tab-me': {}

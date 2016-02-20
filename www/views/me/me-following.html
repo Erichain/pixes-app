@@ -1,0 +1,25 @@
+<ion-view view-title="Following">
+    <ion-nav-buttons side="left">
+        <button class="button button-clear" ui-sref="tab.me">
+            <i class="ion ion-ios-arrow-left"></i>
+            Back
+        </button>
+    </ion-nav-buttons>
+    <ion-content class="me-follower">
+        <div class="card animated fadeIn me-following">
+            <div class="item item-avatar mb10" ng-repeat="people in me.followingData">
+                <img ng-src="{{ people.avatar_url }}" alt="Avatar">
+                <h2>{{ people.name }}</h2>
+                <p>
+                    <i class="fa fa-user m5"></i>{{ people.follower_count }}
+                    <i class="fa fa-user m5"></i>{{ people.following_count }}
+                    <i class="fa fa-photo m5"></i>{{ people.photo_count }}
+                </p>
+                <button class="button add-to-following">
+                    <i class="fa" ng-class="{'fa-plus': people.status === 0, 'fa-check': people.status === 1}"></i>
+                    {{ people.status | dict: 'followOrNot' }}
+                </button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

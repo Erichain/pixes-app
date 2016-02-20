@@ -4,9 +4,11 @@
         background: $page-me-bgcolor;
 
         .user-avatar {
+            display: inline-block;
             width: 75px;
             height: 75px;
             border-radius: 100%;
+            border: 2px solid $border-light-color;
         }
 
         p {
