@@ -5,16 +5,20 @@
  * @author Erichain
  * @date 2015-10-25
  */
-(function ( create ) {
+(function ( Create ) {
 
-    create.controller('CreateCtrl', CreateCtrl);
-    CreateCtrl.$inject = ['$location', '$ionicActionSheet', '$cordovaCamera', 'TempService'];
+    Create.controller('CreateCtrl', CreateCtrl);
+    CreateCtrl.$inject = ['$scope', '$location', '$ionicActionSheet', '$cordovaCamera', '$ionicPopup', 'TempService'];
 
-    function CreateCtrl( $location, $ionicActionSheet, $cordovaCamera, TempService ) {
+    function CreateCtrl( $scope, $location, $ionicActionSheet, $cordovaCamera, $ionicPopup, TempService ) {
         var vm = this;
 
         vm.choosePhotoFromGalleryOrCamera = function () {
             choosePhotoFromGalleryOrCamera();
+        };
+
+        vm.confirmDelete = function () {
+            confirmDelete();
         };
 
         // open the action sheet for user
@@ -70,6 +74,17 @@
             }, function ( error ) {});
 
             return true;
+        }
+
+        // popup for deleting or not
+        function confirmDelete() {
+            var options = {
+                title: 'Confirm deleting',
+                template: 'Are you sure to delete this item ?',
+                okType: 'button-assertive'
+            };
+
+            $ionicPopup.confirm(options).then();
         }
     }
 

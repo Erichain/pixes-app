@@ -24,7 +24,7 @@
         </div>
 
         <div class="card" ng-if="create.imgURI !== undefined">
-            <div class="item text-center animated fadeIn">
+            <div class="item text-center animated fadeIn" on-hold="create.confirmDelete()">
                 <img class="m0" ng-src="{{ create.imgURI }}" width="365" alt="">
                 <div class="row text-center operation-bar">
                     <div class="col col-33">
