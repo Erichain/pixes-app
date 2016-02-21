@@ -1,22 +1,47 @@
 <ion-view view-title="Create">
-    <ion-content class="padding create-page">
-        <div class="row text-center">
-            <div class="col col-offset-25 col-50">
-                <object data="images/create/create_photo.svg"
-                        width="150"
-                        height=""
-                        type="image/svg+xml"
-                        codebase="http://www.adobe.com/svg/viewer/install/"></object>
+    <ion-content class="create-page">
+        <div ng-if="create.imgURI === undefined">
+            <div class="row text-center">
+                <div class="col col-offset-25 col-50">
+                    <object data="images/create/create_photo.svg"
+                            width="150"
+                            height=""
+                            type="image/svg+xml"
+                            codebase="http://www.adobe.com/svg/viewer/install/"></object>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-offset-25 col-50">
+                    <div class="input-group">
+                        <button class="button button-block button-general"
+                                ng-click="create.choosePhotoFromGalleryOrCamera()">
+                            <i class="fa fa-plus"></i>
+                            Add A Photo
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col col-offset-25 col-50">
-                <div class="input-group">
-                    <button class="button button-block button-general"
-                            ng-click="create.choosePhotoFromGalleryOrCamera()">
-                        <i class="fa fa-plus"></i>
-                        Add A Photo
-                    </button>
+
+        <div class="card" ng-if="create.imgURI !== undefined">
+            <div class="item text-center animated fadeIn">
+                <img class="m0" ng-src="{{ create.imgURI }}" width="365" alt="">
+                <div class="row text-center operation-bar">
+                    <div class="col col-33">
+                        <a href="">
+                            <i class="fa fa-star-o"></i>
+                        </a>
+                    </div>
+                    <div class="col col-33">
+                        <a href="">
+                            <i class="fa fa-comment-o"></i>
+                        </a>
+                    </div>
+                    <div class="col col-33">
+                        <a href="">
+                            <i class="fa fa-thumbs-o-up"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

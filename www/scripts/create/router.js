@@ -21,6 +21,16 @@
                             }
                         }
                     })
+
+                    .state('tab.edit_photo', {
+                        url: '/edit-photo',
+                        views: {
+                            'tab-create': {
+                                templateUrl: 'views/create/photo-edit.html',
+                                controller: 'uploadPhotoCtrl as uploadPhoto'
+                            }
+                        }
+                    });
             }]);
 
 })( angular.module('Pixes.create') );

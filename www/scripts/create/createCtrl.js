@@ -8,9 +8,9 @@
 (function ( create ) {
 
     create.controller('CreateCtrl', CreateCtrl);
-    CreateCtrl.$inject = ['$ionicActionSheet', '$cordovaCamera'];
+    CreateCtrl.$inject = ['$location', '$ionicActionSheet', '$cordovaCamera', 'TempService'];
 
-    function CreateCtrl( $ionicActionSheet, $cordovaCamera ) {
+    function CreateCtrl( $location, $ionicActionSheet, $cordovaCamera, TempService ) {
         var vm = this;
 
         vm.choosePhotoFromGalleryOrCamera = function () {
@@ -45,24 +45,29 @@
             document.addEventListener('deviceready', function () {
                 var options = {
                     quality: 100,
-                    destinationType: Camera.DestinationType.FILE_URI,
+                    destinationType: Camera.DestinationType.DATA_URL,
                     sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
                     allowEdit: true,
-                    encodingType: Camera.EncodingType.JPEG,
+                    targetWidth: 365,
                     popoverOptions: CameraPopoverOptions,
-                    correctOrientation: true,
-                    saveToPhotoAlbum: false
+                    saveToPhotoAlbum: false,
+                    correctOrientation: true
                 };
 
-                $cordovaCamera.getPicture( options ).then(function ( imgData ) {}, function ( error ) {});
-            });
+                $cordovaCamera.getPicture( options ).then(function ( imgData ) {
+                    $location.path('/tab/edit-photo');
+                    vm.imgURI = 'data:image/jpeg;base64,' + imgData;
+                }, function ( error ) {});
+            }, false);
 
             return true;
         }
 
         // open device's camera to take photo
         function takePhoto() {
-            $cordovaCamera.getPicture().then(function ( imgData ) {}, function ( error ) {});
+            $cordovaCamera.getPicture().then(function ( imgData ) {
+                vm.imgURI = 'data:image/jpeg;base64,' + imgData;
+            }, function ( error ) {});
 
             return true;
         }

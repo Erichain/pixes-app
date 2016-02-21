@@ -99,6 +99,7 @@
                         }
                     })
 
+                    /* setting list */
                     .state('tab.me_setting.list', {
                         url: '/list',
                         templateUrl: 'views/me/me-setting.html',
