@@ -8,9 +8,9 @@
 (function ( create ) {
 
     create.controller('CreateCtrl', CreateCtrl);
-    CreateCtrl.$inject = ['$ionicActionSheet', 'PhotoService'];
+    CreateCtrl.$inject = ['$ionicActionSheet', '$cordovaCamera'];
 
-    function CreateCtrl( $ionicActionSheet, PhotoService ) {
+    function CreateCtrl( $ionicActionSheet, $cordovaCamera ) {
         var vm = this;
 
         vm.choosePhotoFromGalleryOrCamera = function () {
@@ -33,8 +33,7 @@
                     var choices = {
                             '0': choosePhotoFromGallery,
                             '1': takePhoto
-                        },
-                        options = {};
+                        };
 
                     return choices[index]();
                 }
@@ -55,7 +54,7 @@
                     saveToPhotoAlbum: false
                 };
 
-                PhotoService.getPicture( options ).then(function ( imgData ) {}, function ( error ) {});
+                $cordovaCamera.getPicture( options ).then(function ( imgData ) {}, function ( error ) {});
             });
 
             return true;
@@ -63,7 +62,7 @@
 
         // open device's camera to take photo
         function takePhoto() {
-            PhotoService.getPicture().then(function ( imgData ) {}, function ( error ) {});
+            $cordovaCamera.getPicture().then(function ( imgData ) {}, function ( error ) {});
 
             return true;
         }

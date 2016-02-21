@@ -89,30 +89,42 @@
                     })
 
                     /* me-settings */
-                    .state('tab.me_settings', {
-                        url: '/settings',
+                    .state('tab.me_setting', {
+                        url: '/setting',
                         views: {
                             'tab-me': {
-                                templateUrl: 'views/me/me-settings.html',
+                                templateUrl: 'views/me/page-setting.html',
                                 abstract: true
                             }
                         }
                     })
 
-                    /* settings-notification */
-                    .state('tab.me_settings.notification', {})
+                    .state('tab.me_setting.list', {
+                        url: '/list',
+                        templateUrl: 'views/me/me-setting.html',
+                        controller: ''
+                    })
 
                     /* settings-private */
-                    .state('tab.me_settings.private', {})
-
-                    /* settings-cache */
-                    .state('tab.me_settings.cache', {})
+                    .state('tab.me_setting.private', {
+                        url: '/private',
+                        templateUrl: 'views/me/setting-private.html',
+                        controller: ''
+                    })
 
                     /* settings-feedback */
-                    .state('tab.me_settings.feedback', {})
+                    .state('tab.me_setting.feedback', {
+                        url: '/private',
+                        templateUrl: '',
+                        controller: ''
+                    })
 
                     /* settings-about */
-                    .state('tab.me_setting.about', {});
+                    .state('tab.me_setting.about', {
+                        url: '/private',
+                        templateUrl: '',
+                        controller: ''
+                    });
             }]);
 
 })( angular.module('Pixes.me') );

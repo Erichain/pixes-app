@@ -51,6 +51,6 @@
                     url: '/tab',
                     abstract: true,
                     templateUrl: 'views/common/tabs.html'
-                })
+                });
         }]);
 })( angular.module('Pixes.common') );

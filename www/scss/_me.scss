@@ -25,3 +25,16 @@
         }
     }
 }
+
+.me-setting {
+    .log-out-button {
+        color: $text-bright-color;
+        background-color: $btn-danger-bgcolor;
+
+        &:active
+        &.active {
+            color: $text-bright-color;
+            background-color: $btn-danger-bgcolor;
+        }
+    }
+}

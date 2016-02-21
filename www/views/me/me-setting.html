@@ -1,0 +1,36 @@
+<!-- me-settings -->
+<div class="list text-minor">
+    <li class="item item-toggle text-minor">
+        Notification
+        <label class="toggle">
+            <input type="checkbox" ng-model="setting.isPushMsg" ng-init="setting.isPushMsg = true">
+            <div class="track">
+                <div class="handle"></div>
+            </div>
+        </label>
+    </li>
+    <a href="" ui-sref="tab.me_setting.private" class="item item-icon-right" nav-direction="enter">
+        Private
+        <i class="icon ion ion-ios-arrow-right"></i>
+    </a>
+    <a href="" class="item">
+        Clear Cache
+    </a>
+</div>
+<div class="list text-minor">
+    <a href="" ui-sref="" class="item item-icon-right">
+        Feedback
+        <i class="icon ion ion-ios-arrow-right"></i>
+    </a>
+    <a href="" ui-sref="" class="item item-icon-right">
+        About
+        <i class="icon ion ion-ios-arrow-right"></i>
+    </a>
+</div>
+<div class="row">
+    <div class="col-offset-25 col-50">
+        <button class="button button-block log-out-button">
+            Log Out
+        </button>
+    </div>
+</div>
