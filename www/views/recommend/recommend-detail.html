@@ -7,18 +7,17 @@
         </button>
     </ion-nav-buttons>
     <ion-content class="recommend-detail-page">
-        <div class="text-center">
-            <img src="images/recommend/photo.png" alt="" width="375">
-        </div>
-        <div class="user-info">
+
+        <!-- photo info -->
+        <div class="photo-info">
             <div class="card">
-                <div class="item item-avatar">
-                    <img ng-src="{{ people.avatar_url }}" alt="Avatar">
-                    <h2>{{ 12334 }}</h2>
+                <div class="item">
+                    <h2>title</h2>
+                    <p class="fs12 text-minor">{{  }}</p>
                     <p>
-                        <i class="fa fa-user m5"></i>{{ people.follower_count }}
-                        <i class="fa fa-user m5"></i>{{ people.following_count }}
-                        <i class="fa fa-photo m5"></i>{{ people.photo_count }}
+                        <i class="fa fa-eye m5"></i>{{ people.follower_count }}
+                        <i class="fa fa-thumbs-up m5"></i>{{ people.following_count }}
+                        <i class="fa fa-thumbs-down m5"></i>{{ people.photo_count }}
                     </p>
                     <button class="button star-this-photo">
                         <i class="fa fa-star"></i>
@@ -29,6 +28,48 @@
                 </div>
             </div>
         </div>
-        <div class="comment"></div>
+
+        <div class="text-center">
+            <img src="images/recommend/photo.png" alt="" width="375">
+        </div>
+
+        <!-- user info -->
+        <div class="user-info">
+            <div class="card">
+                <div class="item item-avatar">
+                    <img ng-src="{{ people.avatar_url }}" alt="Avatar">
+                    <h2>{{ 12334 }}</h2>
+                    <p>
+                        <i class="fa fa-user m5"></i>{{ people.follower_count }}
+                        <i class="fa fa-user m5"></i>{{ people.following_count }}
+                        <i class="fa fa-photo m5"></i>{{ people.photo_count }}
+                    </p>
+                    <button class="button add-to-following">
+                        <i class="fa fa-plus"></i>
+                        Follow
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- user's comments -->
+        <div class="padding comment text-minor">
+            <p class="fs12">COMMENTS({{  }})</p>
+            <div class="card">
+                <div class="item item-avatar mb10" ng-repeat="">
+                    <img ng-src="{{ people.avatar_url }}" alt="Avatar">
+                    <h2>{{ people.name }}</h2>
+                    <p class="text-general">{{  }}</p>
+                    <p>{{  }}</p>
+                </div>
+            </div>
+        </div>
     </ion-content>
+    <div class="bar bar-footer add-comment">
+        <div class="row">
+            <dic class="col col-offset-10 col-80">
+                <button class="button button-block button-small button-general" ng-click="recommendDetail.leaveComment()">Leave A Comment</button>
+            </dic>
+        </div>
+    </div>
 </ion-view>

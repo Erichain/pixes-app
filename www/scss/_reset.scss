@@ -26,26 +26,24 @@
     box-shadow: none;
     outline: none;
 
-    &.button-block {
-        &.button-general {
-            color: $text-bright-color;
-            background-color: $btn-highlight-bgcolor;
+    &.button-general {
+        color: $text-bright-color;
+        background-color: $btn-highlight-bgcolor;
 
-            &:active {
-                color: #ffffff;
-                background-color: $btn-highlight-active-bgcolor;
-            }
-        }
-
-        &.button-bordered {
+        &:active {
             color: #ffffff;
-            background-color: transparent;
-            border: 2px solid #ffffff;
+            background-color: $btn-highlight-active-bgcolor;
+        }
+    }
 
-            &:active {
-                color: #ffffff;
-                background-color: rgba(255, 255, 255, 0.2);
-            }
+    &.button-bordered {
+        color: #ffffff;
+        background-color: transparent;
+        border: 2px solid #ffffff;
+
+        &:active {
+            color: #ffffff;
+            background-color: rgba(255, 255, 255, 0.2);
         }
     }
 }

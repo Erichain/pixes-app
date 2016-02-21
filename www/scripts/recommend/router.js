@@ -30,7 +30,7 @@
                         views: {
                             'tab-recommend': {
                                 templateUrl: 'views/recommend/recommend-detail.html',
-                                controller: 'RecommendCtrl as recommend'
+                                controller: 'recommendDetailCtrl as recommendDetail'
                             }
                         }
                     })

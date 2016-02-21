@@ -1,6 +1,8 @@
 /* styles for recommend page */
 .recommend-detail-page {
-    .user-info {
+    .user-info,
+    .comment,
+    .photo-info {
         .star-this-photo,
         .download-this-photo {
             position: absolute;
@@ -33,6 +35,26 @@
                 border-radius: 0;
                 box-shadow: none;
             }
+        }
+    }
+
+    .comment {
+        .card {
+            .item {
+                border: none;
+                border-top: 1px solid $border-light-color;
+            }
+        }
+    }
+}
+
+.add-comment {
+    bottom: 59px;
+    background: transparent;
+
+    .button {
+        &.button-block {
+            margin: 0;
         }
     }
 }
