@@ -26,9 +26,7 @@
             if ( dictName && typeof dictName === 'string' ) {
                 return DICT[dictName][index];
             }
-            else {
-                return index;
-            }
+            return index;
         }
     }
 
