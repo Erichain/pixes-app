@@ -11,6 +11,15 @@
             border: 2px solid $border-light-color;
         }
 
+        .button-edit-profile {
+            color: rgba(255, 255, 255, 0.8);
+            min-height: 20px;
+            line-height: 20px;
+            padding: 0 8px;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            border-radius: 4px;
+        }
+
         p {
             color: $text-bright-color;
         }

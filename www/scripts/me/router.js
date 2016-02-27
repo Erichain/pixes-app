@@ -22,6 +22,16 @@
                         }
                     })
 
+                    .state('tab.me_update_profile', {
+                        url: '/update',
+                        views: {
+                            'tab-me': {
+                                templateUrl: 'views/me/me-update-profile.html',
+                                controller: 'updateProfileCtrl as updateProfile'
+                            }
+                        }
+                    })
+
                     /* me-follower */
                     .state('tab.me_follower', {
                         url: '/follower',

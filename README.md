@@ -19,4 +19,4 @@ Use `ionic serve --lab` to run with a browser in iOS and Android views.
 Use `ionic emulate iOS --livereload` to run with a iOS emulator.
 
 ## License
-Release under the MIT license.
+Release under the [MIT license](https://github.com/Erichain/Pixes/blob/master/LICENSE).
