@@ -10,13 +10,9 @@
     RequestService.$inject = ['$http', '$q', 'config'];
 
     function RequestService( $http, $q, config ) {
-        var service =  {
-            ajax: ajax,
-            get: get,
-            post: post
-        };
-
-        return service;
+        this.ajax = ajax;
+        this.get = get;
+        this.post = post;
 
         /**
          * Ajax method

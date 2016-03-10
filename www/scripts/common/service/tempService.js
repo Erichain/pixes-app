@@ -12,12 +12,8 @@
     TempService.$inject = [];
 
     function TempService() {
-        var service = {};
-
         // save the URI of choosed image before upload
-        service.imgInfo = null;
-
-        return service;
+        this.imgInfo = null;
     }
 
 })( angular.module('Pixes.common') );
