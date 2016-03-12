@@ -66,7 +66,7 @@
             options.url = url;
             options.data = data || {};
 
-            return service.ajax(options);
+            return ajax(options);
         }
 
         /**
