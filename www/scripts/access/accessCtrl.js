@@ -8,9 +8,9 @@
 (function ( Access ) {
 
     Access.controller('AccessCtrl', AccessCtrl);
-    AccessCtrl.$inject = ['$scope', '$location', '$timeout', '$ionicLoading'];
+    AccessCtrl.$inject = ['$scope', '$location', '$timeout', '$ionicLoading', 'Toast'];
 
-    function AccessCtrl( $scope, $location, $timeout, $ionicLoading ) {
+    function AccessCtrl( $scope, $location, $timeout, $ionicLoading, Toast ) {
         var vm = this;
 
         vm.login = {
@@ -36,10 +36,7 @@
         /* signg in */
         function signIn() {
             if ( !vm.login.username || !vm.login.password ) {
-                vm.isEmpty = true;
-                $timeout(function () {
-                    vm.isEmpty = false;
-                }, 1000);
+                Toast.showToast('000001');
                 return;
             }
 
