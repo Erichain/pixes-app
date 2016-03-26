@@ -1,16 +1,16 @@
 /**
+ * @description
  * transfer filter used to transfer status code to text
- *
  * @module Pixes.common
  * @author Erichain
  * @date 2016-01-24
  */
 (function ( Common ) {
 
-    Common.filter('transfer', transfer);
-    transfer.$inject = [];
+    Common.filter('dict', dict);
+    dict.$inject = [];
 
-    function transfer () {
+    function dict() {
         var DICT = {
             'followOrNot': {
                 '0': 'Follow',
@@ -26,9 +26,7 @@
             if ( dictName && typeof dictName === 'string' ) {
                 return DICT[dictName][index];
             }
-            else {
-                return index;
-            }
+            return index;
         }
     }
 

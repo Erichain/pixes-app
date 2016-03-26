@@ -1,6 +1,5 @@
 /**
- * recommend page's controller
- *
+ * @description recommend page's controller
  * @controller RecommendCtrl
  * @module Pixes.recommend
  * @author Erichain
@@ -11,7 +10,7 @@
     recommend.controller('RecommendCtrl', RecommendCtrl);
     RecommendCtrl.$inject = ['$scope', '$timeout', 'RecommendService'];
 
-    function RecommendCtrl ( $scope, $timeout, RecommendService ) {
+    function RecommendCtrl( $scope, $timeout, RecommendService ) {
         var vm = this;
 
         vm.getDataByRefresh = function () {
@@ -28,7 +27,7 @@
          */
 
         /* get photos list */
-        function getPhotosList () {
+        function getPhotosList() {
             var reqParams = {};
 
             RecommendService.getPhotosList( reqParams ).then(function ( data ) {
@@ -40,7 +39,7 @@
         }
 
         /* refreshing by pulling down */
-        function getDataByRefresh () {
+        function getDataByRefresh() {
             console.log('refreshed!');
             $timeout(function () {
                 $scope.$broadcast('scroll.refreshComplete');

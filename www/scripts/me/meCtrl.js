@@ -1,6 +1,5 @@
 /**
- * me page's controller
- *
+ * @description me page's controller
  * @controller MeCtrl
  * @module Pixes.me
  * @author Erichain
@@ -11,7 +10,7 @@
     me.controller('MeCtrl', MeCtrl);
     MeCtrl.$inject = ['$scope'];
 
-    function MeCtrl ( $scope ) {
+    function MeCtrl( $scope ) {
 
     }
 

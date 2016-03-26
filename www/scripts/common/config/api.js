@@ -1,6 +1,5 @@
 /**
- * Server api
- *
+ * @description Server api
  * @module Pixes.common
  * @author Erichain
  * @date 2015-10-31

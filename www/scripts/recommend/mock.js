@@ -1,6 +1,5 @@
 /**
- * mock data for recommend page
- *
+ * @description mock data for recommend page
  * @module Pixes.recommend
  * @author Erichain
  * @date 2016-01-10

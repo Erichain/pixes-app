@@ -1,0 +1,33 @@
+<ion-view view-title="Edit Photo">
+    <ion-nav-buttons side="left">
+        <button class="button button-clear" back>
+            <i class="ion ion-ios-arrow-left"></i>
+            Cancel
+        </button>
+    </ion-nav-buttons>
+    <ion-content class="page-edit-photo">
+        <div class="list">
+            <label class="item item-input">
+                <input type="text" placeholder="Your Photo Name">
+            </label>
+            <label class="item item-input item-select">
+                <div class="input-label">
+                    Photo Type
+                </div>
+                <select name="">
+                    <option value="">Nature</option>
+                    <option value="">Life</option>
+                    <option value="">Animation</option>
+                </select>
+            </label>
+            <label class="item item-input">
+                <textarea name="" rows="5" placeholder="Description for your photo"></textarea>
+            </label>
+        </div>
+        <div class="row">
+            <div class="col col-offset-10 col-80">
+                <button class="button button-block button-general" ng-click="uploadPhoto.uploadPhoto()">Upload Now</button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

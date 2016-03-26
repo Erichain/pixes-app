@@ -1,6 +1,5 @@
 /**
- * mock data for explore
- *
+ * @description mock data for explore
  * @module Pixes.explore
  * @author Erichain
  * @date 2016-01-23

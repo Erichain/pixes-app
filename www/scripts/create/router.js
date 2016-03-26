@@ -1,6 +1,5 @@
 /**
- * router for create
- *
+ * @description router for create
  * @module Pixes.create
  * @author Erichain
  * @date 2016-01-10
@@ -22,6 +21,16 @@
                             }
                         }
                     })
+
+                    .state('tab.edit_photo', {
+                        url: '/edit-photo',
+                        views: {
+                            'tab-create': {
+                                templateUrl: 'views/create/photo-edit.html',
+                                controller: 'uploadPhotoCtrl as uploadPhoto'
+                            }
+                        }
+                    });
             }]);
 
 })( angular.module('Pixes.create') );

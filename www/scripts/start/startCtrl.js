@@ -1,6 +1,5 @@
 /**
- * controller for start page
- *
+ * @description controller for start page
  * @module Pixes.start
  * @controller StartCtrl
  * @author Erichain
@@ -11,6 +10,6 @@
     Start.controller('StartCtrl', StartCtrl);
     StartCtrl.$inject = [];
 
-    function StartCtrl () {}
+    function StartCtrl() {}
 
 })( angular.module('Pixes.start') );

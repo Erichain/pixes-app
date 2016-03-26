@@ -1,6 +1,5 @@
 /**
- * Request Service
- *
+ * @description Request Service
  * @module Pixes.common
  * @author Erichain
  * @date 2015-11-14
@@ -8,18 +7,12 @@
 (function ( Common ) {
 
     Common.service('RequestService', RequestService);
-
     RequestService.$inject = ['$http', '$q', 'config'];
 
-    function RequestService ( $http, $q, config ) {
-        var service =  {
-            ajax: ajax,
-            get: get,
-            post: post
-        };
-
-        return service;
-
+    function RequestService( $http, $q, config ) {
+        this.ajax = ajax;
+        this.get = get;
+        this.post = post;
 
         /**
          * Ajax method
@@ -28,7 +21,7 @@
          * @param {object} options
          * @returns {*}
          */
-        function ajax ( options ) {
+        function ajax( options ) {
             var default_options = {
                     method: 'POST',
                     url: '',
@@ -56,7 +49,6 @@
             return defered.promise;
         }
 
-
         /**
          * base function of get and post
          *
@@ -68,15 +60,14 @@
          * @returns {*}
          * @private
          */
-        function _request ( method, url, data, config ) {
+        function _request( method, url, data, config ) {
             var options = angular.merge( {}, config || {} );
             options.method = method;
             options.url = url;
             options.data = data || {};
 
-            return service.ajax(options);
+            return ajax(options);
         }
-
 
         /**
          * @function get
@@ -85,10 +76,9 @@
          * @param config
          * @returns {*}
          */
-        function get ( url, data, config ) {
+        function get( url, data, config ) {
             return _request('GET', url, data, config)
         }
-
 
         /**
          * @function post
@@ -97,7 +87,7 @@
          * @param config
          * @returns {*}
          */
-        function post ( url, data, config ) {
+        function post( url, data, config ) {
             return _request('POST', url, data, config);
         }
     }

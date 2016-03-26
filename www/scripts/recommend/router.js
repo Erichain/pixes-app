@@ -1,6 +1,5 @@
 /**
- * router for recommend
- *
+ * @description router for recommend
  * @module Pixes.recommend
  * @author Erichain
  * @date 2016-01-10
@@ -13,6 +12,8 @@
             function ( $stateProvider, $urlRouterProvider ) {
 
                 $stateProvider
+
+                    /* recommend-list */
                     .state('tab.recommend_list', {
                         url: '/recommend/list',
                         views: {
@@ -22,12 +23,14 @@
                             }
                         }
                     })
+
+                    /* recommend-detail */
                     .state('tab.recommend_detail', {
                         url: '/recommend/detail?img_id',
                         views: {
                             'tab-recommend': {
                                 templateUrl: 'views/recommend/recommend-detail.html',
-                                controller: 'RecommendCtrl as recommend'
+                                controller: 'recommendDetailCtrl as recommendDetail'
                             }
                         }
                     })

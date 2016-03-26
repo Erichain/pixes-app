@@ -1,30 +1,47 @@
-.button-bar {
-    .button {
-        min-height: 35px;
-        line-height: 35px;
-        color: $text-highlight-color;
-        background-color: transparent;
-        border: 1px solid $border-highlight-color;
+/* styles for explore page */
+.explore-page {
+    .explore-people {}
 
-        &:first-child {
-            border-radius: 5px 0 0 5px;
+    .button-bar {
+        .button {
+            min-height: 30px;
+            line-height: 30px;
+            color: $text-highlight-color;
+            background-color: transparent;
+            border: 1px solid $border-highlight-color;
+
+            &:first-child {
+                border-radius: 5px 0 0 5px;
+            }
+
+            &:last-child {
+                border-radius: 0 5px 5px 0;
+            }
         }
 
-        &:last-child {
-            border-radius: 0 5px 5px 0;
+        .active {
+            color: $text-bright-color !important;
+            background-color: $btn-highlight-bgcolor;
+            box-shadow: none;
         }
     }
 
-    .active {
-        color: $text-bright-color !important;
-        background-color: $btn-highlight-bgcolor;
-        box-shadow: none;
-    }
-}
+    /* photo type */
+    .explore-photo {
+        .photo-type {
+            color: $text-minor-color;
+            text-decoration: none;
 
-.photo-type {
-    img {
-        width: 60px;
-        height: 60px;
+            &:hover,
+            &:active {
+                text-decoration: none;
+            }
+
+            img {
+                width: 60px;
+                height: 60px;
+                margin-bottom: 5px;
+            }
+        }
     }
 }

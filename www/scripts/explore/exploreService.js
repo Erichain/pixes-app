@@ -1,6 +1,5 @@
 /**
- * Service for explore
- *
+ * @description Service for explore
  * @module Pixes.explore
  * @author Erichain
  * @date 2016-01-23
@@ -10,7 +9,7 @@
     Explore.service('ExploreService', ExploreService);
     ExploreService.$inject = ['RequestService', 'ExploreApi'];
 
-    function ExploreService ( RequestService, ExploreApi ) {
+    function ExploreService( RequestService, ExploreApi ) {
         return {
             getPeopleList: getPeopleList
         };
@@ -20,8 +19,8 @@
          * @param params
          * @returns {*|HttpPromise}
          */
-        function getPeopleList ( params ) {
-            return RequestService.post(ExploreApi.explore.list.people, params);
+        function getPeopleList( params ) {
+            return RequestService.post( ExploreApi.explore.list.people, params );
         }
     }
 

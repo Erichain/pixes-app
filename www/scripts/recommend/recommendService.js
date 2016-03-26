@@ -1,6 +1,5 @@
 /**
- * service for recommend
- *
+ * @description service for recommend
  * @module Pixes.recommend
  * @author Erichain
  * @date 2016-01-10
@@ -10,7 +9,7 @@
     Recommend.service('RecommendService', RecommendService);
     RecommendService.$inject = ['RequestService', 'RecommendApi'];
 
-    function RecommendService ( RequestService, RecommendApi ) {
+    function RecommendService( RequestService, RecommendApi ) {
         return {
             getPhotosList: getPhotosList
         };
@@ -20,8 +19,8 @@
          * @param params
          * @returns {*|HttpPromise}
          */
-        function getPhotosList ( params ) {
-            return RequestService.post(RecommendApi.recommend.list, params);
+        function getPhotosList( params ) {
+            return RequestService.post( RecommendApi.recommend.list, params );
         }
     }
 

@@ -1,6 +1,5 @@
 /**
- * Create module's api
- *
+ * @description Create module's api
  * @module Pixes.create
  * @author Erichain
  * @date 2015-12-05

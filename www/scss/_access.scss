@@ -1,5 +1,12 @@
+/* styles for access pages */
 .login-page,
 .reg-page {
+    transform: translateY(10%);
+
+    .logo-content {
+        margin-bottom: 20px;
+    }
+
     .item {
         padding: 10px 0;
         border: 0;

@@ -1,23 +1,60 @@
-.recommend-page {
-    .operation-bar {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        background-color: rgba(0, 0, 0, 0.4);
+/* styles for recommend page */
+.recommend-detail-page {
+    .user-info,
+    .comment,
+    .photo-info {
+        .star-this-photo,
+        .download-this-photo {
+            position: absolute;
+            top: 27px;
+            min-height: 24px;
+            font-size: 1.2em;
+            line-height: 24px;
+            color: $text-minor-color;
+            background-color: transparent;
 
-        i {
-            color: lighten($text-minor-color, 30%);
+            &:active,
+            &:focus,
+            &.activated {
+                box-shadow: none;
+            }
+        }
+
+        .star-this-photo {
+            right: 15px;
+        }
+
+        .download-this-photo {
+            right: 60px;
+        }
+
+        .card {
+            .item {
+                border: none;
+                border-bottom: 1px solid $border-light-color;
+                border-radius: 0;
+                box-shadow: none;
+            }
         }
     }
 
-    .card {
-        margin: 10px;
-        box-shadow: none;
+    .comment {
+        .card {
+            .item {
+                border: none;
+                border-top: 1px solid $border-light-color;
+            }
+        }
+    }
+}
 
-        .item {
-            height: 176px;
-            margin-bottom: 10px;
-            padding: 0;
+.add-comment {
+    bottom: 59px;
+    background: transparent;
+
+    .button {
+        &.button-block {
+            margin: 0;
         }
     }
 }

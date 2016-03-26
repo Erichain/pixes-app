@@ -1,6 +1,6 @@
 # Pixes
 
-![](https://github.com/Erichain/Pixes/blob/master/www/images/pixes-main.png)
+![](https://github.com/Erichain/Pixes/blob/develop/www/images/pixes-main.png)
 
 An application built with Ionic and Angular
 
@@ -11,7 +11,7 @@ An application built with Ionic and Angular
 
 **If you haven't install ionic and cordova, then `npm install -g cordova ionic`**
 
-## Run
+## Preview
 Use `gulp serve` or `ionic serve` to run with a browser.
 
 Use `ionic serve --lab` to run with a browser in iOS and Android views.
@@ -19,4 +19,4 @@ Use `ionic serve --lab` to run with a browser in iOS and Android views.
 Use `ionic emulate iOS --livereload` to run with a iOS emulator.
 
 ## License
-Release under the MIT license.
+Release under the [MIT license](https://github.com/Erichain/Pixes/blob/master/LICENSE).

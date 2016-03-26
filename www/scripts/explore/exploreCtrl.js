@@ -1,6 +1,5 @@
 /**
- * explore page's controller
- *
+ * @description explore page's controller
  * @controller ExploreCtrl
  * @module Pixes.explore
  * @author Erichain
@@ -11,12 +10,12 @@
     Explore.controller('ExploreCtrl', ExploreCtrl);
     ExploreCtrl.$inject = ['ExploreService'];
 
-    function ExploreCtrl ( ExploreService ) {
+    function ExploreCtrl( ExploreService ) {
         var vm = this;
 
         getPeopleList();
 
-        function getPeopleList () {
+        function getPeopleList() {
             var reqContent = {};
 
             ExploreService.getPeopleList( reqContent ).then(function ( data ) {

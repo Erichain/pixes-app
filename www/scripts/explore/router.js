@@ -1,6 +1,5 @@
 /**
- * router for explore
- *
+ * @description router for explore
  * @module Pixes.explore
  * @author Erichain
  * @date 2016-01-10
@@ -22,6 +21,8 @@
                             }
                         }
                     })
+
+                    /* explore-people */
                     .state('tab.explore.people', {
                         url: '/people',
                         views: {
@@ -31,6 +32,8 @@
                             }
                         }
                     })
+
+                    /* explore-photo */
                     .state('tab.explore.photo', {
                         url: '/photo',
                         views: {
