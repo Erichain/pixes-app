@@ -1,25 +1,4 @@
-// card style in recommend page and create page
-.recommend-list,
-.create-page {
-    .operation-bar {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        background-color: rgba(0, 0, 0, 0.4);
-
-        i {
-            color: lighten($text-minor-color, 30%);
-        }
-    }
-
-    .card {
-        margin: 5px;
-        box-shadow: none;
-
-        .item {
-            height: 176px;
-            margin-bottom: 10px;
-            padding: 0;
-        }
-    }
+html {
+    width: 100%;
+    height: 100%;
 }

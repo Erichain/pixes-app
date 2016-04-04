@@ -14,26 +14,23 @@
 
         .intro-content {
             padding-top: 15px;
-            -webkit-transform: translateY(520px);
-            -moz-transform: translateY(520px);
-            -ms-transform: translateY(520px);
-            -o-transform: translateY(520px);
-            transform: translateY(520px);
+            @include translateposition(0, 520px);
         }
 
         .entry {
-            -webkit-transform: translateY(35%);
-            -moz-transform: translateY(35%);
-            -ms-transform: translateY(35%);
-            -o-transform: translateY(35%);
-            transform: translateY(35%);
+            @include translateposition(0, 35%);
 
             .logo-content {
                 margin-bottom: 200px;
 
                 p {
-                    font-size: 5em;
+                    font-size: 4.5em;
                 }
+            }
+
+            .cancel-login {
+                font-size: 16px;
+                margin-top: 10px;
             }
 
             a {
@@ -43,6 +40,26 @@
                 &:active {
                     color: $text-minor-color;
                     text-decoration: none;
+                }
+            }
+        }
+
+        @include media-query($screen-i5) {
+            h4 {
+                font-size: 16px;
+            }
+
+            .intro-content {
+                @include translateposition(0, 450px);
+            }
+
+            .entry {
+                .logo-content {
+                    margin-bottom: 150px;
+
+                    p {
+                        font-size: 4em;
+                    }
                 }
             }
         }

@@ -1,7 +1,7 @@
 /* styles for access pages */
 .login-page,
 .reg-page {
-    transform: translateY(10%);
+    @include translateposition(0, 10%);
 
     .logo-content {
         margin-bottom: 20px;

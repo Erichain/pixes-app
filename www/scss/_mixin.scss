@@ -42,10 +42,25 @@
     }
 }
 
-@mixin hovertransition ( $t: 0.2s) {
+@mixin hovertransition( $t: 0.2s) {
     -webkit-transition: all $t ease-in-out;
     -moz-transition: all $t ease-in-out;
     -ms-transition: all $t ease-in-out;
     -o-transition: all $t ease-in-out;
     transition: all $t ease-in-out;
+}
+
+@mixin translateposition( $x: 0, $y: 0 ) {
+    -webkit-transform: translate($x, $y);
+    -moz-transform: translate($x, $y);
+    -ms-transform: translate($x, $y);
+    -o-transform: translate($x, $y);
+    transform: translate($x, $y);
+}
+
+/* used for media-queries */
+@mixin media-query( $screen ) {
+    @media screen and (max-width: $screen) {
+        @content;
+    }
 }

@@ -33,4 +33,37 @@
             }
         }
     }
+
+    @include media-query($screen-i5) {
+        .user-info {
+            height: 220px;
+
+            p {
+                font-size: 12px;
+            }
+
+            .user-avatar {
+                width: 60px;
+                height: 60px;
+            }
+
+            .info-name {
+                font-size: 16px;
+            }
+
+            .info-intro {
+                font-size: 13px;
+            }
+
+            .count {
+                font-size: 14px;
+            }
+
+            .button-edit-profile {
+                font-size: 12px;
+                line-height: 18px;
+            }
+        }
+
+    }
 }
