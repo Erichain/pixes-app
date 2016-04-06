@@ -175,3 +175,33 @@ ion-tabs {
         font-size: 15px;
     }
 }
+
+/* reset the popup */
+.popup-container {
+    .popup {
+        padding: 5px;
+        border-radius: 4px;
+
+        .popup-head {
+            padding: 10px;
+        }
+
+        .popup-body {
+            padding: 15px;
+
+            input {
+                padding: 3px 5px;
+                border-radius: 3px;
+            }
+        }
+
+        .popup-buttons {
+            min-height: 40px;
+            padding: 0 10px 10px 10px;
+
+            .button {
+                min-height: 40px;
+            }
+        }
+    }
+}

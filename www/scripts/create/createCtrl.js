@@ -13,13 +13,9 @@
     function CreateCtrl( $scope, $location, $ionicActionSheet, $cordovaCamera, $ionicPopup, TempService ) {
         var vm = this;
 
-        vm.choosePhotoFromGalleryOrCamera = function () {
-            choosePhotoFromGalleryOrCamera();
-        };
+        vm.choosePhotoFromGalleryOrCamera = choosePhotoFromGalleryOrCamera;
 
-        vm.confirmDelete = function () {
-            confirmDelete();
-        };
+        vm.confirmDelete = confirmDelete;
 
         // open the action sheet for user
         // to choose use photo from gallery or taking a photo

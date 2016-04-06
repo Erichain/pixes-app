@@ -18,15 +18,11 @@
             password: ''
         };
 
-        vm.signIn = function () {
-            signIn();
-        };
+        vm.signIn = signIn;
 
-        vm.signUp = function () {
-            signUp();
-        };
+        vm.signUp = signUp;
 
-        /* signg in */
+        // sign in
         function signIn() {
             if ( !vm.login.username || !vm.login.password ) {
                 Toast.showToast('000001');
@@ -44,7 +40,7 @@
             }
         }
 
-        /* sign up */
+        // sign up
         function signUp() {}
 
     }

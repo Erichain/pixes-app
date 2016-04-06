@@ -55,7 +55,11 @@
 
             .entry {
                 .logo-content {
-                    margin-bottom: 150px;
+                    margin-bottom: 160px;
+
+                    @include media-query( $screen-i5 ) {
+                        margin-bottom: 170px;
+                    }
 
                     p {
                         font-size: 4em;

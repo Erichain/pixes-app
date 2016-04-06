@@ -5,7 +5,7 @@
                        refreshing-icon="fa fa-spinner fa-spin">
         </ion-refresher>
         <div class="card">
-            <div class="item text-center animated fadeIn" ng-repeat="photos in recommend.imgData">
+            <div class="item text-center animated fadeIn" ng-repeat="photos in recommendList.imgData">
                 <img class="m0" ng-src="{{ photos.src }}" width="365" alt="" ui-sref="tab.recommend_detail({ img_id: photos.img_id })">
                 <div class="row text-center operation-bar">
                     <div class="col col-33">
@@ -14,7 +14,7 @@
                         </a>
                     </div>
                     <div class="col col-33">
-                        <a href="">
+                        <a href="" ng-click="recommendList.leaveComment()">
                             <i class="fa fa-comment-o"></i>
                         </a>
                     </div>
@@ -24,6 +24,10 @@
                         </a>
                     </div>
                 </div>
+            </div>
+            <div class="item text-center"
+                 ng-if="(recommendList.imgData === null || recommendList.imgData.length === 0) && recommendList.isLoaded === false">
+                <i class="fa fa-spinner fa-spin"></i>
             </div>
         </div>
     </ion-content>

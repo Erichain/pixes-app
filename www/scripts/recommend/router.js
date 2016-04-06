@@ -19,7 +19,7 @@
                         views: {
                             'tab-recommend': {
                                 templateUrl: 'views/recommend/recommend-list.html',
-                                controller: 'RecommendCtrl as recommend'
+                                controller: 'RecommendCtrl as recommendList'
                             }
                         }
                     })
