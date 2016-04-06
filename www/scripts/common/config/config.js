@@ -37,7 +37,7 @@
                 }
             });*/
 
-        }])
+        }]);
 
 
 })( angular.module('Pixes.common') );

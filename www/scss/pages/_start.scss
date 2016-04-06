@@ -1,4 +1,4 @@
-@import "variables";
+@import "../common/variables";
 
 .start-page {
     .slider-pager {
@@ -44,7 +44,7 @@
             }
         }
 
-        @include media-query($screen-i5) {
+        @include media-query( $screen-i5 ) {
             h4 {
                 font-size: 16px;
             }
@@ -65,17 +65,17 @@
         }
 
         &.slide1 {
-            background: url("../images/start/start1.png") center center no-repeat;
+            background: url("../../images/start/start1.png") center center no-repeat;
             background-size: contain;
         }
 
         &.slide2 {
-            background: url("../images/start/start2.png") center center no-repeat;
+            background: url("../../images/start/start2.png") center center no-repeat;
             background-size: contain;
         }
 
         &.slide3 {
-            background: url("../images/start/start3.png") center center no-repeat;
+            background: url("../../images/start/start3.png") center center no-repeat;
             background-size: contain;
         }
     }

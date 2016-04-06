@@ -19,13 +19,6 @@
 
         getPhotosList();
 
-        /**
-         * implememention functions
-         *
-         * @function getPhotosList
-         * @function getDataByRefresh
-         */
-
         /* get photos list */
         function getPhotosList() {
             var reqParams = {};

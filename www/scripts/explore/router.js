@@ -42,7 +42,7 @@
                                 controller: 'ExploreCtrl as explore'
                             }
                         }
-                    })
+                    });
             }]);
 
 })( angular.module('Pixes.explore') );

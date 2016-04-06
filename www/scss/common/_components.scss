@@ -11,7 +11,7 @@
     border: 1px solid $border-highlight-color;
     border-radius: 5px;
 
-    @include media-query($screen-i5) {
+    @include media-query( $screen-i5 ) {
         right: 10px;
         line-height: 20px;
     }

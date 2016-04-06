@@ -1,4 +1,4 @@
-@import "compass/css3";
+@import "../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3";
 
 @mixin noliststyle() {
     list-style: none;
@@ -21,25 +21,40 @@
     }
 }
 
+@mixin translateposition( $x: 0, $y: 0 ) {
+    -webkit-transform: translate($x, $y);
+    -moz-transform: translate($x, $y);
+    -ms-transform: translate($x, $y);
+    -o-transform: translate($x, $y);
+    transform: translate($x, $y);
+}
+
 @mixin blockcenter( $hor: true, $ver: true ) {
-    & {
-        position: absolute;
+    position: absolute;
 
+    $x: 0;
+    $y: 0;
+
+    @if $ver {
+        top: 50%;
         $x: 0;
-        $y: 0;
-
-        @if $ver {
-            top: 50%;
-            $y: -50%;
-        }
-
-        @if $hor {
-            left: 50%;
-            $x: -50%;
-        }
-
-        @include translate($x, $y);
+        $y: -50%;
     }
+
+    @if $hor {
+        left: 50%;
+        $x: -50%;
+        $y: 0;
+    }
+
+    @if ( $hor && $ver ) {
+        top: 50%;
+        left: 50%;
+        $x: -50%;
+        $y: -50%;
+    }
+
+    @include translateposition($x, $y);
 }
 
 @mixin hovertransition( $t: 0.2s) {
@@ -48,14 +63,6 @@
     -ms-transition: all $t ease-in-out;
     -o-transition: all $t ease-in-out;
     transition: all $t ease-in-out;
-}
-
-@mixin translateposition( $x: 0, $y: 0 ) {
-    -webkit-transform: translate($x, $y);
-    -moz-transform: translate($x, $y);
-    -ms-transform: translate($x, $y);
-    -o-transform: translate($x, $y);
-    transform: translate($x, $y);
 }
 
 /* used for media-queries */

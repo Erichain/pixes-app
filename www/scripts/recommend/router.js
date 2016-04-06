@@ -33,7 +33,7 @@
                                 controller: 'recommendDetailCtrl as recommendDetail'
                             }
                         }
-                    })
+                    });
 
             }]);
 

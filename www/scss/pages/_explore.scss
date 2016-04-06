@@ -24,6 +24,11 @@
             background-color: $btn-highlight-bgcolor;
             box-shadow: none;
         }
+
+        @include media-query( $screen-i5 ) {
+            min-height: 25px;
+            line-height: 25px;
+        }
     }
 
     /* photo type */

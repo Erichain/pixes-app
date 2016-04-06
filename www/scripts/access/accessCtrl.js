@@ -26,13 +26,6 @@
             signUp();
         };
 
-        /**
-         * implementation functions
-         * @function signIn
-         * @function signUp
-         * @function getDataByRefresh
-         */
-
         /* signg in */
         function signIn() {
             if ( !vm.login.username || !vm.login.password ) {

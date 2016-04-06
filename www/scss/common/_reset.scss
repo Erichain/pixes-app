@@ -26,7 +26,7 @@
     box-shadow: none;
     outline: none;
 
-    @include media-query($screen-i5) {
+    @include media-query( $screen-i5 ) {
         padding: 0 6px;
         font-size: 14px;
         min-height: 32px;
@@ -49,7 +49,7 @@
         background-color: transparent;
         border: 2px solid #ffffff;
 
-        @include media-query($screen-i5) {
+        @include media-query( $screen-i5 ) {
             border: 1px solid #ffffff;
         }
 
@@ -108,7 +108,7 @@ ion-tabs {
                 padding: 8px 0;
                 font-size: 22px;
 
-                @include media-query($screen-i5) {
+                @include media-query( $screen-i5 ) {
                     font-size: 20px;
                 }
             }
@@ -124,7 +124,7 @@ ion-tabs {
 
 /* reset card */
 .card {
-    margin: 10px;;
+    margin: 10px;
     box-shadow: none;
 
     .item {
@@ -150,18 +150,24 @@ ion-tabs {
 
 /* reset the list's font-size and icon size */
 .scroll-content {
-    .setting-selection {
-        .list {
-            .item {
-                font-size: 14px;
-            }
+    .list {
+        .item {
+            padding: 14px;
+            font-size: 14px;
+        }
 
-            .item-icon-left,
-            .item-icon-right {
-                .icon {
-                    font-size: 18px;
-                }
+        .item-icon-left,
+        .item-icon-right {
+            .icon {
+                font-size: 18px;
             }
         }
+    }
+}
+
+/* reset the actionsheet's font-size */
+.action-sheet {
+    .button {
+        font-size: 15px;
     }
 }

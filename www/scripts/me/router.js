@@ -116,24 +116,17 @@
                         controller: ''
                     })
 
-                    /* settings-private */
-                    .state('tab.me_setting.private', {
-                        url: '/private',
-                        templateUrl: 'views/me/setting-private.html',
-                        controller: ''
-                    })
-
                     /* settings-feedback */
                     .state('tab.me_setting.feedback', {
-                        url: '/private',
+                        url: '/feedback',
                         templateUrl: '',
                         controller: ''
                     })
 
                     /* settings-about */
                     .state('tab.me_setting.about', {
-                        url: '/private',
-                        templateUrl: '',
+                        url: '/about',
+                        templateUrl: 'views/me/setting-about.html',
                         controller: ''
                     });
             }]);

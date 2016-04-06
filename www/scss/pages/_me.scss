@@ -1,3 +1,4 @@
+/* main page style of me page */
 .me-page {
     .user-info {
         height: 250px;
@@ -64,6 +65,18 @@
                 line-height: 18px;
             }
         }
+    }
+}
 
+/* styles for settingpages */
+.me-setting {
+    .setting-about-content {
+        font-size: 14px;
+        @include translateposition(0, 70%);
+
+        @include media-query( $screen-i5 ) {
+            font-size: 12px;
+            @include translateposition(0, 50%);
+        }
     }
 }

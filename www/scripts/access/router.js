@@ -29,7 +29,7 @@
                                 controller: 'AccessCtrl as access'
                             }
                         }
-                    })
+                    });
             }]);
 
 })( angular.module('Pixes.access') );
