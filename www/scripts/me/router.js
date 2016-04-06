@@ -113,21 +113,21 @@
                     .state('tab.me_setting.list', {
                         url: '/list',
                         templateUrl: 'views/me/me-setting.html',
-                        controller: ''
+                        controller: 'SettingCtrl as setting'
                     })
 
                     /* settings-feedback */
                     .state('tab.me_setting.feedback', {
                         url: '/feedback',
                         templateUrl: '',
-                        controller: ''
+                        controller: 'SettingCtrl as setting'
                     })
 
                     /* settings-about */
                     .state('tab.me_setting.about', {
                         url: '/about',
                         templateUrl: 'views/me/setting-about.html',
-                        controller: ''
+                        controller: 'SettingCtrl as setting'
                     });
             }]);
 
