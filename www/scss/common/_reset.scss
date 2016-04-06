@@ -154,6 +154,10 @@ ion-tabs {
         .item {
             padding: 14px;
             font-size: 14px;
+
+            &.item-input {
+                padding: 2px 16px;
+            }
         }
 
         .item-icon-left,
