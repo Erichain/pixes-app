@@ -1,5 +1,5 @@
 <ion-view view-title="Create">
-    <ion-content class="create-page">
+    <ion-content class="create-page" ng-class="{'bg-white': create.imgURI !== undefined}">
         <div class="create-page-upload-ctrl">
             <div ng-if="create.imgURI === undefined">
                 <div class="row text-center">

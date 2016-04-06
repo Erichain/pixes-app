@@ -16,15 +16,7 @@
                         cache: false,
                         url: '/start',
                         templateUrl: 'views/start/start.html',
-                        controller: 'StartCtrl'
-                    })
-
-                    /* access router */
-                    .state('access', {
-                        cache: false,
-                        url: '/access',
-                        templateUrl: 'views/access/access.html',
-                        controller: 'AccessCtrl as access'
+                        controller: 'StartCtrl as start'
                     })
 
                     /* tabs' page router definition */

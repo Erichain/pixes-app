@@ -1,1 +1,44 @@
 <!-- people's brief intro page -->
+<ion-view view-title="{{}}">
+    <ion-nav-buttons side="left">
+        <button class="button button-clear" back>
+            <i class="ion ion-ios-arrow-left"></i>
+            Back
+        </button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="user-info p15">
+            <div class="row">
+                <div class="col col-offset-25 col-50 text-center">
+                    <img src="" alt="Avatar" class="user-avatar">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-offset-10 col-80 text-center">
+                    <p class="fs20 info-name">Username</p>
+                    <p class="fs14 info-intro">One sentence to intro self.</p>
+                </div>
+            </div>
+            <div class="row text-center mt10">
+                <div class="col col-33">
+                    <a href="" ui-sref="tab.me_follower">
+                        <p class="fs16 count">{{ 2343 | numconvert }}</p>
+                        <p>Follower</p>
+                    </a>
+                </div>
+                <div class="col col-33">
+                    <a href="" ui-sref="tab.me_following">
+                        <p class="fs16 count">{{ 45344 | numconvert }}</p>
+                        <p>Following</p>
+                    </a>
+                </div>
+                <div class="col col-33">
+                    <a href="" ui-sref="tab.me_photo">
+                        <p class="fs16 count">{{ 100 }}</p>
+                        <p>Photo</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

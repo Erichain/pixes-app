@@ -8,7 +8,6 @@
         'ionic',
         'ngCordova',
         'Pixes.start',
-        'Pixes.access',
         'Pixes.recommend',
         'Pixes.explore',
         'Pixes.create',

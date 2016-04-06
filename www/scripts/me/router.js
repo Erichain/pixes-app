@@ -113,28 +113,21 @@
                     .state('tab.me_setting.list', {
                         url: '/list',
                         templateUrl: 'views/me/me-setting.html',
-                        controller: ''
-                    })
-
-                    /* settings-private */
-                    .state('tab.me_setting.private', {
-                        url: '/private',
-                        templateUrl: 'views/me/setting-private.html',
-                        controller: ''
+                        controller: 'SettingCtrl as setting'
                     })
 
                     /* settings-feedback */
                     .state('tab.me_setting.feedback', {
-                        url: '/private',
+                        url: '/feedback',
                         templateUrl: '',
-                        controller: ''
+                        controller: 'SettingCtrl as setting'
                     })
 
                     /* settings-about */
                     .state('tab.me_setting.about', {
-                        url: '/private',
-                        templateUrl: '',
-                        controller: ''
+                        url: '/about',
+                        templateUrl: 'views/me/setting-about.html',
+                        controller: 'SettingCtrl as setting'
                     });
             }]);
 

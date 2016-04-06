@@ -12,10 +12,9 @@
     function recommendDetailCtrl( $ionicPopup ) {
         var vm = this;
 
-        vm.leaveComment = function () {
-            leaveComment();
-        };
+        vm.leaveComment = leaveComment;
 
+        // leave comment
         function leaveComment() {
             var options = {
                 title: 'Leave A Comment',
