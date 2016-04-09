@@ -12,7 +12,7 @@
     function StartService( RequestService, StartApi ) {
 
         this.getRequestToken = function ( params ) {
-            return RequestService.post( StartApi.start, params );
+            return RequestService.post( StartApi.request, params );
         };
 
     }

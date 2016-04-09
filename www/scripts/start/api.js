@@ -7,7 +7,7 @@
 (function ( Start ) {
 
     Start.constant('StartApi', {
-        start: '/start'
+        request: '/get_request'
     });
 
 })( angular.module('Pixes.start') );

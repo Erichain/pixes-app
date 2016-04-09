@@ -24,7 +24,8 @@
 
                 // save oauth_token, oauth_token_secret to requestToken
                 requestToken = data;
-                console.log(requestToken);
+            }, function ( error ) {
+                throw new Error(error);
             });
         }
 
