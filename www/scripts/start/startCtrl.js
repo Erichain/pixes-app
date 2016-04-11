@@ -8,20 +8,25 @@
 (function ( Start ) {
 
     Start.controller('StartCtrl', StartCtrl);
-    StartCtrl.$inject = ['$cordovaInAppBrowser', 'StartService'];
+    StartCtrl.$inject = ['$rootScope', '$state', '$cordovaInAppBrowser', 'StartService'];
 
-    function StartCtrl( $cordovaInAppBrowser, StartService ) {
+    function StartCtrl( $rootScope, $state, $cordovaInAppBrowser, StartService ) {
         var vm = this,
             requestToken = {};
 
         vm.signIn = signIn;
+
+        vm.verifyAccess = verifyAccess;
+
+        $rootScope.$on('$cordovaInAppBrowser:exit', function ( e, event ) {
+            $state.go('verify');
+        });
 
         getRequestToken();
 
         // get request token from backend
         function getRequestToken() {
             StartService.getRequestToken().then(function ( data ) {
-
                 // save oauth_token, oauth_token_secret to requestToken
                 requestToken = data;
             }, function ( error ) {
@@ -41,12 +46,24 @@
             document.addEventListener('deviceready', function () {
                 $cordovaInAppBrowser.open('https://www.flickr.com/services/oauth/authorize?oauth_token=' + requestToken.oauth_token, '_blank', options)
                     .then(function ( event ) {
-                        //$cordovaInAppBrowser.close();
+                        // success
                     })
                     .catch(function ( event ) {
-
+                        // error
                     });
             }, false);
+        }
+
+        // verify
+        function verifyAccess() {
+            var reqParams = {
+                oauth_token: requestToken.oauth_token,
+                oauth_verifier: vm.verifier
+            };
+
+            StartService.getAccessToken( reqParams ).then(function ( data ) {
+                $state.go('tab.recommend_list');
+            });
         }
     }
 

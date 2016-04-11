@@ -7,7 +7,12 @@
 (function ( Start ) {
 
     Start.constant('StartApi', {
-        request: '/get_request'
+
+        /* get request token */
+        request: '/get_request',
+
+        /* get access token */
+        access: '/get_access'
     });
 
 })( angular.module('Pixes.start') );

@@ -1,5 +1,6 @@
 @import "../common/variables";
 
+/* styles for start pages */
 .start-page {
     .slider-pager {
         .slider-pager-page {
@@ -83,6 +84,19 @@
         &.slide3 {
             background: url("../images/start/start3.png") center center no-repeat;
             background-size: contain;
+        }
+    }
+}
+
+/* styles for verify page */
+.verify-page {
+    .verify-form {
+        @include translateposition(0, 50%);
+
+        input[type="text"] {
+            width: 100%;
+            margin-top: 40px;
+            border-radius: 0;
         }
     }
 }

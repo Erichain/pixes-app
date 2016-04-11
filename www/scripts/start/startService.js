@@ -11,8 +11,24 @@
 
     function StartService( RequestService, StartApi ) {
 
+        /**
+         * @description
+         * get request token from Flickr
+         * @param {object} params
+         * @returns {promise}
+         */
         this.getRequestToken = function ( params ) {
             return RequestService.post( StartApi.request, params );
+        };
+
+        /**
+         * @description
+         * get access token from Flickr
+         * @param {object} params
+         * @returns {promise}
+         */
+        this.getAccessToken = function ( params ) {
+            return RequestService.post( StartApi.access, params );
         };
 
     }
