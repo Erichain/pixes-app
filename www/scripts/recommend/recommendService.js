@@ -10,18 +10,15 @@
     RecommendService.$inject = ['RequestService', 'RecommendApi'];
 
     function RecommendService( RequestService, RecommendApi ) {
-        return {
-            getPhotosList: getPhotosList
-        };
 
         /**
          * get photos list
          * @param params
          * @returns {*|HttpPromise}
          */
-        function getPhotosList( params ) {
-            return RequestService.post( RecommendApi.recommend.list, params );
-        }
+        this.getPhotosList  = function ( params ) {
+            return RequestService.post( RecommendApi.list, params );
+        };
     }
 
 })( angular.module('Pixes.recommend') );

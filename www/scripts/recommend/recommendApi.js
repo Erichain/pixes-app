@@ -7,9 +7,21 @@
 (function ( Recommend ) {
 
     Recommend.constant('RecommendApi', {
-        recommend: {
-            list: '/recommend/list'
-        }
+
+        /* get recommend list */
+        list: '/get_recommend_list',
+
+        /* get photo's detail info */
+        detail: '/get_recommend_detail',
+
+        /* get photo's comments */
+        comments: '/get_comments',
+
+        /* make a comment to a photo */
+        comment: '/make_comment',
+
+        /* if not authorized, get interesting photos */
+        interesting: '/get_interesting_photos'
     });
 
 })( angular.module('Pixes.recommend') );

@@ -9,7 +9,7 @@
 
     Common
         .constant('config', {
-            API_ROOT_URL: 'http://192.168.2.3:9022'
+            API_ROOT_URL: 'http://0.0.0.0:9022'
         })
         .run(['$rootScope', '$state', '$stateParams', '$ionicPlatform', function ( $rootScope, $state, $stateParams, $ionicPlatform ) {
             $rootScope.$state = $state;
