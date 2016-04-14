@@ -32,6 +32,12 @@
                         url: '/tab',
                         abstract: true,
                         templateUrl: 'views/common/tabs.html'
+                    })
+
+                    .state('login', {
+                        url: '/login',
+                        templateUrl: 'views/common/guide-to-login.html',
+                        controller: 'StartCtrl as login'
                     });
             }]);
 })( angular.module('Pixes.common') );

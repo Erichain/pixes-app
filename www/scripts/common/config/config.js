@@ -27,13 +27,16 @@
             });
 
             /*$rootScope.$on('$stateChangeStart', function ( event, stateName ) {
-                var reg = /^tab(\.\w+){0,}$/,
+                var reg = /^tab.me(\w+){0,}$/,
                     toStateName = stateName.name,
-                    isBesideApp = reg.test(toStateName);
+                    isBesideApp = reg.test(toStateName),
+
+                    // decide a user is signed or not
+                    isLogined = false;
 
                 if ( isBesideApp ) {
                     event.preventDefault();
-                    $state.go('access.login');
+                    $state.go('login');
                 }
             });*/
 

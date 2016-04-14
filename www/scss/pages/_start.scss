@@ -1,7 +1,8 @@
 @import "../common/variables";
 
 /* styles for start pages */
-.start-page {
+.start-page,
+.guide-to-login {
     .slider-pager {
         .slider-pager-page {
             color: $text-bright-color;
@@ -83,6 +84,15 @@
 
         &.slide3 {
             background: url("../images/start/start3.png") center center no-repeat;
+            background-size: contain;
+        }
+    }
+}
+
+.guide-to-login {
+    .slide-item {
+        &.slide3 {
+            background: url("../images/start/guide_to_login.png") center center no-repeat;
             background-size: contain;
         }
     }

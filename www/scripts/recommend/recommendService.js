@@ -19,6 +19,15 @@
         this.getPhotosList  = function ( params ) {
             return RequestService.post( RecommendApi.list, params );
         };
+
+        /**
+         * get interesting photos
+         * @param params
+         * @returns {*|HttpPromise}
+         */
+        this.getInterestingPhotos = function ( params ) {
+            return RequestService.post( RecommendApi.interesting, params );
+        };
     }
 
 })( angular.module('Pixes.recommend') );

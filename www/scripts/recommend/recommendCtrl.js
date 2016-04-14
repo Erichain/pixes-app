@@ -17,7 +17,8 @@
 
         vm.leaveComment = leaveComment;
 
-        getPhotosList();
+        //getPhotosList();
+        getInterestingPhotos();
 
         // get photos list
         function getPhotosList() {
@@ -33,6 +34,16 @@
             }, function ( data ) {
                 vm.isLoaded = true;
                 console.log('error');
+            });
+        }
+
+        // get interesting photos list
+        function getInterestingPhotos() {
+            RecommendService.getInterestingPhotos().then(function ( data ) {
+                vm.isLoaded = true;
+                console.log(data);
+            }, function ( error ) {
+                vm.isLoaded = true;
             });
         }
 
