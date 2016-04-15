@@ -8,9 +8,9 @@
 (function ( Start ) {
 
     Start.controller('StartCtrl', StartCtrl);
-    StartCtrl.$inject = ['$rootScope', '$state', '$cordovaInAppBrowser', 'StartService'];
+    StartCtrl.$inject = ['$rootScope', '$state', '$cordovaInAppBrowser', 'StartService', 'Toast'];
 
-    function StartCtrl( $rootScope, $state, $cordovaInAppBrowser, StartService ) {
+    function StartCtrl( $rootScope, $state, $cordovaInAppBrowser, StartService, Toast ) {
         var vm = this,
             requestToken = {};
 
@@ -63,6 +63,8 @@
 
             StartService.getAccessToken( reqParams ).then(function ( data ) {
                 $state.go('tab.recommend_list');
+            }, function ( error ) {
+                Toast.showToast('000001');
             });
         }
     }
