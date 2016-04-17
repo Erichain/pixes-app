@@ -41,7 +41,8 @@
         function getInterestingPhotos() {
             RecommendService.getInterestingPhotos().then(function ( data ) {
                 vm.isLoaded = true;
-                console.log(data);
+
+                vm.imgData = data.photo;
             }, function ( error ) {
                 vm.isLoaded = true;
             });
@@ -49,7 +50,6 @@
 
         // refreshing by pulling down
         function getDataByRefresh() {
-            console.log('refreshed!');
             $timeout(function () {
                 $scope.$broadcast('scroll.refreshComplete');
             }, 2000);

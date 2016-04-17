@@ -27,7 +27,7 @@
                 return DICT[dictName][index];
             }
             return index;
-        }
+        };
     }
 
 })( angular.module('Pixes.common') );

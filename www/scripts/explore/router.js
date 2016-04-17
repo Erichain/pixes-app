@@ -22,6 +22,28 @@
                         }
                     })
 
+                    /* explore photo list */
+                    .state('tab.explore_photo_list', {
+                        url: '/photo-list',
+                        views: {
+                            'tab-explore': {
+                                templateUrl: 'views/common/photo-list.html',
+                                controller: 'ExplorePhotoListCtrl'
+                            }
+                        }
+                    })
+
+                    /* explore people detail */
+                    .state('tab.explore_people_detail', {
+                        url: '/people-detail',
+                        view: {
+                            'tab-explore': {
+                                templateUrl: 'views/common/people-intro.html',
+                                controller: 'ExplorePeopleDetailCtrl'
+                            }
+                        }
+                    })
+
                     /* explore-people */
                     .state('tab.explore.people', {
                         url: '/people',

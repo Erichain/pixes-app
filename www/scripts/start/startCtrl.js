@@ -18,6 +18,7 @@
 
         vm.verifyAccess = verifyAccess;
 
+        // operation after closing the browser
         $rootScope.$on('$cordovaInAppBrowser:exit', function ( e, event ) {
             $state.go('verify');
         });

@@ -28,6 +28,14 @@
         this.getInterestingPhotos = function ( params ) {
             return RequestService.post( RecommendApi.interesting, params );
         };
+
+        this.postComment = function ( params ) {};
+
+        this.downloadPhoto = function ( params ) {};
+
+        this.starPhoto = function ( params ) {};
+
+        this.followUser = function ( params ) {};
     }
 
 })( angular.module('Pixes.recommend') );

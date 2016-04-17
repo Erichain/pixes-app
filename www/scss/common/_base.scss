@@ -100,6 +100,10 @@ $font-weight-maps:
     &-bright {
         color: $text-bright-color;
     }
+
+    &-shallow {
+        color: #d7d7d7;
+    }
 }
 
 .clearfix {

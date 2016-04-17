@@ -13,7 +13,7 @@
     function ExploreCtrl( ExploreService ) {
         var vm = this;
 
-        getPeopleList();
+        //getPeopleList();
 
         function getPeopleList() {
             var reqContent = {};
