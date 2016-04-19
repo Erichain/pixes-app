@@ -1,28 +1,30 @@
 /**
- * @description mock data for explore
- * @module Pixes.explore
+ * @description mock data for explore module
+ * @module Pixes.recommend
  * @author Erichain
- * @date 2016-01-23
+ * @date 2016-04-19
  */
 (function ( Explore ) {
 
     Mock.mockjax(Explore);
-
     Explore.run([
         'config', 'ExploreApi',
         function ( config, ExploreApi ) {
-            var root = config.API_ROOT_URL;
 
-            Mock.mock(root + ExploreApi.explore.list.people, {
-                'result|20': [{
-                    'avatar_url': '',
+            var root = config.API_ROOT_URL,
+                Random = Mock.Random;
+
+            Mock.mock(root + ExploreApi.people, {
+                'result|30': [{
                     'name': '@name',
-                    'follower_count|20-100': 0,
-                    'following_count|10-200': 0,
-                    'photo_count|0-100': 0,
+                    'avatar_url': Random.dataImage(),
+                    'follower_count|0-10000': 0,
+                    'following_count|0-10000': 0,
+                    'photo_count|0-1000': 0,
                     'status|1': [0, 1]
                 }]
             });
+
         }]);
 
 })( angular.module('Pixes.explore') );

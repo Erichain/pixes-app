@@ -18,11 +18,11 @@
         '504': '',
 
         /**
-         * access module's message
+         * start module's message
          * 6 digit number, starting with 0
          * e.g. 000001
          */
-        '000001': 'Password can\'t be empty',
+        '000001': 'Get access token failed',
 
         /**
          * recommend module's message

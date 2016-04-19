@@ -1,0 +1,17 @@
+<ion-view view-title="Validation">
+    <ion-content scroll="false" class="verify-page">
+        <form action="" class="verify-form">
+            <div class="row">
+                <div class="col col-offset-25 col-50 text-center">
+                    <label for="verifier" class="fwb fs16 text-general">Please input the code:</label>
+                    <input type="text" id="verifier" class="input-general" ng-model="start.verifier">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-offset-25 col-50">
+                    <a class="button button-general button-block" ng-click="start.verifyAccess()">Confirm</a>
+                </div>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

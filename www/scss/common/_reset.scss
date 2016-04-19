@@ -47,11 +47,7 @@
     &.button-bordered {
         color: #ffffff;
         background-color: transparent;
-        border: 2px solid #ffffff;
-
-        @include media-query( $screen-i5 ) {
-            border: 1px solid #ffffff;
-        }
+        border: 1px solid #ffffff;
 
         &:active {
             color: #ffffff;

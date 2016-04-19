@@ -9,7 +9,7 @@
 
     Common
         .constant('config', {
-            API_ROOT_URL: ''
+            API_ROOT_URL: 'http://0.0.0.0:9022'
         })
         .run(['$rootScope', '$state', '$stateParams', '$ionicPlatform', function ( $rootScope, $state, $stateParams, $ionicPlatform ) {
             $rootScope.$state = $state;
@@ -27,13 +27,16 @@
             });
 
             /*$rootScope.$on('$stateChangeStart', function ( event, stateName ) {
-                var reg = /^tab(\.\w+){0,}$/,
+                var reg = /^tab.me(\w+){0,}$/,
                     toStateName = stateName.name,
-                    isBesideApp = reg.test(toStateName);
+                    isBesideApp = reg.test(toStateName),
+
+                    // decide a user is signed or not
+                    isLogined = false;
 
                 if ( isBesideApp ) {
                     event.preventDefault();
-                    $state.go('access.login');
+                    $state.go('login');
                 }
             });*/
 

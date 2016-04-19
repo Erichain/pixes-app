@@ -17,7 +17,8 @@
 
         vm.leaveComment = leaveComment;
 
-        getPhotosList();
+        //getPhotosList();
+        getInterestingPhotos();
 
         // get photos list
         function getPhotosList() {
@@ -32,13 +33,21 @@
 
             }, function ( data ) {
                 vm.isLoaded = true;
-                console.log('error');
+            });
+        }
+
+        // get interesting photos list
+        function getInterestingPhotos() {
+            RecommendService.getInterestingPhotos().then(function ( data ) {
+                vm.isLoaded = true;
+                vm.imgData = data.photo.slice(0, 20);
+            }, function ( error ) {
+                vm.isLoaded = true;
             });
         }
 
         // refreshing by pulling down
         function getDataByRefresh() {
-            console.log('refreshed!');
             $timeout(function () {
                 $scope.$broadcast('scroll.refreshComplete');
             }, 2000);

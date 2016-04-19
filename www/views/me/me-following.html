@@ -7,7 +7,7 @@
     </ion-nav-buttons>
     <ion-content class="me-follower">
         <div class="card animated fadeIn me-following">
-            <div class="item item-avatar mb10" ng-repeat="people in me.followingData">
+            <div class="item item-avatar mb10" ng-repeat="people in myFollowing.followingData">
                 <img ng-src="{{ people.avatar_url }}" alt="Avatar">
                 <h2>{{ people.name }}</h2>
                 <p>

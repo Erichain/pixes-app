@@ -1,6 +1,8 @@
 @import "../common/variables";
 
-.start-page {
+/* styles for start pages */
+.start-page,
+.guide-to-login {
     .slider-pager {
         .slider-pager-page {
             color: $text-bright-color;
@@ -21,11 +23,15 @@
             @include translateposition(0, 35%);
 
             .logo-content {
-                margin-bottom: 200px;
+                overflow: auto;
 
                 p {
                     font-size: 4.5em;
                 }
+            }
+
+            .button-holder {
+                margin-top: 250px;
             }
 
             .cancel-login {
@@ -55,15 +61,13 @@
 
             .entry {
                 .logo-content {
-                    margin-bottom: 160px;
-
-                    @include media-query( $screen-i5 ) {
-                        margin-bottom: 170px;
-                    }
-
                     p {
                         font-size: 4em;
                     }
+                }
+
+                .button-holder {
+                    margin-top: 200px;
                 }
             }
         }
@@ -81,6 +85,28 @@
         &.slide3 {
             background: url("../images/start/start3.png") center center no-repeat;
             background-size: contain;
+        }
+    }
+}
+
+.guide-to-login {
+    .slide-item {
+        &.slide3 {
+            background: url("../images/start/guide_to_login.png") center center no-repeat;
+            background-size: contain;
+        }
+    }
+}
+
+/* styles for verify page */
+.verify-page {
+    .verify-form {
+        @include translateposition(0, 50%);
+
+        input[type="text"] {
+            width: 100%;
+            margin-top: 40px;
+            border-radius: 0;
         }
     }
 }

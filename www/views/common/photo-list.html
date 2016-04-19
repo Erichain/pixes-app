@@ -1,11 +1,13 @@
-<ion-view view-title="Recommend">
-    <ion-content class="recommend-list">
-        <ion-refresher pulling-text="Let go to refresh !"
-                       on-refresh="recommend.getDataByRefresh()"
-                       refreshing-icon="fa fa-spinner fa-spin">
-        </ion-refresher>
+<ion-view>
+    <ion-nav-buttons>
+        <button class="button button-clear" ui-sref="tab.explore.photo" nav-direction="back">
+            <i class="ion ion-ios-arrow-left"></i>
+            Back
+        </button>
+    </ion-nav-buttons>
+    <ion-content>
         <div class="card">
-            <div class="item text-center animated fadeIn" ng-repeat="photo in recommendList.imgData">
+            <div class="item text-center animated fadeIn" ng-repeat="photo in imgData">
                 <img class="m0" ng-src="{{ photo.url_c }}" width="365" alt="" ui-sref="tab.recommend_detail({ img_id: photo.id })">
                 <div class="row text-center operation-bar">
                     <div class="col col-50 text-left">
@@ -15,18 +17,16 @@
                         <a href="">
                             <i class="fa fa-star-o"></i>
                         </a>
-                        <span class="text-shallow fs14">{{ photo.count_faves | numconvert }}</span>
                     </div>
                     <div class="col col-25">
-                        <a href="" ng-click="recommendList.leaveComment()">
+                        <a href="" ng-click="leaveComment()">
                             <i class="fa fa-comment-o"></i>
                         </a>
-                        <span class="text-shallow fs14">{{ photo.count_comments | numconvert }}</span>
                     </div>
                 </div>
             </div>
             <div class="item text-center"
-                 ng-if="(recommendList.imgData === null || recommendList.imgData.length === 0) && recommendList.isLoaded === false">
+                 ng-if="(imgData === null || imgData.length === 0) && isLoaded === false">
                 <i class="fa fa-spinner fa-spin"></i>
             </div>
         </div>

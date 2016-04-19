@@ -10,18 +10,22 @@
     ExploreService.$inject = ['RequestService', 'ExploreApi'];
 
     function ExploreService( RequestService, ExploreApi ) {
-        return {
-            getPeopleList: getPeopleList
-        };
 
         /**
          * get explore people's list
          * @param params
          * @returns {*|HttpPromise}
          */
-        function getPeopleList( params ) {
-            return RequestService.post( ExploreApi.explore.list.people, params );
-        }
+        this.getPeopleList = function ( params ) {
+            return RequestService.post( ExploreApi.people, params );
+        };
+
+        /**
+         * function to get photos list by series name
+         * @param params
+         * @returns {*|HttpPromise}
+         */
+        this.getPhotoListByType = function ( params ) {};
     }
 
 })( angular.module('Pixes.explore') );

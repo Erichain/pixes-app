@@ -29,34 +29,6 @@
     transform: translate($x, $y);
 }
 
-@mixin blockcenter( $hor: true, $ver: true ) {
-    position: absolute;
-
-    $x: 0;
-    $y: 0;
-
-    @if $ver {
-        top: 50%;
-        $x: 0;
-        $y: -50%;
-    }
-
-    @if $hor {
-        left: 50%;
-        $x: -50%;
-        $y: 0;
-    }
-
-    @if ( $hor && $ver ) {
-        top: 50%;
-        left: 50%;
-        $x: -50%;
-        $y: -50%;
-    }
-
-    @include translateposition($x, $y);
-}
-
 @mixin hovertransition( $t: 0.2s) {
     -webkit-transition: all $t ease-in-out;
     -moz-transition: all $t ease-in-out;

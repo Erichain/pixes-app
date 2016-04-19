@@ -19,11 +19,25 @@
                         controller: 'StartCtrl as start'
                     })
 
+                    // verify when get access token
+                    .state('verify', {
+                        cache: false,
+                        url: '/verify',
+                        templateUrl: 'views/start/verify.html',
+                        controller: 'StartCtrl as start'
+                    })
+
                     /* tabs' page router definition */
                     .state('tab', {
                         url: '/tab',
                         abstract: true,
                         templateUrl: 'views/common/tabs.html'
+                    })
+
+                    .state('login', {
+                        url: '/login',
+                        templateUrl: 'views/common/guide-to-login.html',
+                        controller: 'StartCtrl as login'
                     });
             }]);
 })( angular.module('Pixes.common') );
