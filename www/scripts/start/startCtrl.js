@@ -20,7 +20,7 @@
 
         // operation after closing the browser
         $rootScope.$on('$cordovaInAppBrowser:exit', function ( e, event ) {
-            $state.go('verify');
+            $state.go('tab.recommend_list');
         });
 
         getRequestToken();
@@ -45,7 +45,7 @@
 
             // open the flickr page to sign in
             document.addEventListener('deviceready', function () {
-                $cordovaInAppBrowser.open('https://www.flickr.com/services/oauth/authorize?oauth_token=' + requestToken.oauth_token, '_blank', options)
+                $cordovaInAppBrowser.open('https://api.500px.com/v1/oauth/authorize?oauth_token=' + requestToken.oauth_token, '_blank', options)
                     .then(function ( event ) {
                         // success
                     })

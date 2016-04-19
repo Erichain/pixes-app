@@ -33,7 +33,6 @@
 
             }, function ( data ) {
                 vm.isLoaded = true;
-                console.log('error');
             });
         }
 
@@ -41,8 +40,7 @@
         function getInterestingPhotos() {
             RecommendService.getInterestingPhotos().then(function ( data ) {
                 vm.isLoaded = true;
-
-                vm.imgData = data.photo;
+                vm.imgData = data.photo.slice(0, 20);
             }, function ( error ) {
                 vm.isLoaded = true;
             });

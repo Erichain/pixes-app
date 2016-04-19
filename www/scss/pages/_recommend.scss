@@ -31,11 +31,14 @@
         .card {
             .item {
                 border: none;
-                border-bottom: 1px solid $border-light-color;
                 border-radius: 0;
                 box-shadow: none;
             }
         }
+    }
+
+    .photo-body {
+        min-height: 180px;
     }
 
     .comment {
@@ -43,6 +46,10 @@
             .item {
                 border: none;
                 border-top: 1px solid $border-light-color;
+
+                p {
+                    white-space: normal;
+                }
             }
         }
     }
@@ -50,12 +57,19 @@
 
 /* comment */
 .add-comment {
+    width: 50px;
+    height: 50px;
     bottom: 59px;
+    right: 15px;
+    left: auto;
     background: transparent;
 
     .button {
         &.button-block {
             margin: 0;
+            border-radius: 25px;
+            line-height: 37px;
+            box-shadow: 0 2px 4px #aaaaaa;
         }
     }
 }

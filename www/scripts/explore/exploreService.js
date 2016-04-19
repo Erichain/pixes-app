@@ -17,7 +17,7 @@
          * @returns {*|HttpPromise}
          */
         this.getPeopleList = function ( params ) {
-            return RequestService.post( ExploreApi.explore.list.people, params );
+            return RequestService.post( ExploreApi.people, params );
         };
 
         /**

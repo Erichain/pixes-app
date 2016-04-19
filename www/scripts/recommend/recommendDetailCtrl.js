@@ -7,12 +7,29 @@
 (function ( Recommend ) {
 
     Recommend.controller('recommendDetailCtrl', recommendDetailCtrl);
-    recommendDetailCtrl.$inject = ['$ionicPopup'];
+    recommendDetailCtrl.$inject = ['$ionicPopup', '$stateParams', 'RecommendService'];
 
-    function recommendDetailCtrl( $ionicPopup ) {
+    function recommendDetailCtrl( $ionicPopup, $stateParams, RecommendService ) {
         var vm = this;
 
         vm.leaveComment = leaveComment;
+
+        getDetail();
+
+        function getDetail() {
+            var reqParams = {
+                photo_id: $stateParams.img_id
+            };
+
+            // initialize
+            vm.photoInfo = {};
+
+            RecommendService.getPhotoDetail(reqParams).then(function ( data ) {
+                vm.photoInfo = data;
+            }, function ( error ) {
+
+            });
+        }
 
         // leave comment
         function leaveComment() {

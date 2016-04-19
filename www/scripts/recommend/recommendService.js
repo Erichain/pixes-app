@@ -29,6 +29,15 @@
             return RequestService.post( RecommendApi.interesting, params );
         };
 
+        /**
+         * get photo's detail
+         * @param params
+         * @returns {*|HttpPromise}
+         */
+        this.getPhotoDetail = function ( params ) {
+            return RequestService.post( RecommendApi.detail, params );
+        };
+
         this.postComment = function ( params ) {};
 
         this.downloadPhoto = function ( params ) {};
