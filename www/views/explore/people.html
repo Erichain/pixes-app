@@ -7,9 +7,9 @@
             <i class="fa fa-user m5"></i>{{ people.following_count | numconvert }}
             <i class="fa fa-photo m5"></i>{{ people.photo_count | numconvert }}
         </p>
-        <button class="button add-to-following">
-            <i class="fa" ng-class="{'fa-plus': people.status === 0, 'fa-check': people.status === 1}"></i>
-            {{ people.status | dict: 'followOrNot' }}
+        <button class="button add-to-following" ng-click="people.status = !people.status">
+            <i class="fa" ng-class="{'fa-plus': +!people.status, 'fa-check': +people.status}"></i>
+            {{ +people.status | dict: 'followOrNot' }}
         </button>
     </div>
 </div>

@@ -8,6 +8,9 @@
 
     Me.constant('MeApi', {
 
+        /* get user info */
+        userInfo: '/get_user_info',
+
         /* update profile */
         profile: '/update_profile',
 

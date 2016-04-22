@@ -42,9 +42,9 @@
                         <i class="fa fa-user m5"></i>{{ recommendDetail.following_count }}
                         <i class="fa fa-photo m5"></i>{{ recommendDetail.photo_count }}
                     </p>
-                    <button class="button add-to-following">
-                        <i class="fa fa-plus"></i>
-                        Follow
+                    <button class="button add-to-following" ng-init="recommendDetail.status = 1" ng-click="recommendDetail.status = !recommendDetail.status">
+                        <i class="fa" ng-class="{'fa-plus': +!recommendDetail.status, 'fa-check': +recommendDetail.status}"></i>
+                        {{ +recommendDetail.status | dict: 'followOrNot' }}
                     </button>
                 </div>
             </div>
@@ -58,7 +58,6 @@
                     <img ng-src="{{ comment.iconurls.medium }}" alt="Avatar">
                     <h2>{{ comment.authorname }}</h2>
                     <p class="text-general">{{ comment._content }}</p>
-                    <p>{{  }}</p>
                 </div>
             </div>
         </div>

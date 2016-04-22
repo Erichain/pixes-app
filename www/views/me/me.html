@@ -3,7 +3,7 @@
         <div class="user-info p15">
             <div class="row">
                 <div class="col col-offset-25 col-50 text-center">
-                    <img src="" alt="Avatar" class="user-avatar">
+                    <img ng-src="{{ me.info.avatar_url }}" alt="Avatar" class="user-avatar">
                 </div>
                 <div class="col col-25 text-right">
                     <button class="button button-small button-bordered button-edit-profile" ui-sref="tab.me_update_profile">Edit</button>
@@ -11,26 +11,26 @@
             </div>
             <div class="row">
                 <div class="col col-offset-10 col-80 text-center">
-                    <p class="fs20 info-name">Username</p>
-                    <p class="fs14 info-intro">One sentence to intro self.</p>
+                    <p class="fs20 info-name">{{ me.info.username }}</p>
+                    <p class="fs14 info-intro">{{ me.info.brief_intro }}</p>
                 </div>
             </div>
             <div class="row text-center mt10">
                 <div class="col col-33">
                     <a href="" ui-sref="tab.me_follower">
-                        <p class="fs16 count">{{ 2343 | numconvert }}</p>
+                        <p class="fs16 count">{{ me.info.count_follower | numconvert }}</p>
                         <p>Follower</p>
                     </a>
                 </div>
                 <div class="col col-33">
                     <a href="" ui-sref="tab.me_following">
-                        <p class="fs16 count">{{ 45344 | numconvert }}</p>
+                        <p class="fs16 count">{{ me.info.count_following | numconvert }}</p>
                         <p>Following</p>
                     </a>
                 </div>
                 <div class="col col-33">
                     <a href="" ui-sref="tab.me_photo">
-                        <p class="fs16 count">{{ 100 }}</p>
+                        <p class="fs16 count">{{ me.info.photo_count| numconvert }}</p>
                         <p>Photo</p>
                     </a>
                 </div>

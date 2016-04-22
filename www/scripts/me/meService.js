@@ -16,7 +16,9 @@
          * @param params
          * @returns {*|HttpPromise}
          */
-        this.getUserInfo = function ( params ) {};
+        this.getUserInfo = function ( params ) {
+            return RequestService.post( MeApi.userInfo, params );
+        };
 
         /**
          * function to get user's favorite photos list

@@ -8,13 +8,23 @@
 (function ( me ) {
 
     me.controller('MeCtrl', MeCtrl);
-    MeCtrl.$inject = ['$state', '$ionicPopup'];
+    MeCtrl.$inject = ['$state', '$ionicPopup', 'MeService'];
 
-    function MeCtrl( $state, $ionicPopup ) {
+    function MeCtrl( $state, $ionicPopup, MeService ) {
         var vm = this;
 
         vm.logOut = logOut;
 
+        init();
+
+        // function to initialize, such as profile etc.
+        function init() {
+            MeService.getUserInfo().then(function ( data ) {
+                vm.info = data;
+            });
+        }
+
+        // function to log out
         function logOut() {
             var options = {
                 title: 'Log Out',
@@ -23,7 +33,12 @@
             };
 
             $ionicPopup.confirm(options).then(function ( data ) {
-                $state.go('start');
+                if ( data ) {
+                    $state.go('start');
+                }
+                else {
+                    // if canceled, do nothing
+                }
             });
         }
     }
