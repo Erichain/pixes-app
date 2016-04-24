@@ -28,7 +28,7 @@
         </div>
 
         <div class="text-center">
-            <img ng-src="{{ recommendDetail.photoInfo.url_c }}" alt="" width="375" class="photo-body">
+            <img ng-src="{{ $stateParams.img_url }}" alt="" width="375" class="photo-body">
         </div>
 
         <!-- user info -->
@@ -54,7 +54,7 @@
         <div class="padding comment text-minor">
             <p class="fs12">COMMENTS({{ recommendDetail.photoInfo.comments._content | numconvert }})</p>
             <div class="card">
-                <div class="item item-avatar mb10" ng-repeat="comment in recommendDetail.photoInfo.comment">
+                <div class="item item-avatar mb10" ng-repeat="comment in recommendDetail.comments">
                     <img ng-src="{{ comment.iconurls.medium }}" alt="Avatar">
                     <h2>{{ comment.authorname }}</h2>
                     <p class="text-general">{{ comment._content }}</p>

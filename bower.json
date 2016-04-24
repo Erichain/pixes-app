@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "font-awesome": "Font-Awesome#~4.5.0",
-    "mockjs": "^1.0.0"
+    "mockjs": "^1.0.0",
+    "ngCordova": "^0.1.26-alpha"
   }
 }

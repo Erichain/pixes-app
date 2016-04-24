@@ -26,6 +26,9 @@
 
             RecommendService.getPhotoDetail(reqParams).then(function ( data ) {
                 vm.photoInfo = data;
+
+                // user comments
+                vm.comments = data.comment;
             }, function ( error ) {
 
             });
