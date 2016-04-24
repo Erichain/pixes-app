@@ -14,11 +14,11 @@
                 <div class="item">
                     <h2>{{ recommendDetail.photoInfo.title._content | split: {seperator: '/', count: 0} }}</h2>
                     <p>
-                        <i class="fa fa-eye m5"></i>{{ recommendDetail.photoInfo.views | numconvert }}
-                        <i class="fa fa-star m5"></i>{{ recommendDetail.photoInfo.count_faves | numconvert }}
+                        <i class="fa fa-eye m5"></i>{{ $stateParams.count_fav | numconvert }}
+                        <i class="fa fa-star m5"></i>{{ $stateParams.count_comments | numconvert }}
                     </p>
-                    <button class="button star-this-photo">
-                        <i class="fa fa-star"></i>
+                    <button class="button star-this-photo" ng-click="recommendDetail.starPhoto()">
+                        <i class="fa fa-star" ng-class="{'star': !!recommendDetail.isStar}"></i>
                     </button>
                     <button class="button download-this-photo">
                         <i class="fa fa-download"></i>
@@ -36,11 +36,10 @@
             <div class="card">
                 <div class="item item-avatar">
                     <img ng-src="{{ recommendDetail.photoInfo.owner.iconurls.medium }}" alt="Avatar">
-                    <h2>{{ recommendDetail.owner.iconurls.medium }}</h2>
+                    <h2>{{ $stateParams.ownername }}</h2>
                     <p>
-                        <i class="fa fa-user m5"></i>{{ recommendDetail.follower_count }}
-                        <i class="fa fa-user m5"></i>{{ recommendDetail.following_count }}
-                        <i class="fa fa-photo m5"></i>{{ recommendDetail.photo_count }}
+                        <i class="fa fa-user m5"></i>{{ 543 }}
+                        <i class="fa fa-photo m5"></i>{{ 112 }}
                     </p>
                     <button class="button add-to-following" ng-init="recommendDetail.status = 1" ng-click="recommendDetail.status = !recommendDetail.status">
                         <i class="fa" ng-class="{'fa-plus': +!recommendDetail.status, 'fa-check': +recommendDetail.status}"></i>

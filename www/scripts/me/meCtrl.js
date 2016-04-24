@@ -32,8 +32,8 @@
                 okType: 'button-assertive'
             };
 
-            $ionicPopup.confirm(options).then(function ( data ) {
-                if ( data ) {
+            $ionicPopup.confirm(options).then(function ( res ) {
+                if ( res ) {
                     $state.go('start');
                 }
                 else {

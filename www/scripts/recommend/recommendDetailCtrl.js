@@ -13,6 +13,11 @@
         var vm = this;
 
         vm.leaveComment = leaveComment;
+        vm.starPhoto = starPhoto;
+
+        // initialize
+        vm.comments = [];
+        vm.isStar = false;
 
         getDetail();
 
@@ -45,7 +50,19 @@
                 okType: 'button-general'
             };
 
-            $ionicPopup.prompt(options);
+            $ionicPopup.prompt(options).then(function ( res ) {
+                vm.comments.push({
+                    iconurls: {
+                        medium: 'https://c2.staticflickr.com/8/7674/buddyicons/47919595@N02_m.jpg?1431563398#47919595@N02'
+                    },
+                    authorname: 'Erichain',
+                    _content: res
+                });
+            });
+        }
+
+        function starPhoto() {
+            vm.isStar = !vm.isStar;
         }
     }
 

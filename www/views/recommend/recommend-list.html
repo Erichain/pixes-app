@@ -9,19 +9,19 @@
                 <img class="m0"
                      ng-src="{{ photo.url_c }}"
                      width="365"
-                     ui-sref="tab.recommend_detail({ img_id: photo.id, img_url: photo.url_c })">
+                     ui-sref="tab.recommend_detail({ img_id: photo.id, img_url: photo.url_c, count_fav: photo.count_faves, count_comments: photo.count_comments, ownername: photo.ownername })">
                 <div class="row text-center operation-bar">
                     <div class="col col-50 text-left">
                         <span class="fs14 text-shallow">{{ photo.ownername }}</span>
                     </div>
                     <div class="col col-25">
-                        <a href="">
+                        <a href="" ui-sref="tab.recommend_detail({ img_id: photo.id, img_url: photo.url_c, count_fav: photo.count_faves, count_comments: photo.count_comments, ownername: photo.ownername })">
                             <i class="fa fa-star-o"></i>
                         </a>
                         <span class="text-shallow fs14">{{ photo.count_faves | numconvert }}</span>
                     </div>
                     <div class="col col-25">
-                        <a href="" ng-click="recommendList.leaveComment()">
+                        <a href="" ui-sref="tab.recommend_detail({ img_id: photo.id, img_url: photo.url_c, count_fav: photo.count_faves, count_comments: photo.count_comments, ownername: photo.ownername })">
                             <i class="fa fa-comment-o"></i>
                         </a>
                         <span class="text-shallow fs14">{{ photo.count_comments | numconvert }}</span>

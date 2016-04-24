@@ -26,7 +26,7 @@
 
                     /* recommend-detail */
                     .state('tab.recommend_detail', {
-                        url: '/recommend/detail?img_id&img_url',
+                        url: '/recommend/detail?img_id&img_url&count_fav&count_comments&ownername',
                         views: {
                             'tab-recommend': {
                                 templateUrl: 'views/recommend/recommend-detail.html',

@@ -97,16 +97,3 @@
         }
     }
 }
-
-/* styles for verify page */
-.verify-page {
-    .verify-form {
-        @include translateposition(0, 50%);
-
-        input[type="text"] {
-            width: 100%;
-            margin-top: 40px;
-            border-radius: 0;
-        }
-    }
-}

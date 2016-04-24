@@ -8,18 +8,17 @@
 (function ( Start ) {
 
     Start.controller('StartCtrl', StartCtrl);
-    StartCtrl.$inject = ['$rootScope', '$state', '$cordovaInAppBrowser', 'StartService', 'Toast'];
+    StartCtrl.$inject = ['$rootScope', '$scope', '$state', '$cordovaInAppBrowser', 'StartService', 'Toast'];
 
-    function StartCtrl( $rootScope, $state, $cordovaInAppBrowser, StartService, Toast ) {
+    function StartCtrl( $rootScope, $scope, $state, $cordovaInAppBrowser, StartService, Toast ) {
         var vm = this,
             requestToken = {};
 
         vm.signIn = signIn;
 
-        vm.verifyAccess = verifyAccess;
-
         // operation after closing the browser
         $rootScope.$on('$cordovaInAppBrowser:exit', function ( e, event ) {
+            $scope.$emit('login.ok');
             $state.go('tab.recommend_list');
         });
 
@@ -53,20 +52,6 @@
                         // error
                     });
             }, false);
-        }
-
-        // verify
-        function verifyAccess() {
-            var reqParams = {
-                oauth_token: requestToken.oauth_token,
-                oauth_verifier: vm.verifier
-            };
-
-            StartService.getAccessToken( reqParams ).then(function ( data ) {
-                $state.go('tab.recommend_list');
-            }, function ( error ) {
-                Toast.showToast('000001');
-            });
         }
     }
 

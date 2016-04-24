@@ -15,9 +15,9 @@
                 Random = Mock.Random;
 
             Mock.mock(root + MeApi.userInfo, {
-                'avatar_url': Random.image('250x250'),
-                'username': '@name',
-                'brief_intro': Random.paragraph(1, 2),
+                'avatar_url|1': ['https://c2.staticflickr.com/8/7674/buddyicons/47919595@N02_m.jpg?1431563398#47919595@N02'],
+                'username|1': ['Erichain'],
+                'brief_intro|1': ['Life is beautiful.'],
                 'count_follower|0-2000': 0,
                 'count_following|0-2000': 0,
                 'photo_count|0-1000': 0

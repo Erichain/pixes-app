@@ -8,14 +8,12 @@
 (function ( recommend ) {
 
     recommend.controller('RecommendCtrl', RecommendCtrl);
-    RecommendCtrl.$inject = ['$scope', '$timeout', 'RecommendService', '$ionicPopup'];
+    RecommendCtrl.$inject = ['$scope', '$timeout', 'RecommendService', '$ionicPopup', 'TempService'];
 
-    function RecommendCtrl( $scope, $timeout, RecommendService, $ionicPopup ) {
+    function RecommendCtrl( $scope, $timeout, RecommendService, $ionicPopup, TempService ) {
         var vm = this;
 
         vm.getDataByRefresh = getDataByRefresh;
-
-        vm.leaveComment = leaveComment;
 
         //getPhotosList();
         getInterestingPhotos();
@@ -51,20 +49,6 @@
             $timeout(function () {
                 $scope.$broadcast('scroll.refreshComplete');
             }, 2000);
-        }
-
-        // leave comment
-        function leaveComment() {
-            var options = {
-                title: 'Leave A Comment',
-                inputType: 'text',
-                inputPlaceholder: 'Leave your comment to author',
-                cancelText: 'Cancel',
-                okText: 'OK',
-                okType: 'button-general'
-            };
-
-            $ionicPopup.prompt(options);
         }
     }
 

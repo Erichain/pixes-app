@@ -38,21 +38,23 @@
                     $cordovaKeyboard.close();
                 });
 
-            /*$rootScope.$on('$stateChangeStart', function ( event, stateName ) {
-                var reg = /^tab.me(\w+){0,}$/,
-                    toStateName = stateName.name,
-                    isBesideApp = reg.test(toStateName),
+                /*$rootScope.isLogined = false;
 
-                    // decide a user is signed or not
-                    isLogined = false;
+                $rootScope.$on('login.ok', function () {
+                    $rootScope.isLogined = true;
+                });
 
-                if ( isBesideApp ) {
-                    event.preventDefault();
-                    $state.go('login');
-                }
-            });*/
+                $rootScope.$on('$stateChangeStart', function ( event, stateName ) {
+                    var reg = /^(tab.me|tab.create)(\w+){0,}$/,
+                        toStateName = stateName.name,
+                        isBesideApp = reg.test(toStateName);
 
-        }]);
+                    if ( isBesideApp && !$rootScope.isLogined ) {
+                        event.preventDefault();
+                        $state.go('login');
+                    }
+                });*/
+            }]);
 
 
 })( angular.module('Pixes.common') );

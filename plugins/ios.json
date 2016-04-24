@@ -24,6 +24,9 @@
         },
         "cordova-plugin-statusbar": {
             "PACKAGE_NAME": "com.ionicframework.pixes434605"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.ionicframework.pixes434605"
         }
     },
     "dependent_plugins": {}
