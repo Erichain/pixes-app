@@ -48,7 +48,7 @@
         function getDataByRefresh() {
             $timeout(function () {
                 $scope.$broadcast('scroll.refreshComplete');
-            }, 2000);
+            }, 1000);
         }
     }
 
