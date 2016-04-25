@@ -15,6 +15,11 @@
             'followOrNot': {
                 '0': 'Follow',
                 '1': 'Following'
+            },
+            'gender': {
+                '0': '-',
+                '1': 'male',
+                '2': 'Female'
             }
         };
 

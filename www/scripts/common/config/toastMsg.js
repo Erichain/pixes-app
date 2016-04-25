@@ -36,7 +36,21 @@
          * 6 digit number, starting with 2
          * e.g. 200001
          */
-        '200001': ''
+        '200001': '',
+
+        /**
+         * create module's message
+         * 6 digit number, starting with 3
+         * e.g. 300001
+         */
+        '300001': '',
+
+        /**
+         * me module's message
+         * 6 digit number, starting with 4
+         * e.g. 400001
+         */
+        '400001': 'Update Success!'
     });
 
 })( angular.module('Pixes.common') );

@@ -33,7 +33,6 @@
                     var isVisible = $cordovaKeyboard.isVisible();
                     $cordovaStatusbar.styleColor('white');
 
-                    $cordovaKeyboard.hideAccessoryBar(true);
                     $cordovaKeyboard.disableScroll(true);
                     $cordovaKeyboard.close();
                 });

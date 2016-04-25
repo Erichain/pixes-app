@@ -20,7 +20,8 @@
                 'brief_intro|1': ['Life is beautiful.'],
                 'count_follower|0-2000': 0,
                 'count_following|0-2000': 0,
-                'photo_count|0-1000': 0
+                'photo_count|0-1000': 0,
+                'gender|1': [0, 1]
             });
 
         }]);

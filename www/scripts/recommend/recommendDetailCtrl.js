@@ -7,13 +7,14 @@
 (function ( Recommend ) {
 
     Recommend.controller('recommendDetailCtrl', recommendDetailCtrl);
-    recommendDetailCtrl.$inject = ['$ionicPopup', '$stateParams', 'RecommendService'];
+    recommendDetailCtrl.$inject = ['$ionicPopup', '$stateParams', 'RecommendService', '$cordovaFileTransfer', 'Toast'];
 
-    function recommendDetailCtrl( $ionicPopup, $stateParams, RecommendService ) {
+    function recommendDetailCtrl( $ionicPopup, $stateParams, RecommendService, $cordovaFileTransfer, Toast ) {
         var vm = this;
 
         vm.leaveComment = leaveComment;
         vm.starPhoto = starPhoto;
+        vm.downloadPhoto = downloadPhoto;
 
         // initialize
         vm.comments = [];
@@ -34,9 +35,7 @@
 
                 // user comments
                 vm.comments = data.comment;
-            }, function ( error ) {
-
-            });
+            }, function ( error ) {});
         }
 
         // leave comment
@@ -61,8 +60,27 @@
             });
         }
 
+        // star a photo
         function starPhoto() {
             vm.isStar = !vm.isStar;
+        }
+
+        // down a photo
+        function downloadPhoto() {
+            document.addEventListener('deviceready', function () {
+                var url = 'http://cdn.wall-pix.net/albums/art-space/00030109.jpg',
+                    targetPath = cordova.file.tempDirectory + '00030109.jpg',
+                    trustHosts = true,
+                    options = {};
+
+                $cordovaFileTransfer.download(url, targetPath, options, trustHosts).then(function ( data ) {
+                    Toast.showToast(null, 'Download Sucess');
+                }, function ( error ) {
+                    Toast.showToast(null, 'Download Failed');
+                }, function ( progress ) {
+
+                });
+            });
         }
     }
 
