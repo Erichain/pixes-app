@@ -17,6 +17,9 @@
         /* get user's photos */
         photos: '/get_my_photos',
 
+        /* get user's bought photos */
+        bought: '/get_my_bought',
+
         /* get user's followers */
         followers: '/get_my_followers',
 

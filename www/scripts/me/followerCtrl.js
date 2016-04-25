@@ -7,8 +7,14 @@
 (function ( Me ) {
 
     Me.controller('FollowerCtrl', FollowerCtrl);
-    FollowerCtrl.$inject = [];
+    FollowerCtrl.$inject = ['MeService'];
 
-    function FollowerCtrl() {}
+    function FollowerCtrl( MeService ) {
+        var vm = this;
+
+        MeService.getUsersFollowers().then(function ( data ) {
+            vm.followerData = data.result;
+        });
+    }
 
 })( angular.module('Pixes.me') );

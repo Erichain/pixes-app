@@ -9,11 +9,11 @@
         <div class="card animated fadeIn me-following">
             <div class="item item-avatar mb10" ng-repeat="people in myFollowing.followingData">
                 <img ng-src="{{ people.avatar_url }}" alt="Avatar">
-                <h2>{{ people.name }}</h2>
+                <h2>{{ people.author }}</h2>
                 <p>
-                    <i class="fa fa-user m5"></i>{{ people.follower_count }}
-                    <i class="fa fa-user m5"></i>{{ people.following_count }}
-                    <i class="fa fa-photo m5"></i>{{ people.photo_count }}
+                    <i class="fa fa-user m5"></i>{{ people.follower_count | numconvert }}
+                    <i class="fa fa-user m5"></i>{{ people.following_count | numconvert }}
+                    <i class="fa fa-photo m5"></i>{{ people.photo_count | numconvert }}
                 </p>
                 <button class="button add-to-following">
                     <i class="fa" ng-class="{'fa-plus': people.status === 0, 'fa-check': people.status === 1}"></i>

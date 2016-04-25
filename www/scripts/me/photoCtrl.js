@@ -7,8 +7,19 @@
 (function ( Me ) {
 
     Me.controller('PhotoCtrl', PhotoCtrl);
-    PhotoCtrl.$inject = [];
+    PhotoCtrl.$inject = ['MeService'];
 
-    function PhotoCtrl() {}
+    function PhotoCtrl( MeService ) {
+        var vm = this;
+
+        init();
+
+        function init() {
+            MeService.getUsersPhotos().then(function ( data ) {
+                vm.imgData = data.photo.slice(70, 90);
+            });
+        }
+
+    }
 
 })( angular.module('Pixes.me') );
