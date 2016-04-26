@@ -5,17 +5,20 @@
  * @author Erichain
  * @date 2015-10-25
  */
-(function ( recommend ) {
+(function ( Recommend ) {
 
-    recommend.controller('RecommendCtrl', RecommendCtrl);
-    RecommendCtrl.$inject = ['$scope', '$timeout', 'RecommendService', '$ionicPopup', 'TempService'];
+    Recommend.controller('RecommendCtrl', RecommendCtrl);
+    RecommendCtrl.$inject = ['$scope', '$timeout', 'RecommendService'];
 
-    function RecommendCtrl( $scope, $timeout, RecommendService, $ionicPopup, TempService ) {
+    function RecommendCtrl( $scope, $timeout, RecommendService ) {
         var vm = this;
 
         vm.getDataByRefresh = getDataByRefresh;
 
-        //getPhotosList();
+        $scope.$on('login.ok', function () {
+            getPhotosList();
+        });
+
         getInterestingPhotos();
 
         // get photos list
@@ -24,12 +27,9 @@
 
             vm.isLoaded = false;
             RecommendService.getPhotosList( reqParams ).then(function ( data ) {
-
                 vm.isLoaded = true;
-
-                vm.imgData = data.result;
-
-            }, function ( data ) {
+                vm.imgData = data.photo.slice(60, 90);
+            }, function ( error ) {
                 vm.isLoaded = true;
             });
         }

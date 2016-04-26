@@ -24,7 +24,7 @@
 
                     /* explore photo list */
                     .state('tab.explore_photo_list', {
-                        url: '/photo-list',
+                        url: '/photo-list?type',
                         views: {
                             'tab-explore': {
                                 templateUrl: 'views/common/photo-list.html',

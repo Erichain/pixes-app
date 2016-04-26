@@ -25,7 +25,9 @@
          * @param params
          * @returns {*|HttpPromise}
          */
-        this.getPhotoListByType = function ( params ) {};
+        this.getPhotoListByType = function ( params ) {
+            return RequestService.post( ExploreApi.photo, params );
+        };
     }
 
 })( angular.module('Pixes.explore') );
