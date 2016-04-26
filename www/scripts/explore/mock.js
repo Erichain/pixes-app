@@ -32,6 +32,17 @@
                     'photo_count|0-1000': 0,
                     'status|1': [0, 1]
                 }]
+            })
+            .mock(root + ExploreApi.profile, {
+                'result': {
+                    'description|1': [
+                        'Life is beautiful',
+                        'This is my brief intro',
+                        'Just be what you wanna be',
+                        'I\'m a photographor!',
+                        'EEEEEEE....'
+                    ]
+                }
             });
 
         }]);

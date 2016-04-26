@@ -21,6 +21,15 @@
         };
 
         /**
+         * get explore people's detail
+         * @param params
+         * @returns {*|HttpPromise}
+         */
+        this.getPeopleDetail = function ( params ) {
+            return RequestService.post( ExploreApi.profile, params );
+        };
+
+        /**
          * function to get photos list by series name
          * @param params
          * @returns {*|HttpPromise}

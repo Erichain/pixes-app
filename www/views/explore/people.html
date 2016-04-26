@@ -1,6 +1,8 @@
 <div class="card animated fadeIn explore-people">
     <div class="item item-avatar mb10" ng-repeat="people in explore.explorePeopleData">
-        <img ng-src="{{ people.avatar_url }}" alt="Avatar">
+        <img ng-src="{{ people.avatar_url }}"
+             alt="Avatar"
+             ui-sref="tab.explore_people_detail({avatar: people.avatar_url, name: people.name, follower: people.follower_count, following: people.following_count, photo: people.photo_count, status: people.status})" nav-direction="forward">
         <h3 class="fwn">{{ people.name }}</h3>
         <p>
             <i class="fa fa-user m5"></i>{{ people.follower_count | numconvert }}
@@ -8,7 +10,7 @@
             <i class="fa fa-photo m5"></i>{{ people.photo_count | numconvert }}
         </p>
         <button class="button add-to-following" ng-click="people.status = !people.status">
-            <i class="fa" ng-class="{'fa-plus': +!people.status, 'fa-check': +people.status}"></i>
+            <i class="fa" ng-class="{'fa-plus' : +!people.status, 'fa-check': +people.status}"></i>
             {{ +people.status | dict: 'followOrNot' }}
         </button>
     </div>

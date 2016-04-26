@@ -8,8 +8,17 @@
 (function ( Explore ) {
 
     Explore.controller('ExplorePeopleDetailCtrl', ExplorePeopleDetailCtrl);
-    ExplorePeopleDetailCtrl.$inject = [];
+    ExplorePeopleDetailCtrl.$inject = ['$scope', 'ExploreService'];
 
-    function ExplorePeopleDetailCtrl() {}
+    function ExplorePeopleDetailCtrl( $scope, ExploreService ) {
+
+        init();
+
+        function init() {
+            ExploreService.getPeopleDetail().then(function ( data ) {
+                $scope.userInfo = data.result;
+            }, function ( error ) {});
+        }
+    }
 
 })( angular.module('Pixes.explore') );
