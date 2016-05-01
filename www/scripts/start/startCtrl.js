@@ -30,7 +30,8 @@
                 // save oauth_token, oauth_token_secret to requestToken
                 requestToken = data;
             }, function ( error ) {
-                throw new Error(error);
+                console.error('Can\'t get request token');
+                Toast.showToast(null, 'Can\'t get request token');
             });
         }
 

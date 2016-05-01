@@ -33,12 +33,11 @@
                     var isVisible = $cordovaKeyboard.isVisible();
                     $cordovaStatusbar.styleColor('white');
 
-                    $cordovaKeyboard.hideAccessoryBar(true);
                     $cordovaKeyboard.disableScroll(true);
                     $cordovaKeyboard.close();
                 });
 
-                /*$rootScope.isLogined = false;
+                $rootScope.isLogined = false;
 
                 $rootScope.$on('login.ok', function () {
                     $rootScope.isLogined = true;
@@ -53,7 +52,7 @@
                         event.preventDefault();
                         $state.go('login');
                     }
-                });*/
+                });
             }]);
 
 

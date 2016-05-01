@@ -1,8 +1,16 @@
 /* styles for create page */
 .create-page {
-    background-color: $shallow-page-bgcolor;
+    background-color: #ffffff;
 
     .create-page-upload-ctrl {
         @include translateposition(0, 40%);
+    }
+
+    .card {
+        margin: 0;
+
+        .item {
+            margin: 4px;
+        }
     }
 }

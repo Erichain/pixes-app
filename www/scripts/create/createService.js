@@ -10,13 +10,7 @@
     CreateService.$inject = ['RequestService', 'CreateApi'];
 
     function CreateService( RequestService, CreateApi ) {
-
-        /**
-         * function to upload photo
-         * @param params
-         * @returns {*|HttpPromise}
-         */
-        this.uploadPhoto = function ( params ) {};
+        var _photos = [];
 
         /**
          * function to update photo's info
@@ -30,8 +24,31 @@
          * @param params
          * @returns {*|HttpPromise}
          */
-        this.deletePhoto = function ( params ) {};
+        this.getCreatedPhotos = function ( params ) {
+            return RequestService.post( CreateApi.photos, params );
+        };
 
+        /**
+         * get photos from uploaded
+         */
+        this.getPhotos = function () {
+            return _photos;
+        };
+
+        /**
+         * save the uploaded photos to a array
+         * @param photoInfo
+         */
+        this.uploadPhoto = function ( photoInfo ) {
+            _photos.push(photoInfo);
+        };
+
+        /**
+         * remove photo from uploaded
+         */
+        this.removePhoto = function () {
+            _photos.pop();
+        };
     }
 
 })( angular.module('Pixes.create') );

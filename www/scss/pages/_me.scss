@@ -28,3 +28,16 @@
         }
     }
 }
+
+.img-list {
+    .card {
+        margin: 0;
+
+        .item {
+            min-height: 176px;
+            max-height: 400px;
+            padding: 0;
+            margin: 5px;
+        }
+    }
+}

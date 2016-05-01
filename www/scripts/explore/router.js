@@ -24,7 +24,7 @@
 
                     /* explore photo list */
                     .state('tab.explore_photo_list', {
-                        url: '/photo-list',
+                        url: '/photo-list?type',
                         views: {
                             'tab-explore': {
                                 templateUrl: 'views/common/photo-list.html',
@@ -35,8 +35,8 @@
 
                     /* explore people detail */
                     .state('tab.explore_people_detail', {
-                        url: '/people-detail',
-                        view: {
+                        url: '/people-detail?avatar&name&follower&following&photo&status',
+                        views: {
                             'tab-explore': {
                                 templateUrl: 'views/common/people-intro.html',
                                 controller: 'ExplorePeopleDetailCtrl'

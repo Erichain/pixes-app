@@ -7,33 +7,30 @@
     </ion-nav-buttons>
     <ion-content class="me-update-profile-page">
         <div class="list">
-            <label class="item item-icon-right">
-                <span class="input-label">Avatar</span>
-                <a href="" class="icon">
-                    <img src="" alt="">
-                </a>
-            </label>
             <label class="item item-input">
                 <span class="input-label">Name</span>
-                <input type="text">
+                <input type="text" ng-model="updateProfile.formData.username">
             </label>
             <label class="item item-input item-select">
                 <div class="input-label">
                     Gender
                 </div>
-                <select>
-                    <option value="">None</option>
-                    <option value="">Male</option>
-                    <option value="">Female</option>
+                <select ng-model="updateProfile.formData.gender" ng-init="updateProfile.formData.gender = 1">
+                    <option value="{{0}}">None</option>
+                    <option value="{{1}}" ng-selected="true">Male</option>
+                    <option value="{{2}}">Female</option>
                 </select>
             </label>
             <label class="item item-input">
-                <textarea name="" rows="5" placeholder="Brief description for yourself"></textarea>
+                <textarea name=""
+                          rows="5"
+                          placeholder="Brief description for yourself"
+                          ng-model="updateProfile.formData.brief_intro"></textarea>
             </label>
         </div>
         <div class="row">
             <div class="col col-offset-10 col-80">
-                <button class="button button-block button-general">Update</button>
+                <button class="button button-block button-general" ng-click="updateProfile.updateProfile()">Update</button>
             </div>
         </div>
     </ion-content>

@@ -2,7 +2,7 @@
     <ion-content class="recommend-list">
         <ion-refresher pulling-text="Let go to refresh !"
                        on-refresh="recommend.getDataByRefresh()"
-                       refreshing-icon="fa fa-spinner fa-spin">
+                       spinner="ripple">
         </ion-refresher>
         <div class="card">
             <div class="item text-center animated fadeIn" ng-repeat="photo in recommendList.imgData">

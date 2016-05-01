@@ -8,9 +8,9 @@
 (function ( me ) {
 
     me.controller('MeCtrl', MeCtrl);
-    MeCtrl.$inject = ['$state', '$ionicPopup', 'MeService'];
+    MeCtrl.$inject = ['$state', '$ionicPopup', 'MeService', 'UserService'];
 
-    function MeCtrl( $state, $ionicPopup, MeService ) {
+    function MeCtrl( $state, $ionicPopup, MeService, UserService ) {
         var vm = this;
 
         vm.logOut = logOut;
@@ -20,7 +20,7 @@
         // function to initialize, such as profile etc.
         function init() {
             MeService.getUserInfo().then(function ( data ) {
-                vm.info = data;
+                vm.info = angular.merge({}, data, UserService.getInfo());
             });
         }
 

@@ -1,5 +1,5 @@
 <!-- Recommend detail page -->
-<ion-view view-title="Create">
+<ion-view view-title="Recommend">
     <ion-nav-buttons side="left">
         <button class="button button-clear" ui-sref="tab.recommend_list">
             <i class="ion ion-ios-arrow-left"></i>
@@ -20,7 +20,7 @@
                     <button class="button star-this-photo" ng-click="recommendDetail.starPhoto()">
                         <i class="fa fa-star" ng-class="{'star': !!recommendDetail.isStar}"></i>
                     </button>
-                    <button class="button download-this-photo">
+                    <button class="button download-this-photo" ng-click="recommendDetail.downloadPhoto()">
                         <i class="fa fa-download"></i>
                     </button>
                 </div>
