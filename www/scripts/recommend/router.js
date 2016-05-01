@@ -19,21 +19,21 @@
                         views: {
                             'tab-recommend': {
                                 templateUrl: 'views/recommend/recommend-list.html',
-                                controller: 'RecommendCtrl as recommend'
+                                controller: 'RecommendCtrl as recommendList'
                             }
                         }
                     })
 
                     /* recommend-detail */
                     .state('tab.recommend_detail', {
-                        url: '/recommend/detail?img_id',
+                        url: '/recommend/detail?img_id&img_url&count_fav&count_comments&ownername',
                         views: {
                             'tab-recommend': {
                                 templateUrl: 'views/recommend/recommend-detail.html',
                                 controller: 'recommendDetailCtrl as recommendDetail'
                             }
                         }
-                    })
+                    });
 
             }]);
 

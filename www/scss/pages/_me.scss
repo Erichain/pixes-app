@@ -1,0 +1,43 @@
+.me-page {
+    .button-edit-profile {
+        color: rgba(255, 255, 255, 0.8);
+        min-height: 20px;
+        line-height: 20px;
+        padding: 0 8px;
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        border-radius: 4px;
+    }
+
+    @include media-query( $screen-i5 ) {
+        .button-edit-profile {
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+}
+
+/* styles for settingpages */
+.me-setting {
+    .setting-about-content {
+        font-size: 14px;
+        @include translateposition(0, 70%);
+
+        @include media-query( $screen-i5 ) {
+            font-size: 12px;
+            @include translateposition(0, 50%);
+        }
+    }
+}
+
+.img-list {
+    .card {
+        margin: 0;
+
+        .item {
+            min-height: 176px;
+            max-height: 400px;
+            padding: 0;
+            margin: 5px;
+        }
+    }
+}

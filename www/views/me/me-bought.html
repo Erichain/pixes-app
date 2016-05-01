@@ -1,11 +1,23 @@
 <!-- me-bought -->
 <ion-view view-title="My Bought">
     <ion-nav-buttons>
-        <button class="button button-clear" back>
+        <button class="button button-clear" ui-sref="tab.me">
             <i class="ion ion-ios-arrow-left"></i>
             Back
         </button>
     </ion-nav-buttons>
-    <ion-content>
+    <ion-content class="img-list">
+        <div class="card">
+            <div class="item text-center" ng-repeat="photos in myBought.imgData">
+                <img class="m0"
+                     ng-src="{{ photos.url_c }}"
+                     width="365"
+                     ui-sref="tab.recommend_detail({ img_id: photos.img_id })">
+            </div>
+            <div class="item text-center"
+                 ng-if="(myFavorites.imgData === null || myFavorites.imgData.length === 0) && myFavorites.isLoaded === false">
+                <i class="fa fa-spinner fa-spin"></i>
+            </div>
+        </div>
     </ion-content>
 </ion-view>

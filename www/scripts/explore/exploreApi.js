@@ -7,11 +7,15 @@
 (function ( Explore ) {
 
     Explore.constant('ExploreApi', {
-        explore: {
-            list: {
-                people: '/explore/list/people'
-            }
-        }
+
+        /* get explore people's list */
+        people: '/get_explore_people',
+
+        /* get people's detail */
+        profile: '/get_people_detail',
+
+        /* get photo list */
+        photo: '/get_explore_photo'
     });
 
 })( angular.module('Pixes.explore') );

@@ -22,6 +22,7 @@
                         }
                     })
 
+                    /* update profile */
                     .state('tab.me_update_profile', {
                         url: '/update',
                         views: {
@@ -38,7 +39,7 @@
                         views: {
                             'tab-me': {
                                 templateUrl: 'views/me/me-follower.html',
-                                controller: ''
+                                controller: 'FollowerCtrl as myFollower'
                             }
                         }
                     })
@@ -49,7 +50,7 @@
                         views: {
                             'tab-me': {
                                 templateUrl: 'views/me/me-following.html',
-                                controller: ''
+                                controller: 'FollowingCtrl as myFollowing'
                             }
                         }
                     })
@@ -60,18 +61,7 @@
                         views: {
                             'tab-me': {
                                 templateUrl: 'views/me/me-photo.html',
-                                controller: ''
-                            }
-                        }
-                    })
-
-                    /* me-creations */
-                    .state('tab.me_creations', {
-                        url: '/creations',
-                        views: {
-                            'tab-me': {
-                                templateUrl: 'views/me/me-creations.html',
-                                controller: ''
+                                controller: 'PhotoCtrl as myPhoto'
                             }
                         }
                     })
@@ -82,7 +72,7 @@
                         views: {
                             'tab-me': {
                                 templateUrl: 'views/me/me-favorites.html',
-                                controller: ''
+                                controller: 'FavoritesCtrl as myFavorites'
                             }
                         }
                     })
@@ -93,7 +83,7 @@
                         views: {
                             'tab-me': {
                                 templateUrl: 'views/me/me-bought.html',
-                                controller: ''
+                                controller: 'BoughtCtrl as myBought'
                             }
                         }
                     })
@@ -113,28 +103,21 @@
                     .state('tab.me_setting.list', {
                         url: '/list',
                         templateUrl: 'views/me/me-setting.html',
-                        controller: ''
-                    })
-
-                    /* settings-private */
-                    .state('tab.me_setting.private', {
-                        url: '/private',
-                        templateUrl: 'views/me/setting-private.html',
-                        controller: ''
+                        controller: 'SettingCtrl as setting'
                     })
 
                     /* settings-feedback */
                     .state('tab.me_setting.feedback', {
-                        url: '/private',
+                        url: '/feedback',
                         templateUrl: '',
-                        controller: ''
+                        controller: 'SettingCtrl as setting'
                     })
 
                     /* settings-about */
                     .state('tab.me_setting.about', {
-                        url: '/private',
-                        templateUrl: '',
-                        controller: ''
+                        url: '/about',
+                        templateUrl: 'views/me/setting-about.html',
+                        controller: 'SettingCtrl as setting'
                     });
             }]);
 

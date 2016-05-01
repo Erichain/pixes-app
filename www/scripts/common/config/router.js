@@ -16,22 +16,21 @@
                         cache: false,
                         url: '/start',
                         templateUrl: 'views/start/start.html',
-                        controller: 'StartCtrl'
-                    })
-
-                    /* access router */
-                    .state('access', {
-                        cache: false,
-                        url: '/access',
-                        templateUrl: 'views/access/access.html',
-                        controller: 'AccessCtrl as access'
+                        controller: 'StartCtrl as start'
                     })
 
                     /* tabs' page router definition */
                     .state('tab', {
+                        cache: false,
                         url: '/tab',
                         abstract: true,
                         templateUrl: 'views/common/tabs.html'
+                    })
+
+                    .state('login', {
+                        url: '/login',
+                        templateUrl: 'views/common/guide-to-login.html',
+                        controller: 'StartCtrl as login'
                     });
             }]);
 })( angular.module('Pixes.common') );

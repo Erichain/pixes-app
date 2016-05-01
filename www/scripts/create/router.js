@@ -13,6 +13,7 @@
 
                 $stateProvider
                     .state('tab.create', {
+                        cache: false,
                         url: '/create',
                         views: {
                             'tab-create': {
@@ -23,6 +24,7 @@
                     })
 
                     .state('tab.edit_photo', {
+                        cache: false,
                         url: '/edit-photo',
                         views: {
                             'tab-create': {

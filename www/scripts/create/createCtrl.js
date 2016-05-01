@@ -8,18 +8,46 @@
 (function ( Create ) {
 
     Create.controller('CreateCtrl', CreateCtrl);
-    CreateCtrl.$inject = ['$scope', '$location', '$ionicActionSheet', '$cordovaCamera', '$ionicPopup', 'TempService'];
+    CreateCtrl.$inject = [
+        'CreateService',
+        '$location',
+        '$ionicActionSheet',
+        '$cordovaCamera',
+        '$ionicPopup',
+        'TempService',
+        '$ionicLoading',
+        'Toast',
+        '$timeout'
+    ];
 
-    function CreateCtrl( $scope, $location, $ionicActionSheet, $cordovaCamera, $ionicPopup, TempService ) {
+    function CreateCtrl(
+        CreateService,
+        $location,
+        $ionicActionSheet,
+        $cordovaCamera,
+        $ionicPopup,
+        TempService,
+        $ionicLoading,
+        Toast,
+        $timeout
+    ) {
         var vm = this;
 
-        vm.choosePhotoFromGalleryOrCamera = function () {
-            choosePhotoFromGalleryOrCamera();
-        };
+        // initialize photos array
+        vm.createdPhotos = [];
+        vm.choosePhotoFromGalleryOrCamera = choosePhotoFromGalleryOrCamera;
+        vm.confirmDelete = confirmDelete;
 
-        vm.confirmDelete = function () {
-            confirmDelete();
-        };
+        init();
+
+        // get user's created photos if existed
+        function init() {
+            CreateService.getCreatedPhotos().then(function ( data ) {
+                vm.createdPhotos = data.photo.slice(70, 72).concat(CreateService.getPhotos());
+            }, function ( error ) {
+
+            });
+        }
 
         // open the action sheet for user
         // to choose use photo from gallery or taking a photo
@@ -59,8 +87,11 @@
                 };
 
                 $cordovaCamera.getPicture( options ).then(function ( imgData ) {
-                    $location.path('/tab/edit-photo');
                     vm.imgURI = 'data:image/jpeg;base64,' + imgData;
+                    TempService.imgInfo = {
+                        imgPath: vm.imgURI
+                    };
+                    $location.path('/tab/edit-photo');
                 }, function ( error ) {});
             }, false);
 
@@ -84,7 +115,22 @@
                 okType: 'button-assertive'
             };
 
-            $ionicPopup.confirm(options).then();
+            $ionicPopup.confirm(options).then(function ( res ) {
+                if ( res ) {
+                    $ionicLoading.show({
+                        template: '<ion-spinner icon="ripple"></ion-spinner>'
+                    });
+                    $timeout(function () {
+                        vm.createdPhotos.pop();
+                        CreateService.removePhoto();
+                        Toast.showToast('300004');
+                        $ionicLoading.hide();
+                    }, 1000);
+                }
+                else {
+                    // do nothing
+                }
+            });
         }
     }
 

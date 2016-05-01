@@ -6,6 +6,13 @@
  */
 (function ( Create ) {
 
-    Create.constant('CreateApi', {});
+    Create.constant('CreateApi', {
+
+        /* upload photo */
+        upload: '/photo_upload',
+
+        /* get created photos */
+        photos: '/get_created_photos'
+    });
 
 })( angular.module('Pixes.create') );

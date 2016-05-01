@@ -1,5 +1,5 @@
 <ion-view view-title="Start" hide-nav-bar="true">
-    <ion-content scroll="false" class="start-page animated fadeIn">
+    <ion-content scroll="false" class="start-page">
         <ion-slide-box class="text-center" auto-play="false">
             <!-- slide page 1 -->
             <ion-slide class="slide-item slide1">
@@ -27,19 +27,15 @@
                             <p class="text-bright">Pixes</p>
                         </div>
                     </div>
-                    <div class="row text-center">
+                    <div class="row text-center button-holder">
                         <div class="col col-offset-10 col-80">
-                            <button class="button button-block button-general m0" ui-sref="access.login" nav-direction="enter">Sign In</button>
+                            <button class="button button-block button-general m0" ng-click="start.signIn()">Sign In</button>
                         </div>
                     </div>
+                    <!-- may be added later -->
                     <div class="row text-center">
                         <div class="col col-offset-10 col-80">
-                            <button class="button button-block button-bordered m0" ui-sref="access.register" nav-direction="enter">Sign Up</button>
-                        </div>
-                    </div>
-                    <div class="row text-center">
-                        <div class="col col-offset-10 col-80">
-                            <a class="fs18 text-bright mt10" ui-sref="tab.recommend_list">No, Just let me have a look.</a>
+                            <button class="button button-block button-bordered m0" ui-sref="tab.recommend_list">No, Just let me have a look.</button>
                         </div>
                     </div>
                 </div>

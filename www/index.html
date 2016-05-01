@@ -8,7 +8,6 @@
         <!-- build:styles(.) styles/vendor.css -->
         <!-- bower:styles -->
         <!-- Animate.styles -->
-        <link rel="stylesheet" href="lib/animate.css/animate.min.css" type="text/css"/>
         <link rel="stylesheet" href="lib/ionic/css/ionic.min.css">
         <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
         <!-- endbower -->
@@ -22,7 +21,7 @@
     <body ng-app="Pixes">
         <ion-nav-bar class="bar-royal"></ion-nav-bar>
 
-        <ion-nav-view class="animated fadeIn"></ion-nav-view>
+        <ion-nav-view></ion-nav-view>
 
         <!-- build:js(.) scripts/lib.js -->
         <!-- bower:js -->
@@ -30,6 +29,7 @@
         <script src="lib/ionic/js/ionic.bundle.min.js"></script>
         <script src="lib/mockjs/dist/mock.js"></script>
         <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+        <script src="lib/mockjs/dist/mock-min.js"></script>
         <!-- cordova script (this will be a 404 during development) -->
         <script src="cordova.js"></script>
         <!-- endbower -->
@@ -52,24 +52,21 @@
         <script src="scripts/common/service/requestService.js"></script>
         <script src="scripts/common/service/tempService.js"></script>
         <script src="scripts/common/service/toast.js"></script>
+        <script src="scripts/common/service/userService.js"></script>
 
         <script src="scripts/common/filter/dict.js"></script>
         <script src="scripts/common/filter/numConvert.js"></script>
+        <script src="scripts/common/filter/split.js"></script>
 
         <script src="scripts/common/directive/back.js"></script>
         <!-- endcommon -->
 
         <!-- start -->
         <script src="scripts/start/main.js"></script>
+        <script src="scripts/start/startApi.js"></script>
+        <script src="scripts/start/startService.js"></script>
         <script src="scripts/start/startCtrl.js"></script>
         <!-- endstart -->
-
-        <!-- access -->
-        <script src="scripts/access/main.js"></script>
-        <script src="scripts/access/router.js"></script>
-        <script src="scripts/access/accessService.js"></script>
-        <script src="scripts/access/accessCtrl.js"></script>
-        <!-- endaccess -->
 
         <!-- recommand -->
         <script src="scripts/recommend/main.js"></script>
@@ -84,14 +81,22 @@
         <script src="scripts/me/main.js"></script>
         <script src="scripts/me/router.js"></script>
         <script src="scripts/me/meApi.js"></script>
+        <script src="scripts/me/meService.js"></script>
         <script src="scripts/me/meCtrl.js"></script>
         <script src="scripts/me/updateProfileCtrl.js"></script>
+        <script src="scripts/me/settingCtrl.js"></script>
+        <script src="scripts/me/followerCtrl.js"></script>
+        <script src="scripts/me/followingCtrl.js"></script>
+        <script src="scripts/me/favoritesCtrl.js"></script>
+        <script src="scripts/me/photoCtrl.js"></script>
+        <script src="scripts/me/boughtCtrl.js"></script>
         <!-- endme -->
 
         <!-- create -->
         <script src="scripts/create/main.js"></script>
         <script src="scripts/create/router.js"></script>
         <script src="scripts/create/createApi.js"></script>
+        <script src="scripts/create/createService.js"></script>
         <script src="scripts/create/createCtrl.js"></script>
         <script src="scripts/create/uploadPhotoCtrl.js"></script>
         <!-- endcreate -->
@@ -102,13 +107,15 @@
         <script src="scripts/explore/exploreService.js"></script>
         <script src="scripts/explore/exploreApi.js"></script>
         <script src="scripts/explore/exploreCtrl.js"></script>
+        <script src="scripts/explore/explorePhotoListCtrl.js"></script>
+        <script src="scripts/explore/explorePeopleDetailCtrl.js"></script>
         <!-- endexplore -->
 
         <!-- mock -->
         <script src="scripts/recommend/mock.js"></script>
         <script src="scripts/explore/mock.js"></script>
+        <script src="scripts/me/mock.js"></script>
         <!-- endmock -->
-
         <!-- endbuild -->
     </body>
 </html>

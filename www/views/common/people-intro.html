@@ -1,0 +1,52 @@
+<!-- people's brief intro page -->
+<ion-view view-title="People">
+    <ion-nav-buttons side="left">
+        <button class="button button-clear" back nav-direction="back">
+            <i class="ion ion-ios-arrow-left"></i>
+            Back
+        </button>
+    </ion-nav-buttons>
+    <ion-content class="user-intro">
+        <div class="user-info p15">
+            <div class="row">
+                <div class="col col-offset-25 col-50 text-center">
+                    <img ng-src="{{ $stateParams.avatar }}" alt="Avatar" class="user-avatar">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-offset-10 col-80 text-center">
+                    <p class="fs20 info-name">{{ $stateParams.name }}</p>
+                    <p class="fs14 info-intro">{{ userInfo.description }}</p>
+                </div>
+            </div>
+            <div class="row text-center mt10">
+                <div class="col col-33">
+                    <a>
+                        <p class="fs16 count">{{ $stateParams.follower | numconvert }}</p>
+                        <p>Follower</p>
+                    </a>
+                </div>
+                <div class="col col-33">
+                    <a>
+                        <p class="fs16 count">{{ $stateParams.following | numconvert }}</p>
+                        <p>Following</p>
+                    </a>
+                </div>
+                <div class="col col-33">
+                    <a>
+                        <p class="fs16 count">{{ $stateParams.photo | numconvert }}</p>
+                        <p>Photo</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row mt30">
+            <div class="col-offset-10 col-80">
+                <button class="button button-block button-general" ng-click="$stateParams.status = !$stateParams.status">
+                    <i class="fa" ng-class="{'fa-plus' : +!$stateParams.status, 'fa-check': +$stateParams.status}"></i>
+                    {{ +$stateParams.status | dict: 'followOrNot' }}
+                </button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

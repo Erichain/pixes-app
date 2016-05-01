@@ -1,0 +1,149 @@
+@import "mixin";
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-size: 14px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    line-height: 1;
+    overflow-y: scroll;
+    outline: none;
+}
+
+/* basic classes for margin */
+$margin-maps:
+                (mt, margin-top),
+                (mr, margin-right),
+                (ml, margin-left),
+                (mb, margin-bottom),
+                (m, margin);
+
+$margin-sizes: -15, -10, -5, 0, 5, 10, 15, 20, 25, 30;
+
+@each $size in $margin-sizes {
+    @each $key, $value1, $value2 in $margin-maps {
+        .#{$key}#{$size} {
+            #{$value1}: #{$size}px !important;
+            @if $value2 {
+                #{$value2}: #{$size}px !important;
+            }
+        }
+    }
+}
+
+/* basic classes for padding */
+$padding-maps:
+                (pt, padding-top),
+                (pr, padding-right),
+                (pb, padding-bottom),
+                (pl, padding-left),
+                (p, padding);
+
+$padding-sizes: -10, -5, 0, 5, 10, 15, 20, 30;
+
+@each $size in $padding-sizes {
+    @each $key, $value1, $value2 in $padding-maps {
+        .#{$key}#{$size} {
+            #{$value1}: #{$size}px !important;
+            @if $value2 {
+                #{$value2}: #{$size}px !important;
+            }
+        }
+    }
+}
+
+/* basic classes for font-size */
+$font-sizes: 12, 14, 16, 18, 20, 22, 24, 26, 28, 30;
+
+@each $size in $font-sizes {
+    .fs#{$size} {
+        font-size: #{$size}px;
+    }
+}
+
+/* basic classes for font-weight */
+$font-weight-maps:
+                (fwb, bold),
+                (fwn, normal);
+
+@each $selector, $value in $font-weight-maps {
+    .#{$selector} {
+        font-weight: $value;
+    }
+}
+
+.text {
+    &-general {
+        color: $text-general-color;
+    }
+
+    &-warning {
+        color: $text-warning-color;
+    }
+
+    &-danger {
+        color: $text-danger-color;
+    }
+
+    &-highlight {
+        color: $app-theme-color;
+    }
+
+    &-minor {
+        color: $text-minor-color;
+    }
+
+    &-bright {
+        color: $text-bright-color;
+    }
+
+    &-shallow {
+        color: #d7d7d7;
+    }
+}
+
+.clearfix {
+    @include clearfix();
+}
+
+.no-list-style {
+    @include noliststyle();
+}
+
+.center {
+    &-verticle {
+        display: flex;
+        min-height: 100vh;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &-horizontal {
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+.no-border {
+    border: none;
+}
+
+.no-radius {
+    border-radius: 0;
+}
+
+.bg-white {
+    background-color: #ffffff;
+}
+
+.txt-white {
+    color: #ffffff;
+}
+
+.star {
+    color: #ffda28;
+}

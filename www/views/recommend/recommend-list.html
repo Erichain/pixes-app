@@ -2,28 +2,35 @@
     <ion-content class="recommend-list">
         <ion-refresher pulling-text="Let go to refresh !"
                        on-refresh="recommend.getDataByRefresh()"
-                       refreshing-icon="fa fa-spinner fa-spin">
+                       spinner="ripple">
         </ion-refresher>
         <div class="card">
-            <div class="item text-center animated fadeIn" ng-repeat="photos in recommend.imgData">
-                <img class="m0" ng-src="{{ photos.src }}" width="365" alt="" ui-sref="tab.recommend_detail({ img_id: photos.img_id })">
+            <div class="item text-center animated fadeIn" ng-repeat="photo in recommendList.imgData">
+                <img class="m0"
+                     ng-src="{{ photo.url_c }}"
+                     width="365"
+                     ui-sref="tab.recommend_detail({ img_id: photo.id, img_url: photo.url_c, count_fav: photo.count_faves, count_comments: photo.count_comments, ownername: photo.ownername })">
                 <div class="row text-center operation-bar">
-                    <div class="col col-33">
-                        <a href="">
+                    <div class="col col-50 text-left">
+                        <span class="fs14 text-shallow">{{ photo.ownername }}</span>
+                    </div>
+                    <div class="col col-25">
+                        <a href="" ui-sref="tab.recommend_detail({ img_id: photo.id, img_url: photo.url_c, count_fav: photo.count_faves, count_comments: photo.count_comments, ownername: photo.ownername })">
                             <i class="fa fa-star-o"></i>
                         </a>
+                        <span class="text-shallow fs14">{{ photo.count_faves | numconvert }}</span>
                     </div>
-                    <div class="col col-33">
-                        <a href="">
+                    <div class="col col-25">
+                        <a href="" ui-sref="tab.recommend_detail({ img_id: photo.id, img_url: photo.url_c, count_fav: photo.count_faves, count_comments: photo.count_comments, ownername: photo.ownername })">
                             <i class="fa fa-comment-o"></i>
                         </a>
-                    </div>
-                    <div class="col col-33">
-                        <a href="">
-                            <i class="fa fa-thumbs-o-up"></i>
-                        </a>
+                        <span class="text-shallow fs14">{{ photo.count_comments | numconvert }}</span>
                     </div>
                 </div>
+            </div>
+            <div class="item text-center"
+                 ng-if="(recommendList.imgData === null || recommendList.imgData.length === 0) && recommendList.isLoaded === false">
+                <i class="fa fa-spinner fa-spin"></i>
             </div>
         </div>
     </ion-content>

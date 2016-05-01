@@ -1,0 +1,36 @@
+<ion-view view-title="{{ view_title }}">
+    <ion-nav-buttons>
+        <button class="button button-clear" ui-sref="tab.explore.photo" nav-direction="back">
+            <i class="ion ion-ios-arrow-left"></i>
+            Back
+        </button>
+    </ion-nav-buttons>
+    <ion-content class="explore-photo-list">
+        <div class="card">
+            <div class="item text-center animated fadeIn" ng-repeat="photo in imgData">
+                <img class="m0" ng-src="{{ photo.sizes[0].location }}" width="365" alt="" ui-sref="tab.recommend_detail({ img_id: photo.id, img_url: photo.sizes[0].location, count_fav: photo.stats.favesCount, count_comments: photo.stats.commentsCount, ownername: photo.owner.name })">
+                <div class="row text-center operation-bar">
+                    <div class="col col-50 text-left">
+                        <span class="fs14 text-shallow">{{ photo.owner.name }}</span>
+                    </div>
+                    <div class="col col-25">
+                        <a href="">
+                            <i class="fa fa-star-o"></i>
+                        </a>
+                        <span class="text-shallow fs14">{{ photo.stats.favesCount | numconvert }}</span>
+                    </div>
+                    <div class="col col-25">
+                        <a href="">
+                            <i class="fa fa-comment-o"></i>
+                        </a>
+                        <span class="text-shallow fs14">{{ photo.stats.commentsCount | numconvert }}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="item text-center"
+                 ng-if="(imgData === null || imgData.length === 0) && isLoaded === false">
+                <i class="fa fa-spinner fa-spin"></i>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
