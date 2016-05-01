@@ -21,6 +21,7 @@
 
                     /* tabs' page router definition */
                     .state('tab', {
+                        cache: false,
                         url: '/tab',
                         abstract: true,
                         templateUrl: 'views/common/tabs.html'

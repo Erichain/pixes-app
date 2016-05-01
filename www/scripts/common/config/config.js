@@ -37,7 +37,7 @@
                     $cordovaKeyboard.close();
                 });
 
-                /*$rootScope.isLogined = false;
+                $rootScope.isLogined = false;
 
                 $rootScope.$on('login.ok', function () {
                     $rootScope.isLogined = true;
@@ -52,7 +52,7 @@
                         event.preventDefault();
                         $state.go('login');
                     }
-                });*/
+                });
             }]);
 
 

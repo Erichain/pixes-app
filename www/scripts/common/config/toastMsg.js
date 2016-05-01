@@ -29,7 +29,8 @@
          * 6 digit number, starting with 1
          * e.g. 100001
          */
-        '100001': '',
+        '100001': 'Download Sucess!',
+        '100002': 'Download Failed!',
 
         /**
          * explore module's message
@@ -43,7 +44,9 @@
          * 6 digit number, starting with 3
          * e.g. 300001
          */
-        '300001': '',
+        '300001': 'Upload Success!',
+        '300002': 'Upload Failed!',
+        '300004': 'Success Deleted!',
 
         /**
          * me module's message

@@ -7,9 +7,25 @@
 (function ( Recommend ) {
 
     Recommend.controller('recommendDetailCtrl', recommendDetailCtrl);
-    recommendDetailCtrl.$inject = ['$ionicPopup', '$stateParams', 'RecommendService', '$cordovaFileTransfer', 'Toast'];
+    recommendDetailCtrl.$inject = [
+        '$ionicPopup',
+        '$stateParams',
+        'RecommendService',
+        '$cordovaFileTransfer',
+        'Toast',
+        '$timeout',
+        '$ionicLoading'
+    ];
 
-    function recommendDetailCtrl( $ionicPopup, $stateParams, RecommendService, $cordovaFileTransfer, Toast ) {
+    function recommendDetailCtrl(
+        $ionicPopup,
+        $stateParams,
+        RecommendService,
+        $cordovaFileTransfer,
+        Toast,
+        $timeout,
+        $ionicLoading
+    ) {
         var vm = this;
 
         vm.leaveComment = leaveComment;
@@ -22,6 +38,7 @@
 
         getDetail();
 
+        // get photo's detail info
         function getDetail() {
             var reqParams = {
                 photo_id: $stateParams.img_id
@@ -50,13 +67,21 @@
             };
 
             $ionicPopup.prompt(options).then(function ( res ) {
-                vm.comments.push({
-                    iconurls: {
-                        medium: 'https://c2.staticflickr.com/8/7674/buddyicons/47919595@N02_m.jpg?1431563398#47919595@N02'
-                    },
-                    authorname: 'Erichain',
-                    _content: res
+                $ionicLoading.show({
+                    template: '<ion-spinner icon="ripple"></ion-spinner>'
                 });
+
+                $timeout(function () {
+                    $ionicLoading.hide();
+
+                    vm.comments.push({
+                        iconurls: {
+                            medium: 'https://c2.staticflickr.com/8/7674/buddyicons/47919595@N02_m.jpg?1431563398#47919595@N02'
+                        },
+                        authorname: 'Erichain',
+                        _content: res
+                    });
+                }, 1000);
             });
         }
 
@@ -68,15 +93,16 @@
         // down a photo
         function downloadPhoto() {
             document.addEventListener('deviceready', function () {
-                var url = 'http://cdn.wall-pix.net/albums/art-space/00030109.jpg',
-                    targetPath = cordova.file.tempDirectory + '00030109.jpg',
+                var url = $stateParams.img_url,
+                    filename = url.split('/').pop(),
+                    targetPath = cordova.file.documentsDirectory + filename,
                     trustHosts = true,
                     options = {};
 
                 $cordovaFileTransfer.download(url, targetPath, options, trustHosts).then(function ( data ) {
-                    Toast.showToast(null, 'Download Sucess');
+                    Toast.showToast('100001');
                 }, function ( error ) {
-                    Toast.showToast(null, 'Download Failed');
+                    Toast.showToast('100002');
                 }, function ( progress ) {
 
                 });
