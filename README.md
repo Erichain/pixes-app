@@ -13,7 +13,7 @@ An example application built with Ionic and Express.
 
 ## Preview
 
-> Note: Before you start the app, you should go to [Server](https://github.com/Erichain/Pixes/tree/master/www) directory to start the server.
+> Note: Before you start the app, you should go to [Server](https://github.com/Erichain/Pixes/tree/master/Server) directory to start the server.
 
 Use `gulp serve` or `ionic serve` to run with a browser.
 
