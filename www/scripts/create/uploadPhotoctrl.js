@@ -15,7 +15,9 @@
         'Toast',
         'TempService',
         '$cordovaFileTransfer',
-        'CreateService'
+        'CreateService',
+        'config',
+        'CreateApi'
     ];
 
     function uploadPhotoCtrl(
@@ -25,7 +27,9 @@
         Toast,
         TempService,
         $cordovaFileTransfer,
-        CreateService
+        CreateService,
+        config,
+        CreateApi
     ) {
         var vm = this;
 
@@ -36,7 +40,7 @@
 
             document.addEventListener('deviceready', function () {
                 var uploadOptions = new FileUploadOptions(),
-                    server = 'http://0.0.0.0:9022/photo_upload',
+                    server = config.API_ROOT_URL + CreateApi.upload,
                     imgPath = TempService.imgInfo.imgPath;
 
                 uploadOptions.fileKey = 'file';
