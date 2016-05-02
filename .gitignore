@@ -34,3 +34,6 @@ platforms/
 .tmp/
 www/lib/
 dist/
+Server/uploads
+Server/node_modules
+Server/config.json

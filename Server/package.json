@@ -1,0 +1,28 @@
+{
+  "name": "pixes-server",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "api_500px": "0.0.3",
+    "body-parser": "^1.13.3",
+    "cookie-parser": "^1.3.3",
+    "express": "^4.13.4",
+    "flickrapi": "^0.4.1",
+    "http": "0.0.0",
+    "jade": "^1.11.0",
+    "mashape-oauth": "^0.1.71",
+    "morgan": "^1.6.1",
+    "multer": "^1.1.0",
+    "serve-favicon": "^2.3.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-ruby-sass": "^2.0.1",
+    "gulp-nodemon": "^2.0.2",
+    "gulp-livereload": "^3.8.0",
+    "gulp-plumber": "^1.0.0"
+  }
+}
