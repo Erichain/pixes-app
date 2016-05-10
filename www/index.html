@@ -5,15 +5,14 @@
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
         <title>Pixes</title>
 
-        <!-- build:styles(.) styles/vendor.css -->
+        <!-- build:css(./www) styles/vendor.css -->
         <!-- bower:styles -->
-        <!-- Animate.styles -->
         <link rel="stylesheet" href="lib/ionic/css/ionic.min.css">
         <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
         <!-- endbower -->
         <!-- endbuild -->
 
-        <!-- build:styles(.tmp) scss/main.css -->
+        <!-- build:css(./www) styles/main.css -->
         <link href="styles/main.css" rel="stylesheet" type="text/css">
         <!-- endbuild -->
 
@@ -23,7 +22,7 @@
 
         <ion-nav-view></ion-nav-view>
 
-        <!-- build:js(.) scripts/lib.js -->
+        <!-- build:js(./www) scripts/lib.min.js -->
         <!-- bower:js -->
         <script src="lib/jquery/dist/jquery.min.js"></script>
         <script src="lib/ionic/js/ionic.bundle.min.js"></script>
@@ -31,11 +30,11 @@
         <script src="lib/ngCordova/dist/ng-cordova.js"></script>
         <script src="lib/mockjs/dist/mock-min.js"></script>
         <!-- cordova script (this will be a 404 during development) -->
-        <script src="cordova.js"></script>
+        <!--<script src="cordova.js"></script>-->
         <!-- endbower -->
         <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <!-- build:js(./www) scripts/main.min.js -->
         <script src="scripts/app.js"></script>
 
         <!-- plugins -->

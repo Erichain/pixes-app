@@ -6,30 +6,32 @@
  */
 'use strict';
 
-/* packages */
+// require packages
 var gulp = require('gulp'),
-    compass = require('gulp-compass'),
-    wiredep = require('wiredep').stream,
+    sass = require('gulp-sass'),
     cssnano = require('gulp-cssnano'),
-    livereload = require('gulp-livereload'),
-    rimraf = require('rimraf'),
     runSequence = require('run-sequence'),
     jshint = require('gulp-jshint'),
-    connect = require('gulp-connect'),
-    open = require('gulp-open'),
     plumber = require('gulp-plumber'),
+    uglify = require('gulp-uglify'),
+    browserSync = require('browser-sync').create(),
+    gulpIf = require('gulp-if'),
+    useref = require('gulp-useref'),
+    imagemin = require('gulp-imagemin'),
+    del = require('del'),
 
-/* define root app */
+// define root app
     rootApp = {
         app: require('./bower.json').appPath || './www',
-        dist: 'dist'
+        dist: './dist'
     },
 
-/* files paths */
+// files
     paths = {
         scripts: [rootApp.app + '/scripts/**/*.js'],
         styles: [rootApp.app + '/scss/**/*.scss'],
-        images: [rootApp.app + '/images/**/*.png', rootApp.app + '/images/**/*.jpg'],
+        images: rootApp.app + '/images/**/*.+(png|jpg|jpeg|gif|svg)',
+        fonts: rootApp.app + '/**/fonts/**/*',
         test: [rootApp.app + '/test/spec/**/*.js'],
         testRequire: [
             rootApp.app + '/lib/ionic/js/ionic.bundle.min.js'
@@ -46,75 +48,88 @@ var gulp = require('gulp'),
 // Tasks definition ////
 ////////////////////////
 
-gulp.task('sass', function () {
-    gulp.src(paths.styles)
-        .pipe(plumber())
-        .pipe(compass({
-            sass: rootApp.app + '/scss',
-            css: rootApp.app + '/styles',
-            image: rootApp.app + '/images'
-        }))
-        .pipe(cssnano())
-        .pipe(gulp.dest(rootApp.app + '/styles/'))
-        .pipe(connect.reload());
-});
-
-gulp.task('lint:scripts', function () {
-    gulp.src(paths.scripts)
-        .pipe(plumber())
-        .pipe(jshint())
-        .pipe(connect.reload());
-});
-
-gulp.task('html', function () {
-    gulp.src(paths.views.files)
-        .pipe(plumber())
-        .pipe(connect.reload());
-});
-
-gulp.task('images', function () {
-    gulp.src(paths.images)
-        .pipe(plumber())
-        .pipe(connect.reload());
-});
-
-gulp.task('clean:css', function ( cb ) {
-    rimraf(rootApp.app + '/styles', cb)
-});
-
-gulp.task('start:server', function () {
-    connect.server({
-        root: [rootApp.app],
-        livereload: {
-            port: 35734
-        },
-        port: 9012
+// browser sync
+gulp.task('browser-sync', function () {
+    browserSync.init({
+        server: rootApp.app,
+        browser: 'Google Chrome',
+        logConnections: true
     });
 });
 
-gulp.task('start:client', ['start:server', 'sass'], function () {
-    var options = {
-        uri: 'http://0.0.0.0:9012',
-        app: 'Google Chrome'
-    };
-
-    gulp.src(paths.views.main)
+// compile sass to css
+gulp.task('sass', function () {
+    return gulp.src(paths.styles)
         .pipe(plumber())
-        .pipe(open(options));
+        .pipe(sass().on('error', sass.logError))
+        .pipe(cssnano())
+        .pipe(gulp.dest(rootApp.app + '/styles/'))
+        .pipe(browserSync.stream({once: false}));
 });
 
-gulp.task('watch', function () {
+gulp.task('lint:scripts', function () {
+    return gulp.src(paths.scripts)
+        .pipe(plumber())
+        .pipe(jshint());
+});
+
+gulp.task('html', function () {
+    return gulp.src(paths.views.files)
+        .pipe(plumber());
+});
+
+gulp.task('images', function () {
+    return gulp.src(paths.images)
+        .pipe(plumber());
+});
+
+gulp.task('clean:css', function ( cb ) {
+    return del(rootApp.app + '/styles')
+});
+
+// watch files changing
+gulp.task('watch', ['browser-sync'], function () {
     gulp.watch(paths.styles, ['sass']);
-    gulp.watch(paths.views.files, ['html']);
-    gulp.watch(paths.views.images, ['images']);
-    gulp.watch(paths.scripts, ['lint:scripts']);
+    gulp.watch(paths.views.files, ['html']).on('change', browserSync.reload);
+    gulp.watch(paths.views.images, ['images']).on('change', browserSync.reload);
+    gulp.watch(paths.scripts, ['lint:scripts']).on('change', browserSync.reload);
 });
 
-gulp.task('serve', ['start:client'], function ( cb ) {
+// main server task
+gulp.task('serve', ['watch']);
+
+gulp.task('clean:dist', function ( cb ) {
+    return del(rootApp.dist);
+});
+
+// compress html and css
+gulp.task('useref', function () {
+    return gulp.src('./www/*.html')
+        .pipe(useref())
+        .pipe(gulpIf('*.js', uglify()))
+        .pipe(gulpIf('*.css', cssnano()))
+        .pipe(gulp.dest(rootApp.dist));
+});
+
+// compress images
+gulp.task('images', function () {
+    return gulp.src(paths.images)
+        /*.pipe(imagemin())*/
+        .pipe(gulp.dest(rootApp.dist + '/images'))
+});
+
+// copy fonts
+gulp.task('fonts', function () {
+    return gulp.src(paths.fonts)
+        .pipe(gulp.dest(rootApp.dist));
+});
+
+gulp.task('build', function ( callback ) {
     runSequence(
-        'clean:css',
-        ['lint:scripts'],
-        'watch', cb)
+        'clean:dist',
+        ['useref', 'images', 'fonts'],
+        callback
+    );
 });
 
-gulp.task('default', ['start:server', 'watch']);
+gulp.task('default', ['serve']);
