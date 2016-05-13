@@ -26,6 +26,7 @@
                     method: 'POST',
                     url: '',
                     data: {},
+                    timeout: 10000,
                     headers: {
                         'Content-Type': 'Application/json'
                     }

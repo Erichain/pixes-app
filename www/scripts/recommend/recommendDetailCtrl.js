@@ -67,21 +67,26 @@
             };
 
             $ionicPopup.prompt(options).then(function ( res ) {
-                $ionicLoading.show({
-                    template: '<ion-spinner icon="ripple"></ion-spinner>'
-                });
-
-                $timeout(function () {
-                    $ionicLoading.hide();
-
-                    vm.comments.push({
-                        iconurls: {
-                            medium: 'https://c2.staticflickr.com/8/7674/buddyicons/47919595@N02_m.jpg?1431563398#47919595@N02'
-                        },
-                        authorname: 'Erichain',
-                        _content: res
+                if ( res ) {
+                    $ionicLoading.show({
+                        template: '<ion-spinner icon="ripple"></ion-spinner>'
                     });
-                }, 1000);
+
+                    $timeout(function () {
+                        $ionicLoading.hide();
+
+                        vm.comments.push({
+                            iconurls: {
+                                medium: 'https://c2.staticflickr.com/8/7674/buddyicons/47919595@N02_m.jpg?1431563398#47919595@N02'
+                            },
+                            authorname: 'Erichain',
+                            _content: res
+                        });
+                    }, 1000);
+                }
+                else {
+                    // do nothing
+                }
             });
         }
 

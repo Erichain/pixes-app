@@ -13,7 +13,7 @@ var multer = require('multer'),
 
     upload = multer({
         storage: storage,
-        limits: 1000000
+        limits: 51200
     }).single('file');
 
 // upload photo

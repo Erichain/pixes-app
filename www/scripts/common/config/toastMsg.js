@@ -13,16 +13,16 @@
          * 3 digit number
          * e.g. 504
          */
-        '400': '',
-        '404': '',
-        '504': '',
+        '400': 'Bad Request!',
+        '404': 'Can\'t find page!',
+        '504': 'Gateway error!',
 
         /**
          * start module's message
          * 6 digit number, starting with 0
          * e.g. 000001
          */
-        '000001': 'Get access token failed',
+        '000001': 'Get access token failed!',
 
         /**
          * recommend module's message
