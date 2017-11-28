@@ -1,10 +1,11 @@
 # Pixes
 
-![](https://github.com/Erichain/Pixes/blob/master/www/images/pixes-main.png)
+![](https://github.com/Erichain/pixes-app/blob/master/www/images/pixes-main.png)
 
 An example application built with Ionic and Express.
 
-## Install
+## Installation
+
 `bower install && npm install` <br/>
 `ionic platform add ios` <br/>
 `ionic build ios` <br/>
